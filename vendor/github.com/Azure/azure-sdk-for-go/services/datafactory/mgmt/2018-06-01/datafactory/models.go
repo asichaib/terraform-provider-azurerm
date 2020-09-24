@@ -32,2624 +32,6 @@ import (
 // The package's fully qualified name.
 const fqdn = "github.com/Azure/azure-sdk-for-go/services/datafactory/mgmt/2018-06-01/datafactory"
 
-// AuthenticationType enumerates the values for authentication type.
-type AuthenticationType string
-
-const (
-	// AuthenticationTypeAnonymous ...
-	AuthenticationTypeAnonymous AuthenticationType = "Anonymous"
-	// AuthenticationTypeBasic ...
-	AuthenticationTypeBasic AuthenticationType = "Basic"
-	// AuthenticationTypeClientCertificate ...
-	AuthenticationTypeClientCertificate AuthenticationType = "ClientCertificate"
-	// AuthenticationTypeWebLinkedServiceTypeProperties ...
-	AuthenticationTypeWebLinkedServiceTypeProperties AuthenticationType = "WebLinkedServiceTypeProperties"
-)
-
-// PossibleAuthenticationTypeValues returns an array of possible values for the AuthenticationType const type.
-func PossibleAuthenticationTypeValues() []AuthenticationType {
-	return []AuthenticationType{AuthenticationTypeAnonymous, AuthenticationTypeBasic, AuthenticationTypeClientCertificate, AuthenticationTypeWebLinkedServiceTypeProperties}
-}
-
-// AuthorizationType enumerates the values for authorization type.
-type AuthorizationType string
-
-const (
-	// AuthorizationTypeKey ...
-	AuthorizationTypeKey AuthorizationType = "Key"
-	// AuthorizationTypeLinkedIntegrationRuntimeType ...
-	AuthorizationTypeLinkedIntegrationRuntimeType AuthorizationType = "LinkedIntegrationRuntimeType"
-	// AuthorizationTypeRBAC ...
-	AuthorizationTypeRBAC AuthorizationType = "RBAC"
-)
-
-// PossibleAuthorizationTypeValues returns an array of possible values for the AuthorizationType const type.
-func PossibleAuthorizationTypeValues() []AuthorizationType {
-	return []AuthorizationType{AuthorizationTypeKey, AuthorizationTypeLinkedIntegrationRuntimeType, AuthorizationTypeRBAC}
-}
-
-// AvroCompressionCodec enumerates the values for avro compression codec.
-type AvroCompressionCodec string
-
-const (
-	// Bzip2 ...
-	Bzip2 AvroCompressionCodec = "bzip2"
-	// Deflate ...
-	Deflate AvroCompressionCodec = "deflate"
-	// None ...
-	None AvroCompressionCodec = "none"
-	// Snappy ...
-	Snappy AvroCompressionCodec = "snappy"
-	// Xz ...
-	Xz AvroCompressionCodec = "xz"
-)
-
-// PossibleAvroCompressionCodecValues returns an array of possible values for the AvroCompressionCodec const type.
-func PossibleAvroCompressionCodecValues() []AvroCompressionCodec {
-	return []AvroCompressionCodec{Bzip2, Deflate, None, Snappy, Xz}
-}
-
-// AzureFunctionActivityMethod enumerates the values for azure function activity method.
-type AzureFunctionActivityMethod string
-
-const (
-	// DELETE ...
-	DELETE AzureFunctionActivityMethod = "DELETE"
-	// GET ...
-	GET AzureFunctionActivityMethod = "GET"
-	// HEAD ...
-	HEAD AzureFunctionActivityMethod = "HEAD"
-	// OPTIONS ...
-	OPTIONS AzureFunctionActivityMethod = "OPTIONS"
-	// POST ...
-	POST AzureFunctionActivityMethod = "POST"
-	// PUT ...
-	PUT AzureFunctionActivityMethod = "PUT"
-	// TRACE ...
-	TRACE AzureFunctionActivityMethod = "TRACE"
-)
-
-// PossibleAzureFunctionActivityMethodValues returns an array of possible values for the AzureFunctionActivityMethod const type.
-func PossibleAzureFunctionActivityMethodValues() []AzureFunctionActivityMethod {
-	return []AzureFunctionActivityMethod{DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE}
-}
-
-// AzureSearchIndexWriteBehaviorType enumerates the values for azure search index write behavior type.
-type AzureSearchIndexWriteBehaviorType string
-
-const (
-	// Merge ...
-	Merge AzureSearchIndexWriteBehaviorType = "Merge"
-	// Upload ...
-	Upload AzureSearchIndexWriteBehaviorType = "Upload"
-)
-
-// PossibleAzureSearchIndexWriteBehaviorTypeValues returns an array of possible values for the AzureSearchIndexWriteBehaviorType const type.
-func PossibleAzureSearchIndexWriteBehaviorTypeValues() []AzureSearchIndexWriteBehaviorType {
-	return []AzureSearchIndexWriteBehaviorType{Merge, Upload}
-}
-
-// BlobEventTypes enumerates the values for blob event types.
-type BlobEventTypes string
-
-const (
-	// MicrosoftStorageBlobCreated ...
-	MicrosoftStorageBlobCreated BlobEventTypes = "Microsoft.Storage.BlobCreated"
-	// MicrosoftStorageBlobDeleted ...
-	MicrosoftStorageBlobDeleted BlobEventTypes = "Microsoft.Storage.BlobDeleted"
-)
-
-// PossibleBlobEventTypesValues returns an array of possible values for the BlobEventTypes const type.
-func PossibleBlobEventTypesValues() []BlobEventTypes {
-	return []BlobEventTypes{MicrosoftStorageBlobCreated, MicrosoftStorageBlobDeleted}
-}
-
-// CassandraSourceReadConsistencyLevels enumerates the values for cassandra source read consistency levels.
-type CassandraSourceReadConsistencyLevels string
-
-const (
-	// ALL ...
-	ALL CassandraSourceReadConsistencyLevels = "ALL"
-	// EACHQUORUM ...
-	EACHQUORUM CassandraSourceReadConsistencyLevels = "EACH_QUORUM"
-	// LOCALONE ...
-	LOCALONE CassandraSourceReadConsistencyLevels = "LOCAL_ONE"
-	// LOCALQUORUM ...
-	LOCALQUORUM CassandraSourceReadConsistencyLevels = "LOCAL_QUORUM"
-	// LOCALSERIAL ...
-	LOCALSERIAL CassandraSourceReadConsistencyLevels = "LOCAL_SERIAL"
-	// ONE ...
-	ONE CassandraSourceReadConsistencyLevels = "ONE"
-	// QUORUM ...
-	QUORUM CassandraSourceReadConsistencyLevels = "QUORUM"
-	// SERIAL ...
-	SERIAL CassandraSourceReadConsistencyLevels = "SERIAL"
-	// THREE ...
-	THREE CassandraSourceReadConsistencyLevels = "THREE"
-	// TWO ...
-	TWO CassandraSourceReadConsistencyLevels = "TWO"
-)
-
-// PossibleCassandraSourceReadConsistencyLevelsValues returns an array of possible values for the CassandraSourceReadConsistencyLevels const type.
-func PossibleCassandraSourceReadConsistencyLevelsValues() []CassandraSourceReadConsistencyLevels {
-	return []CassandraSourceReadConsistencyLevels{ALL, EACHQUORUM, LOCALONE, LOCALQUORUM, LOCALSERIAL, ONE, QUORUM, SERIAL, THREE, TWO}
-}
-
-// DataFlowComputeType enumerates the values for data flow compute type.
-type DataFlowComputeType string
-
-const (
-	// ComputeOptimized ...
-	ComputeOptimized DataFlowComputeType = "ComputeOptimized"
-	// General ...
-	General DataFlowComputeType = "General"
-	// MemoryOptimized ...
-	MemoryOptimized DataFlowComputeType = "MemoryOptimized"
-)
-
-// PossibleDataFlowComputeTypeValues returns an array of possible values for the DataFlowComputeType const type.
-func PossibleDataFlowComputeTypeValues() []DataFlowComputeType {
-	return []DataFlowComputeType{ComputeOptimized, General, MemoryOptimized}
-}
-
-// DataFlowDebugCommandType enumerates the values for data flow debug command type.
-type DataFlowDebugCommandType string
-
-const (
-	// ExecuteExpressionQuery ...
-	ExecuteExpressionQuery DataFlowDebugCommandType = "executeExpressionQuery"
-	// ExecutePreviewQuery ...
-	ExecutePreviewQuery DataFlowDebugCommandType = "executePreviewQuery"
-	// ExecuteStatisticsQuery ...
-	ExecuteStatisticsQuery DataFlowDebugCommandType = "executeStatisticsQuery"
-)
-
-// PossibleDataFlowDebugCommandTypeValues returns an array of possible values for the DataFlowDebugCommandType const type.
-func PossibleDataFlowDebugCommandTypeValues() []DataFlowDebugCommandType {
-	return []DataFlowDebugCommandType{ExecuteExpressionQuery, ExecutePreviewQuery, ExecuteStatisticsQuery}
-}
-
-// DayOfWeek enumerates the values for day of week.
-type DayOfWeek string
-
-const (
-	// Friday ...
-	Friday DayOfWeek = "Friday"
-	// Monday ...
-	Monday DayOfWeek = "Monday"
-	// Saturday ...
-	Saturday DayOfWeek = "Saturday"
-	// Sunday ...
-	Sunday DayOfWeek = "Sunday"
-	// Thursday ...
-	Thursday DayOfWeek = "Thursday"
-	// Tuesday ...
-	Tuesday DayOfWeek = "Tuesday"
-	// Wednesday ...
-	Wednesday DayOfWeek = "Wednesday"
-)
-
-// PossibleDayOfWeekValues returns an array of possible values for the DayOfWeek const type.
-func PossibleDayOfWeekValues() []DayOfWeek {
-	return []DayOfWeek{Friday, Monday, Saturday, Sunday, Thursday, Tuesday, Wednesday}
-}
-
-// DaysOfWeek enumerates the values for days of week.
-type DaysOfWeek string
-
-const (
-	// DaysOfWeekFriday ...
-	DaysOfWeekFriday DaysOfWeek = "Friday"
-	// DaysOfWeekMonday ...
-	DaysOfWeekMonday DaysOfWeek = "Monday"
-	// DaysOfWeekSaturday ...
-	DaysOfWeekSaturday DaysOfWeek = "Saturday"
-	// DaysOfWeekSunday ...
-	DaysOfWeekSunday DaysOfWeek = "Sunday"
-	// DaysOfWeekThursday ...
-	DaysOfWeekThursday DaysOfWeek = "Thursday"
-	// DaysOfWeekTuesday ...
-	DaysOfWeekTuesday DaysOfWeek = "Tuesday"
-	// DaysOfWeekWednesday ...
-	DaysOfWeekWednesday DaysOfWeek = "Wednesday"
-)
-
-// PossibleDaysOfWeekValues returns an array of possible values for the DaysOfWeek const type.
-func PossibleDaysOfWeekValues() []DaysOfWeek {
-	return []DaysOfWeek{DaysOfWeekFriday, DaysOfWeekMonday, DaysOfWeekSaturday, DaysOfWeekSunday, DaysOfWeekThursday, DaysOfWeekTuesday, DaysOfWeekWednesday}
-}
-
-// Db2AuthenticationType enumerates the values for db 2 authentication type.
-type Db2AuthenticationType string
-
-const (
-	// Basic ...
-	Basic Db2AuthenticationType = "Basic"
-)
-
-// PossibleDb2AuthenticationTypeValues returns an array of possible values for the Db2AuthenticationType const type.
-func PossibleDb2AuthenticationTypeValues() []Db2AuthenticationType {
-	return []Db2AuthenticationType{Basic}
-}
-
-// DependencyCondition enumerates the values for dependency condition.
-type DependencyCondition string
-
-const (
-	// Completed ...
-	Completed DependencyCondition = "Completed"
-	// Failed ...
-	Failed DependencyCondition = "Failed"
-	// Skipped ...
-	Skipped DependencyCondition = "Skipped"
-	// Succeeded ...
-	Succeeded DependencyCondition = "Succeeded"
-)
-
-// PossibleDependencyConditionValues returns an array of possible values for the DependencyCondition const type.
-func PossibleDependencyConditionValues() []DependencyCondition {
-	return []DependencyCondition{Completed, Failed, Skipped, Succeeded}
-}
-
-// DynamicsAuthenticationType enumerates the values for dynamics authentication type.
-type DynamicsAuthenticationType string
-
-const (
-	// AADServicePrincipal ...
-	AADServicePrincipal DynamicsAuthenticationType = "AADServicePrincipal"
-	// Ifd ...
-	Ifd DynamicsAuthenticationType = "Ifd"
-	// Office365 ...
-	Office365 DynamicsAuthenticationType = "Office365"
-)
-
-// PossibleDynamicsAuthenticationTypeValues returns an array of possible values for the DynamicsAuthenticationType const type.
-func PossibleDynamicsAuthenticationTypeValues() []DynamicsAuthenticationType {
-	return []DynamicsAuthenticationType{AADServicePrincipal, Ifd, Office365}
-}
-
-// DynamicsDeploymentType enumerates the values for dynamics deployment type.
-type DynamicsDeploymentType string
-
-const (
-	// Online ...
-	Online DynamicsDeploymentType = "Online"
-	// OnPremisesWithIfd ...
-	OnPremisesWithIfd DynamicsDeploymentType = "OnPremisesWithIfd"
-)
-
-// PossibleDynamicsDeploymentTypeValues returns an array of possible values for the DynamicsDeploymentType const type.
-func PossibleDynamicsDeploymentTypeValues() []DynamicsDeploymentType {
-	return []DynamicsDeploymentType{Online, OnPremisesWithIfd}
-}
-
-// EventSubscriptionStatus enumerates the values for event subscription status.
-type EventSubscriptionStatus string
-
-const (
-	// Deprovisioning ...
-	Deprovisioning EventSubscriptionStatus = "Deprovisioning"
-	// Disabled ...
-	Disabled EventSubscriptionStatus = "Disabled"
-	// Enabled ...
-	Enabled EventSubscriptionStatus = "Enabled"
-	// Provisioning ...
-	Provisioning EventSubscriptionStatus = "Provisioning"
-	// Unknown ...
-	Unknown EventSubscriptionStatus = "Unknown"
-)
-
-// PossibleEventSubscriptionStatusValues returns an array of possible values for the EventSubscriptionStatus const type.
-func PossibleEventSubscriptionStatusValues() []EventSubscriptionStatus {
-	return []EventSubscriptionStatus{Deprovisioning, Disabled, Enabled, Provisioning, Unknown}
-}
-
-// FtpAuthenticationType enumerates the values for ftp authentication type.
-type FtpAuthenticationType string
-
-const (
-	// FtpAuthenticationTypeAnonymous ...
-	FtpAuthenticationTypeAnonymous FtpAuthenticationType = "Anonymous"
-	// FtpAuthenticationTypeBasic ...
-	FtpAuthenticationTypeBasic FtpAuthenticationType = "Basic"
-)
-
-// PossibleFtpAuthenticationTypeValues returns an array of possible values for the FtpAuthenticationType const type.
-func PossibleFtpAuthenticationTypeValues() []FtpAuthenticationType {
-	return []FtpAuthenticationType{FtpAuthenticationTypeAnonymous, FtpAuthenticationTypeBasic}
-}
-
-// GlobalParameterType enumerates the values for global parameter type.
-type GlobalParameterType string
-
-const (
-	// Array ...
-	Array GlobalParameterType = "Array"
-	// Bool ...
-	Bool GlobalParameterType = "Bool"
-	// Float ...
-	Float GlobalParameterType = "Float"
-	// Int ...
-	Int GlobalParameterType = "Int"
-	// Object ...
-	Object GlobalParameterType = "Object"
-	// String ...
-	String GlobalParameterType = "String"
-)
-
-// PossibleGlobalParameterTypeValues returns an array of possible values for the GlobalParameterType const type.
-func PossibleGlobalParameterTypeValues() []GlobalParameterType {
-	return []GlobalParameterType{Array, Bool, Float, Int, Object, String}
-}
-
-// GoogleAdWordsAuthenticationType enumerates the values for google ad words authentication type.
-type GoogleAdWordsAuthenticationType string
-
-const (
-	// ServiceAuthentication ...
-	ServiceAuthentication GoogleAdWordsAuthenticationType = "ServiceAuthentication"
-	// UserAuthentication ...
-	UserAuthentication GoogleAdWordsAuthenticationType = "UserAuthentication"
-)
-
-// PossibleGoogleAdWordsAuthenticationTypeValues returns an array of possible values for the GoogleAdWordsAuthenticationType const type.
-func PossibleGoogleAdWordsAuthenticationTypeValues() []GoogleAdWordsAuthenticationType {
-	return []GoogleAdWordsAuthenticationType{ServiceAuthentication, UserAuthentication}
-}
-
-// GoogleBigQueryAuthenticationType enumerates the values for google big query authentication type.
-type GoogleBigQueryAuthenticationType string
-
-const (
-	// GoogleBigQueryAuthenticationTypeServiceAuthentication ...
-	GoogleBigQueryAuthenticationTypeServiceAuthentication GoogleBigQueryAuthenticationType = "ServiceAuthentication"
-	// GoogleBigQueryAuthenticationTypeUserAuthentication ...
-	GoogleBigQueryAuthenticationTypeUserAuthentication GoogleBigQueryAuthenticationType = "UserAuthentication"
-)
-
-// PossibleGoogleBigQueryAuthenticationTypeValues returns an array of possible values for the GoogleBigQueryAuthenticationType const type.
-func PossibleGoogleBigQueryAuthenticationTypeValues() []GoogleBigQueryAuthenticationType {
-	return []GoogleBigQueryAuthenticationType{GoogleBigQueryAuthenticationTypeServiceAuthentication, GoogleBigQueryAuthenticationTypeUserAuthentication}
-}
-
-// HBaseAuthenticationType enumerates the values for h base authentication type.
-type HBaseAuthenticationType string
-
-const (
-	// HBaseAuthenticationTypeAnonymous ...
-	HBaseAuthenticationTypeAnonymous HBaseAuthenticationType = "Anonymous"
-	// HBaseAuthenticationTypeBasic ...
-	HBaseAuthenticationTypeBasic HBaseAuthenticationType = "Basic"
-)
-
-// PossibleHBaseAuthenticationTypeValues returns an array of possible values for the HBaseAuthenticationType const type.
-func PossibleHBaseAuthenticationTypeValues() []HBaseAuthenticationType {
-	return []HBaseAuthenticationType{HBaseAuthenticationTypeAnonymous, HBaseAuthenticationTypeBasic}
-}
-
-// HDInsightActivityDebugInfoOption enumerates the values for hd insight activity debug info option.
-type HDInsightActivityDebugInfoOption string
-
-const (
-	// HDInsightActivityDebugInfoOptionAlways ...
-	HDInsightActivityDebugInfoOptionAlways HDInsightActivityDebugInfoOption = "Always"
-	// HDInsightActivityDebugInfoOptionFailure ...
-	HDInsightActivityDebugInfoOptionFailure HDInsightActivityDebugInfoOption = "Failure"
-	// HDInsightActivityDebugInfoOptionNone ...
-	HDInsightActivityDebugInfoOptionNone HDInsightActivityDebugInfoOption = "None"
-)
-
-// PossibleHDInsightActivityDebugInfoOptionValues returns an array of possible values for the HDInsightActivityDebugInfoOption const type.
-func PossibleHDInsightActivityDebugInfoOptionValues() []HDInsightActivityDebugInfoOption {
-	return []HDInsightActivityDebugInfoOption{HDInsightActivityDebugInfoOptionAlways, HDInsightActivityDebugInfoOptionFailure, HDInsightActivityDebugInfoOptionNone}
-}
-
-// HiveAuthenticationType enumerates the values for hive authentication type.
-type HiveAuthenticationType string
-
-const (
-	// Anonymous ...
-	Anonymous HiveAuthenticationType = "Anonymous"
-	// Username ...
-	Username HiveAuthenticationType = "Username"
-	// UsernameAndPassword ...
-	UsernameAndPassword HiveAuthenticationType = "UsernameAndPassword"
-	// WindowsAzureHDInsightService ...
-	WindowsAzureHDInsightService HiveAuthenticationType = "WindowsAzureHDInsightService"
-)
-
-// PossibleHiveAuthenticationTypeValues returns an array of possible values for the HiveAuthenticationType const type.
-func PossibleHiveAuthenticationTypeValues() []HiveAuthenticationType {
-	return []HiveAuthenticationType{Anonymous, Username, UsernameAndPassword, WindowsAzureHDInsightService}
-}
-
-// HiveServerType enumerates the values for hive server type.
-type HiveServerType string
-
-const (
-	// HiveServer1 ...
-	HiveServer1 HiveServerType = "HiveServer1"
-	// HiveServer2 ...
-	HiveServer2 HiveServerType = "HiveServer2"
-	// HiveThriftServer ...
-	HiveThriftServer HiveServerType = "HiveThriftServer"
-)
-
-// PossibleHiveServerTypeValues returns an array of possible values for the HiveServerType const type.
-func PossibleHiveServerTypeValues() []HiveServerType {
-	return []HiveServerType{HiveServer1, HiveServer2, HiveThriftServer}
-}
-
-// HiveThriftTransportProtocol enumerates the values for hive thrift transport protocol.
-type HiveThriftTransportProtocol string
-
-const (
-	// Binary ...
-	Binary HiveThriftTransportProtocol = "Binary"
-	// HTTP ...
-	HTTP HiveThriftTransportProtocol = "HTTP "
-	// SASL ...
-	SASL HiveThriftTransportProtocol = "SASL"
-)
-
-// PossibleHiveThriftTransportProtocolValues returns an array of possible values for the HiveThriftTransportProtocol const type.
-func PossibleHiveThriftTransportProtocolValues() []HiveThriftTransportProtocol {
-	return []HiveThriftTransportProtocol{Binary, HTTP, SASL}
-}
-
-// HTTPAuthenticationType enumerates the values for http authentication type.
-type HTTPAuthenticationType string
-
-const (
-	// HTTPAuthenticationTypeAnonymous ...
-	HTTPAuthenticationTypeAnonymous HTTPAuthenticationType = "Anonymous"
-	// HTTPAuthenticationTypeBasic ...
-	HTTPAuthenticationTypeBasic HTTPAuthenticationType = "Basic"
-	// HTTPAuthenticationTypeClientCertificate ...
-	HTTPAuthenticationTypeClientCertificate HTTPAuthenticationType = "ClientCertificate"
-	// HTTPAuthenticationTypeDigest ...
-	HTTPAuthenticationTypeDigest HTTPAuthenticationType = "Digest"
-	// HTTPAuthenticationTypeWindows ...
-	HTTPAuthenticationTypeWindows HTTPAuthenticationType = "Windows"
-)
-
-// PossibleHTTPAuthenticationTypeValues returns an array of possible values for the HTTPAuthenticationType const type.
-func PossibleHTTPAuthenticationTypeValues() []HTTPAuthenticationType {
-	return []HTTPAuthenticationType{HTTPAuthenticationTypeAnonymous, HTTPAuthenticationTypeBasic, HTTPAuthenticationTypeClientCertificate, HTTPAuthenticationTypeDigest, HTTPAuthenticationTypeWindows}
-}
-
-// ImpalaAuthenticationType enumerates the values for impala authentication type.
-type ImpalaAuthenticationType string
-
-const (
-	// ImpalaAuthenticationTypeAnonymous ...
-	ImpalaAuthenticationTypeAnonymous ImpalaAuthenticationType = "Anonymous"
-	// ImpalaAuthenticationTypeSASLUsername ...
-	ImpalaAuthenticationTypeSASLUsername ImpalaAuthenticationType = "SASLUsername"
-	// ImpalaAuthenticationTypeUsernameAndPassword ...
-	ImpalaAuthenticationTypeUsernameAndPassword ImpalaAuthenticationType = "UsernameAndPassword"
-)
-
-// PossibleImpalaAuthenticationTypeValues returns an array of possible values for the ImpalaAuthenticationType const type.
-func PossibleImpalaAuthenticationTypeValues() []ImpalaAuthenticationType {
-	return []ImpalaAuthenticationType{ImpalaAuthenticationTypeAnonymous, ImpalaAuthenticationTypeSASLUsername, ImpalaAuthenticationTypeUsernameAndPassword}
-}
-
-// IntegrationRuntimeAuthKeyName enumerates the values for integration runtime auth key name.
-type IntegrationRuntimeAuthKeyName string
-
-const (
-	// AuthKey1 ...
-	AuthKey1 IntegrationRuntimeAuthKeyName = "authKey1"
-	// AuthKey2 ...
-	AuthKey2 IntegrationRuntimeAuthKeyName = "authKey2"
-)
-
-// PossibleIntegrationRuntimeAuthKeyNameValues returns an array of possible values for the IntegrationRuntimeAuthKeyName const type.
-func PossibleIntegrationRuntimeAuthKeyNameValues() []IntegrationRuntimeAuthKeyName {
-	return []IntegrationRuntimeAuthKeyName{AuthKey1, AuthKey2}
-}
-
-// IntegrationRuntimeAutoUpdate enumerates the values for integration runtime auto update.
-type IntegrationRuntimeAutoUpdate string
-
-const (
-	// Off ...
-	Off IntegrationRuntimeAutoUpdate = "Off"
-	// On ...
-	On IntegrationRuntimeAutoUpdate = "On"
-)
-
-// PossibleIntegrationRuntimeAutoUpdateValues returns an array of possible values for the IntegrationRuntimeAutoUpdate const type.
-func PossibleIntegrationRuntimeAutoUpdateValues() []IntegrationRuntimeAutoUpdate {
-	return []IntegrationRuntimeAutoUpdate{Off, On}
-}
-
-// IntegrationRuntimeEdition enumerates the values for integration runtime edition.
-type IntegrationRuntimeEdition string
-
-const (
-	// Enterprise ...
-	Enterprise IntegrationRuntimeEdition = "Enterprise"
-	// Standard ...
-	Standard IntegrationRuntimeEdition = "Standard"
-)
-
-// PossibleIntegrationRuntimeEditionValues returns an array of possible values for the IntegrationRuntimeEdition const type.
-func PossibleIntegrationRuntimeEditionValues() []IntegrationRuntimeEdition {
-	return []IntegrationRuntimeEdition{Enterprise, Standard}
-}
-
-// IntegrationRuntimeEntityReferenceType enumerates the values for integration runtime entity reference type.
-type IntegrationRuntimeEntityReferenceType string
-
-const (
-	// IntegrationRuntimeEntityReferenceTypeIntegrationRuntimeReference ...
-	IntegrationRuntimeEntityReferenceTypeIntegrationRuntimeReference IntegrationRuntimeEntityReferenceType = "IntegrationRuntimeReference"
-	// IntegrationRuntimeEntityReferenceTypeLinkedServiceReference ...
-	IntegrationRuntimeEntityReferenceTypeLinkedServiceReference IntegrationRuntimeEntityReferenceType = "LinkedServiceReference"
-)
-
-// PossibleIntegrationRuntimeEntityReferenceTypeValues returns an array of possible values for the IntegrationRuntimeEntityReferenceType const type.
-func PossibleIntegrationRuntimeEntityReferenceTypeValues() []IntegrationRuntimeEntityReferenceType {
-	return []IntegrationRuntimeEntityReferenceType{IntegrationRuntimeEntityReferenceTypeIntegrationRuntimeReference, IntegrationRuntimeEntityReferenceTypeLinkedServiceReference}
-}
-
-// IntegrationRuntimeInternalChannelEncryptionMode enumerates the values for integration runtime internal
-// channel encryption mode.
-type IntegrationRuntimeInternalChannelEncryptionMode string
-
-const (
-	// NotEncrypted ...
-	NotEncrypted IntegrationRuntimeInternalChannelEncryptionMode = "NotEncrypted"
-	// NotSet ...
-	NotSet IntegrationRuntimeInternalChannelEncryptionMode = "NotSet"
-	// SslEncrypted ...
-	SslEncrypted IntegrationRuntimeInternalChannelEncryptionMode = "SslEncrypted"
-)
-
-// PossibleIntegrationRuntimeInternalChannelEncryptionModeValues returns an array of possible values for the IntegrationRuntimeInternalChannelEncryptionMode const type.
-func PossibleIntegrationRuntimeInternalChannelEncryptionModeValues() []IntegrationRuntimeInternalChannelEncryptionMode {
-	return []IntegrationRuntimeInternalChannelEncryptionMode{NotEncrypted, NotSet, SslEncrypted}
-}
-
-// IntegrationRuntimeLicenseType enumerates the values for integration runtime license type.
-type IntegrationRuntimeLicenseType string
-
-const (
-	// BasePrice ...
-	BasePrice IntegrationRuntimeLicenseType = "BasePrice"
-	// LicenseIncluded ...
-	LicenseIncluded IntegrationRuntimeLicenseType = "LicenseIncluded"
-)
-
-// PossibleIntegrationRuntimeLicenseTypeValues returns an array of possible values for the IntegrationRuntimeLicenseType const type.
-func PossibleIntegrationRuntimeLicenseTypeValues() []IntegrationRuntimeLicenseType {
-	return []IntegrationRuntimeLicenseType{BasePrice, LicenseIncluded}
-}
-
-// IntegrationRuntimeSsisCatalogPricingTier enumerates the values for integration runtime ssis catalog pricing
-// tier.
-type IntegrationRuntimeSsisCatalogPricingTier string
-
-const (
-	// IntegrationRuntimeSsisCatalogPricingTierBasic ...
-	IntegrationRuntimeSsisCatalogPricingTierBasic IntegrationRuntimeSsisCatalogPricingTier = "Basic"
-	// IntegrationRuntimeSsisCatalogPricingTierPremium ...
-	IntegrationRuntimeSsisCatalogPricingTierPremium IntegrationRuntimeSsisCatalogPricingTier = "Premium"
-	// IntegrationRuntimeSsisCatalogPricingTierPremiumRS ...
-	IntegrationRuntimeSsisCatalogPricingTierPremiumRS IntegrationRuntimeSsisCatalogPricingTier = "PremiumRS"
-	// IntegrationRuntimeSsisCatalogPricingTierStandard ...
-	IntegrationRuntimeSsisCatalogPricingTierStandard IntegrationRuntimeSsisCatalogPricingTier = "Standard"
-)
-
-// PossibleIntegrationRuntimeSsisCatalogPricingTierValues returns an array of possible values for the IntegrationRuntimeSsisCatalogPricingTier const type.
-func PossibleIntegrationRuntimeSsisCatalogPricingTierValues() []IntegrationRuntimeSsisCatalogPricingTier {
-	return []IntegrationRuntimeSsisCatalogPricingTier{IntegrationRuntimeSsisCatalogPricingTierBasic, IntegrationRuntimeSsisCatalogPricingTierPremium, IntegrationRuntimeSsisCatalogPricingTierPremiumRS, IntegrationRuntimeSsisCatalogPricingTierStandard}
-}
-
-// IntegrationRuntimeState enumerates the values for integration runtime state.
-type IntegrationRuntimeState string
-
-const (
-	// IntegrationRuntimeStateAccessDenied ...
-	IntegrationRuntimeStateAccessDenied IntegrationRuntimeState = "AccessDenied"
-	// IntegrationRuntimeStateInitial ...
-	IntegrationRuntimeStateInitial IntegrationRuntimeState = "Initial"
-	// IntegrationRuntimeStateLimited ...
-	IntegrationRuntimeStateLimited IntegrationRuntimeState = "Limited"
-	// IntegrationRuntimeStateNeedRegistration ...
-	IntegrationRuntimeStateNeedRegistration IntegrationRuntimeState = "NeedRegistration"
-	// IntegrationRuntimeStateOffline ...
-	IntegrationRuntimeStateOffline IntegrationRuntimeState = "Offline"
-	// IntegrationRuntimeStateOnline ...
-	IntegrationRuntimeStateOnline IntegrationRuntimeState = "Online"
-	// IntegrationRuntimeStateStarted ...
-	IntegrationRuntimeStateStarted IntegrationRuntimeState = "Started"
-	// IntegrationRuntimeStateStarting ...
-	IntegrationRuntimeStateStarting IntegrationRuntimeState = "Starting"
-	// IntegrationRuntimeStateStopped ...
-	IntegrationRuntimeStateStopped IntegrationRuntimeState = "Stopped"
-	// IntegrationRuntimeStateStopping ...
-	IntegrationRuntimeStateStopping IntegrationRuntimeState = "Stopping"
-)
-
-// PossibleIntegrationRuntimeStateValues returns an array of possible values for the IntegrationRuntimeState const type.
-func PossibleIntegrationRuntimeStateValues() []IntegrationRuntimeState {
-	return []IntegrationRuntimeState{IntegrationRuntimeStateAccessDenied, IntegrationRuntimeStateInitial, IntegrationRuntimeStateLimited, IntegrationRuntimeStateNeedRegistration, IntegrationRuntimeStateOffline, IntegrationRuntimeStateOnline, IntegrationRuntimeStateStarted, IntegrationRuntimeStateStarting, IntegrationRuntimeStateStopped, IntegrationRuntimeStateStopping}
-}
-
-// IntegrationRuntimeType enumerates the values for integration runtime type.
-type IntegrationRuntimeType string
-
-const (
-	// Managed ...
-	Managed IntegrationRuntimeType = "Managed"
-	// SelfHosted ...
-	SelfHosted IntegrationRuntimeType = "SelfHosted"
-)
-
-// PossibleIntegrationRuntimeTypeValues returns an array of possible values for the IntegrationRuntimeType const type.
-func PossibleIntegrationRuntimeTypeValues() []IntegrationRuntimeType {
-	return []IntegrationRuntimeType{Managed, SelfHosted}
-}
-
-// IntegrationRuntimeUpdateResult enumerates the values for integration runtime update result.
-type IntegrationRuntimeUpdateResult string
-
-const (
-	// IntegrationRuntimeUpdateResultFail ...
-	IntegrationRuntimeUpdateResultFail IntegrationRuntimeUpdateResult = "Fail"
-	// IntegrationRuntimeUpdateResultNone ...
-	IntegrationRuntimeUpdateResultNone IntegrationRuntimeUpdateResult = "None"
-	// IntegrationRuntimeUpdateResultSucceed ...
-	IntegrationRuntimeUpdateResultSucceed IntegrationRuntimeUpdateResult = "Succeed"
-)
-
-// PossibleIntegrationRuntimeUpdateResultValues returns an array of possible values for the IntegrationRuntimeUpdateResult const type.
-func PossibleIntegrationRuntimeUpdateResultValues() []IntegrationRuntimeUpdateResult {
-	return []IntegrationRuntimeUpdateResult{IntegrationRuntimeUpdateResultFail, IntegrationRuntimeUpdateResultNone, IntegrationRuntimeUpdateResultSucceed}
-}
-
-// JSONWriteFilePattern enumerates the values for json write file pattern.
-type JSONWriteFilePattern string
-
-const (
-	// ArrayOfObjects ...
-	ArrayOfObjects JSONWriteFilePattern = "arrayOfObjects"
-	// SetOfObjects ...
-	SetOfObjects JSONWriteFilePattern = "setOfObjects"
-)
-
-// PossibleJSONWriteFilePatternValues returns an array of possible values for the JSONWriteFilePattern const type.
-func PossibleJSONWriteFilePatternValues() []JSONWriteFilePattern {
-	return []JSONWriteFilePattern{ArrayOfObjects, SetOfObjects}
-}
-
-// ManagedIntegrationRuntimeNodeStatus enumerates the values for managed integration runtime node status.
-type ManagedIntegrationRuntimeNodeStatus string
-
-const (
-	// Available ...
-	Available ManagedIntegrationRuntimeNodeStatus = "Available"
-	// Recycling ...
-	Recycling ManagedIntegrationRuntimeNodeStatus = "Recycling"
-	// Starting ...
-	Starting ManagedIntegrationRuntimeNodeStatus = "Starting"
-	// Unavailable ...
-	Unavailable ManagedIntegrationRuntimeNodeStatus = "Unavailable"
-)
-
-// PossibleManagedIntegrationRuntimeNodeStatusValues returns an array of possible values for the ManagedIntegrationRuntimeNodeStatus const type.
-func PossibleManagedIntegrationRuntimeNodeStatusValues() []ManagedIntegrationRuntimeNodeStatus {
-	return []ManagedIntegrationRuntimeNodeStatus{Available, Recycling, Starting, Unavailable}
-}
-
-// MongoDbAuthenticationType enumerates the values for mongo db authentication type.
-type MongoDbAuthenticationType string
-
-const (
-	// MongoDbAuthenticationTypeAnonymous ...
-	MongoDbAuthenticationTypeAnonymous MongoDbAuthenticationType = "Anonymous"
-	// MongoDbAuthenticationTypeBasic ...
-	MongoDbAuthenticationTypeBasic MongoDbAuthenticationType = "Basic"
-)
-
-// PossibleMongoDbAuthenticationTypeValues returns an array of possible values for the MongoDbAuthenticationType const type.
-func PossibleMongoDbAuthenticationTypeValues() []MongoDbAuthenticationType {
-	return []MongoDbAuthenticationType{MongoDbAuthenticationTypeAnonymous, MongoDbAuthenticationTypeBasic}
-}
-
-// NetezzaPartitionOption enumerates the values for netezza partition option.
-type NetezzaPartitionOption string
-
-const (
-	// NetezzaPartitionOptionDataSlice ...
-	NetezzaPartitionOptionDataSlice NetezzaPartitionOption = "DataSlice"
-	// NetezzaPartitionOptionDynamicRange ...
-	NetezzaPartitionOptionDynamicRange NetezzaPartitionOption = "DynamicRange"
-	// NetezzaPartitionOptionNone ...
-	NetezzaPartitionOptionNone NetezzaPartitionOption = "None"
-)
-
-// PossibleNetezzaPartitionOptionValues returns an array of possible values for the NetezzaPartitionOption const type.
-func PossibleNetezzaPartitionOptionValues() []NetezzaPartitionOption {
-	return []NetezzaPartitionOption{NetezzaPartitionOptionDataSlice, NetezzaPartitionOptionDynamicRange, NetezzaPartitionOptionNone}
-}
-
-// ODataAadServicePrincipalCredentialType enumerates the values for o data aad service principal credential
-// type.
-type ODataAadServicePrincipalCredentialType string
-
-const (
-	// ServicePrincipalCert ...
-	ServicePrincipalCert ODataAadServicePrincipalCredentialType = "ServicePrincipalCert"
-	// ServicePrincipalKey ...
-	ServicePrincipalKey ODataAadServicePrincipalCredentialType = "ServicePrincipalKey"
-)
-
-// PossibleODataAadServicePrincipalCredentialTypeValues returns an array of possible values for the ODataAadServicePrincipalCredentialType const type.
-func PossibleODataAadServicePrincipalCredentialTypeValues() []ODataAadServicePrincipalCredentialType {
-	return []ODataAadServicePrincipalCredentialType{ServicePrincipalCert, ServicePrincipalKey}
-}
-
-// ODataAuthenticationType enumerates the values for o data authentication type.
-type ODataAuthenticationType string
-
-const (
-	// ODataAuthenticationTypeAadServicePrincipal ...
-	ODataAuthenticationTypeAadServicePrincipal ODataAuthenticationType = "AadServicePrincipal"
-	// ODataAuthenticationTypeAnonymous ...
-	ODataAuthenticationTypeAnonymous ODataAuthenticationType = "Anonymous"
-	// ODataAuthenticationTypeBasic ...
-	ODataAuthenticationTypeBasic ODataAuthenticationType = "Basic"
-	// ODataAuthenticationTypeManagedServiceIdentity ...
-	ODataAuthenticationTypeManagedServiceIdentity ODataAuthenticationType = "ManagedServiceIdentity"
-	// ODataAuthenticationTypeWindows ...
-	ODataAuthenticationTypeWindows ODataAuthenticationType = "Windows"
-)
-
-// PossibleODataAuthenticationTypeValues returns an array of possible values for the ODataAuthenticationType const type.
-func PossibleODataAuthenticationTypeValues() []ODataAuthenticationType {
-	return []ODataAuthenticationType{ODataAuthenticationTypeAadServicePrincipal, ODataAuthenticationTypeAnonymous, ODataAuthenticationTypeBasic, ODataAuthenticationTypeManagedServiceIdentity, ODataAuthenticationTypeWindows}
-}
-
-// OraclePartitionOption enumerates the values for oracle partition option.
-type OraclePartitionOption string
-
-const (
-	// OraclePartitionOptionDynamicRange ...
-	OraclePartitionOptionDynamicRange OraclePartitionOption = "DynamicRange"
-	// OraclePartitionOptionNone ...
-	OraclePartitionOptionNone OraclePartitionOption = "None"
-	// OraclePartitionOptionPhysicalPartitionsOfTable ...
-	OraclePartitionOptionPhysicalPartitionsOfTable OraclePartitionOption = "PhysicalPartitionsOfTable"
-)
-
-// PossibleOraclePartitionOptionValues returns an array of possible values for the OraclePartitionOption const type.
-func PossibleOraclePartitionOptionValues() []OraclePartitionOption {
-	return []OraclePartitionOption{OraclePartitionOptionDynamicRange, OraclePartitionOptionNone, OraclePartitionOptionPhysicalPartitionsOfTable}
-}
-
-// OrcCompressionCodec enumerates the values for orc compression codec.
-type OrcCompressionCodec string
-
-const (
-	// OrcCompressionCodecNone ...
-	OrcCompressionCodecNone OrcCompressionCodec = "none"
-	// OrcCompressionCodecSnappy ...
-	OrcCompressionCodecSnappy OrcCompressionCodec = "snappy"
-	// OrcCompressionCodecZlib ...
-	OrcCompressionCodecZlib OrcCompressionCodec = "zlib"
-)
-
-// PossibleOrcCompressionCodecValues returns an array of possible values for the OrcCompressionCodec const type.
-func PossibleOrcCompressionCodecValues() []OrcCompressionCodec {
-	return []OrcCompressionCodec{OrcCompressionCodecNone, OrcCompressionCodecSnappy, OrcCompressionCodecZlib}
-}
-
-// ParameterType enumerates the values for parameter type.
-type ParameterType string
-
-const (
-	// ParameterTypeArray ...
-	ParameterTypeArray ParameterType = "Array"
-	// ParameterTypeBool ...
-	ParameterTypeBool ParameterType = "Bool"
-	// ParameterTypeFloat ...
-	ParameterTypeFloat ParameterType = "Float"
-	// ParameterTypeInt ...
-	ParameterTypeInt ParameterType = "Int"
-	// ParameterTypeObject ...
-	ParameterTypeObject ParameterType = "Object"
-	// ParameterTypeSecureString ...
-	ParameterTypeSecureString ParameterType = "SecureString"
-	// ParameterTypeString ...
-	ParameterTypeString ParameterType = "String"
-)
-
-// PossibleParameterTypeValues returns an array of possible values for the ParameterType const type.
-func PossibleParameterTypeValues() []ParameterType {
-	return []ParameterType{ParameterTypeArray, ParameterTypeBool, ParameterTypeFloat, ParameterTypeInt, ParameterTypeObject, ParameterTypeSecureString, ParameterTypeString}
-}
-
-// PhoenixAuthenticationType enumerates the values for phoenix authentication type.
-type PhoenixAuthenticationType string
-
-const (
-	// PhoenixAuthenticationTypeAnonymous ...
-	PhoenixAuthenticationTypeAnonymous PhoenixAuthenticationType = "Anonymous"
-	// PhoenixAuthenticationTypeUsernameAndPassword ...
-	PhoenixAuthenticationTypeUsernameAndPassword PhoenixAuthenticationType = "UsernameAndPassword"
-	// PhoenixAuthenticationTypeWindowsAzureHDInsightService ...
-	PhoenixAuthenticationTypeWindowsAzureHDInsightService PhoenixAuthenticationType = "WindowsAzureHDInsightService"
-)
-
-// PossiblePhoenixAuthenticationTypeValues returns an array of possible values for the PhoenixAuthenticationType const type.
-func PossiblePhoenixAuthenticationTypeValues() []PhoenixAuthenticationType {
-	return []PhoenixAuthenticationType{PhoenixAuthenticationTypeAnonymous, PhoenixAuthenticationTypeUsernameAndPassword, PhoenixAuthenticationTypeWindowsAzureHDInsightService}
-}
-
-// PolybaseSettingsRejectType enumerates the values for polybase settings reject type.
-type PolybaseSettingsRejectType string
-
-const (
-	// Percentage ...
-	Percentage PolybaseSettingsRejectType = "percentage"
-	// Value ...
-	Value PolybaseSettingsRejectType = "value"
-)
-
-// PossiblePolybaseSettingsRejectTypeValues returns an array of possible values for the PolybaseSettingsRejectType const type.
-func PossiblePolybaseSettingsRejectTypeValues() []PolybaseSettingsRejectType {
-	return []PolybaseSettingsRejectType{Percentage, Value}
-}
-
-// PrestoAuthenticationType enumerates the values for presto authentication type.
-type PrestoAuthenticationType string
-
-const (
-	// PrestoAuthenticationTypeAnonymous ...
-	PrestoAuthenticationTypeAnonymous PrestoAuthenticationType = "Anonymous"
-	// PrestoAuthenticationTypeLDAP ...
-	PrestoAuthenticationTypeLDAP PrestoAuthenticationType = "LDAP"
-)
-
-// PossiblePrestoAuthenticationTypeValues returns an array of possible values for the PrestoAuthenticationType const type.
-func PossiblePrestoAuthenticationTypeValues() []PrestoAuthenticationType {
-	return []PrestoAuthenticationType{PrestoAuthenticationTypeAnonymous, PrestoAuthenticationTypeLDAP}
-}
-
-// RecurrenceFrequency enumerates the values for recurrence frequency.
-type RecurrenceFrequency string
-
-const (
-	// Day ...
-	Day RecurrenceFrequency = "Day"
-	// Hour ...
-	Hour RecurrenceFrequency = "Hour"
-	// Minute ...
-	Minute RecurrenceFrequency = "Minute"
-	// Month ...
-	Month RecurrenceFrequency = "Month"
-	// NotSpecified ...
-	NotSpecified RecurrenceFrequency = "NotSpecified"
-	// Week ...
-	Week RecurrenceFrequency = "Week"
-	// Year ...
-	Year RecurrenceFrequency = "Year"
-)
-
-// PossibleRecurrenceFrequencyValues returns an array of possible values for the RecurrenceFrequency const type.
-func PossibleRecurrenceFrequencyValues() []RecurrenceFrequency {
-	return []RecurrenceFrequency{Day, Hour, Minute, Month, NotSpecified, Week, Year}
-}
-
-// RestServiceAuthenticationType enumerates the values for rest service authentication type.
-type RestServiceAuthenticationType string
-
-const (
-	// RestServiceAuthenticationTypeAadServicePrincipal ...
-	RestServiceAuthenticationTypeAadServicePrincipal RestServiceAuthenticationType = "AadServicePrincipal"
-	// RestServiceAuthenticationTypeAnonymous ...
-	RestServiceAuthenticationTypeAnonymous RestServiceAuthenticationType = "Anonymous"
-	// RestServiceAuthenticationTypeBasic ...
-	RestServiceAuthenticationTypeBasic RestServiceAuthenticationType = "Basic"
-	// RestServiceAuthenticationTypeManagedServiceIdentity ...
-	RestServiceAuthenticationTypeManagedServiceIdentity RestServiceAuthenticationType = "ManagedServiceIdentity"
-)
-
-// PossibleRestServiceAuthenticationTypeValues returns an array of possible values for the RestServiceAuthenticationType const type.
-func PossibleRestServiceAuthenticationTypeValues() []RestServiceAuthenticationType {
-	return []RestServiceAuthenticationType{RestServiceAuthenticationTypeAadServicePrincipal, RestServiceAuthenticationTypeAnonymous, RestServiceAuthenticationTypeBasic, RestServiceAuthenticationTypeManagedServiceIdentity}
-}
-
-// RunQueryFilterOperand enumerates the values for run query filter operand.
-type RunQueryFilterOperand string
-
-const (
-	// ActivityName ...
-	ActivityName RunQueryFilterOperand = "ActivityName"
-	// ActivityRunEnd ...
-	ActivityRunEnd RunQueryFilterOperand = "ActivityRunEnd"
-	// ActivityRunStart ...
-	ActivityRunStart RunQueryFilterOperand = "ActivityRunStart"
-	// ActivityType ...
-	ActivityType RunQueryFilterOperand = "ActivityType"
-	// LatestOnly ...
-	LatestOnly RunQueryFilterOperand = "LatestOnly"
-	// PipelineName ...
-	PipelineName RunQueryFilterOperand = "PipelineName"
-	// RunEnd ...
-	RunEnd RunQueryFilterOperand = "RunEnd"
-	// RunGroupID ...
-	RunGroupID RunQueryFilterOperand = "RunGroupId"
-	// RunStart ...
-	RunStart RunQueryFilterOperand = "RunStart"
-	// Status ...
-	Status RunQueryFilterOperand = "Status"
-	// TriggerName ...
-	TriggerName RunQueryFilterOperand = "TriggerName"
-	// TriggerRunTimestamp ...
-	TriggerRunTimestamp RunQueryFilterOperand = "TriggerRunTimestamp"
-)
-
-// PossibleRunQueryFilterOperandValues returns an array of possible values for the RunQueryFilterOperand const type.
-func PossibleRunQueryFilterOperandValues() []RunQueryFilterOperand {
-	return []RunQueryFilterOperand{ActivityName, ActivityRunEnd, ActivityRunStart, ActivityType, LatestOnly, PipelineName, RunEnd, RunGroupID, RunStart, Status, TriggerName, TriggerRunTimestamp}
-}
-
-// RunQueryFilterOperator enumerates the values for run query filter operator.
-type RunQueryFilterOperator string
-
-const (
-	// Equals ...
-	Equals RunQueryFilterOperator = "Equals"
-	// In ...
-	In RunQueryFilterOperator = "In"
-	// NotEquals ...
-	NotEquals RunQueryFilterOperator = "NotEquals"
-	// NotIn ...
-	NotIn RunQueryFilterOperator = "NotIn"
-)
-
-// PossibleRunQueryFilterOperatorValues returns an array of possible values for the RunQueryFilterOperator const type.
-func PossibleRunQueryFilterOperatorValues() []RunQueryFilterOperator {
-	return []RunQueryFilterOperator{Equals, In, NotEquals, NotIn}
-}
-
-// RunQueryOrder enumerates the values for run query order.
-type RunQueryOrder string
-
-const (
-	// ASC ...
-	ASC RunQueryOrder = "ASC"
-	// DESC ...
-	DESC RunQueryOrder = "DESC"
-)
-
-// PossibleRunQueryOrderValues returns an array of possible values for the RunQueryOrder const type.
-func PossibleRunQueryOrderValues() []RunQueryOrder {
-	return []RunQueryOrder{ASC, DESC}
-}
-
-// RunQueryOrderByField enumerates the values for run query order by field.
-type RunQueryOrderByField string
-
-const (
-	// RunQueryOrderByFieldActivityName ...
-	RunQueryOrderByFieldActivityName RunQueryOrderByField = "ActivityName"
-	// RunQueryOrderByFieldActivityRunEnd ...
-	RunQueryOrderByFieldActivityRunEnd RunQueryOrderByField = "ActivityRunEnd"
-	// RunQueryOrderByFieldActivityRunStart ...
-	RunQueryOrderByFieldActivityRunStart RunQueryOrderByField = "ActivityRunStart"
-	// RunQueryOrderByFieldPipelineName ...
-	RunQueryOrderByFieldPipelineName RunQueryOrderByField = "PipelineName"
-	// RunQueryOrderByFieldRunEnd ...
-	RunQueryOrderByFieldRunEnd RunQueryOrderByField = "RunEnd"
-	// RunQueryOrderByFieldRunStart ...
-	RunQueryOrderByFieldRunStart RunQueryOrderByField = "RunStart"
-	// RunQueryOrderByFieldStatus ...
-	RunQueryOrderByFieldStatus RunQueryOrderByField = "Status"
-	// RunQueryOrderByFieldTriggerName ...
-	RunQueryOrderByFieldTriggerName RunQueryOrderByField = "TriggerName"
-	// RunQueryOrderByFieldTriggerRunTimestamp ...
-	RunQueryOrderByFieldTriggerRunTimestamp RunQueryOrderByField = "TriggerRunTimestamp"
-)
-
-// PossibleRunQueryOrderByFieldValues returns an array of possible values for the RunQueryOrderByField const type.
-func PossibleRunQueryOrderByFieldValues() []RunQueryOrderByField {
-	return []RunQueryOrderByField{RunQueryOrderByFieldActivityName, RunQueryOrderByFieldActivityRunEnd, RunQueryOrderByFieldActivityRunStart, RunQueryOrderByFieldPipelineName, RunQueryOrderByFieldRunEnd, RunQueryOrderByFieldRunStart, RunQueryOrderByFieldStatus, RunQueryOrderByFieldTriggerName, RunQueryOrderByFieldTriggerRunTimestamp}
-}
-
-// SalesforceSinkWriteBehavior enumerates the values for salesforce sink write behavior.
-type SalesforceSinkWriteBehavior string
-
-const (
-	// Insert ...
-	Insert SalesforceSinkWriteBehavior = "Insert"
-	// Upsert ...
-	Upsert SalesforceSinkWriteBehavior = "Upsert"
-)
-
-// PossibleSalesforceSinkWriteBehaviorValues returns an array of possible values for the SalesforceSinkWriteBehavior const type.
-func PossibleSalesforceSinkWriteBehaviorValues() []SalesforceSinkWriteBehavior {
-	return []SalesforceSinkWriteBehavior{Insert, Upsert}
-}
-
-// SalesforceSourceReadBehavior enumerates the values for salesforce source read behavior.
-type SalesforceSourceReadBehavior string
-
-const (
-	// Query ...
-	Query SalesforceSourceReadBehavior = "Query"
-	// QueryAll ...
-	QueryAll SalesforceSourceReadBehavior = "QueryAll"
-)
-
-// PossibleSalesforceSourceReadBehaviorValues returns an array of possible values for the SalesforceSourceReadBehavior const type.
-func PossibleSalesforceSourceReadBehaviorValues() []SalesforceSourceReadBehavior {
-	return []SalesforceSourceReadBehavior{Query, QueryAll}
-}
-
-// SapCloudForCustomerSinkWriteBehavior enumerates the values for sap cloud for customer sink write behavior.
-type SapCloudForCustomerSinkWriteBehavior string
-
-const (
-	// SapCloudForCustomerSinkWriteBehaviorInsert ...
-	SapCloudForCustomerSinkWriteBehaviorInsert SapCloudForCustomerSinkWriteBehavior = "Insert"
-	// SapCloudForCustomerSinkWriteBehaviorUpdate ...
-	SapCloudForCustomerSinkWriteBehaviorUpdate SapCloudForCustomerSinkWriteBehavior = "Update"
-)
-
-// PossibleSapCloudForCustomerSinkWriteBehaviorValues returns an array of possible values for the SapCloudForCustomerSinkWriteBehavior const type.
-func PossibleSapCloudForCustomerSinkWriteBehaviorValues() []SapCloudForCustomerSinkWriteBehavior {
-	return []SapCloudForCustomerSinkWriteBehavior{SapCloudForCustomerSinkWriteBehaviorInsert, SapCloudForCustomerSinkWriteBehaviorUpdate}
-}
-
-// SapHanaAuthenticationType enumerates the values for sap hana authentication type.
-type SapHanaAuthenticationType string
-
-const (
-	// SapHanaAuthenticationTypeBasic ...
-	SapHanaAuthenticationTypeBasic SapHanaAuthenticationType = "Basic"
-	// SapHanaAuthenticationTypeWindows ...
-	SapHanaAuthenticationTypeWindows SapHanaAuthenticationType = "Windows"
-)
-
-// PossibleSapHanaAuthenticationTypeValues returns an array of possible values for the SapHanaAuthenticationType const type.
-func PossibleSapHanaAuthenticationTypeValues() []SapHanaAuthenticationType {
-	return []SapHanaAuthenticationType{SapHanaAuthenticationTypeBasic, SapHanaAuthenticationTypeWindows}
-}
-
-// SapHanaPartitionOption enumerates the values for sap hana partition option.
-type SapHanaPartitionOption string
-
-const (
-	// SapHanaPartitionOptionNone ...
-	SapHanaPartitionOptionNone SapHanaPartitionOption = "None"
-	// SapHanaPartitionOptionPhysicalPartitionsOfTable ...
-	SapHanaPartitionOptionPhysicalPartitionsOfTable SapHanaPartitionOption = "PhysicalPartitionsOfTable"
-	// SapHanaPartitionOptionSapHanaDynamicRange ...
-	SapHanaPartitionOptionSapHanaDynamicRange SapHanaPartitionOption = "SapHanaDynamicRange"
-)
-
-// PossibleSapHanaPartitionOptionValues returns an array of possible values for the SapHanaPartitionOption const type.
-func PossibleSapHanaPartitionOptionValues() []SapHanaPartitionOption {
-	return []SapHanaPartitionOption{SapHanaPartitionOptionNone, SapHanaPartitionOptionPhysicalPartitionsOfTable, SapHanaPartitionOptionSapHanaDynamicRange}
-}
-
-// SapTablePartitionOption enumerates the values for sap table partition option.
-type SapTablePartitionOption string
-
-const (
-	// SapTablePartitionOptionNone ...
-	SapTablePartitionOptionNone SapTablePartitionOption = "None"
-	// SapTablePartitionOptionPartitionOnCalendarDate ...
-	SapTablePartitionOptionPartitionOnCalendarDate SapTablePartitionOption = "PartitionOnCalendarDate"
-	// SapTablePartitionOptionPartitionOnCalendarMonth ...
-	SapTablePartitionOptionPartitionOnCalendarMonth SapTablePartitionOption = "PartitionOnCalendarMonth"
-	// SapTablePartitionOptionPartitionOnCalendarYear ...
-	SapTablePartitionOptionPartitionOnCalendarYear SapTablePartitionOption = "PartitionOnCalendarYear"
-	// SapTablePartitionOptionPartitionOnInt ...
-	SapTablePartitionOptionPartitionOnInt SapTablePartitionOption = "PartitionOnInt"
-	// SapTablePartitionOptionPartitionOnTime ...
-	SapTablePartitionOptionPartitionOnTime SapTablePartitionOption = "PartitionOnTime"
-)
-
-// PossibleSapTablePartitionOptionValues returns an array of possible values for the SapTablePartitionOption const type.
-func PossibleSapTablePartitionOptionValues() []SapTablePartitionOption {
-	return []SapTablePartitionOption{SapTablePartitionOptionNone, SapTablePartitionOptionPartitionOnCalendarDate, SapTablePartitionOptionPartitionOnCalendarMonth, SapTablePartitionOptionPartitionOnCalendarYear, SapTablePartitionOptionPartitionOnInt, SapTablePartitionOptionPartitionOnTime}
-}
-
-// SelfHostedIntegrationRuntimeNodeStatus enumerates the values for self hosted integration runtime node
-// status.
-type SelfHostedIntegrationRuntimeNodeStatus string
-
-const (
-	// SelfHostedIntegrationRuntimeNodeStatusInitializeFailed ...
-	SelfHostedIntegrationRuntimeNodeStatusInitializeFailed SelfHostedIntegrationRuntimeNodeStatus = "InitializeFailed"
-	// SelfHostedIntegrationRuntimeNodeStatusInitializing ...
-	SelfHostedIntegrationRuntimeNodeStatusInitializing SelfHostedIntegrationRuntimeNodeStatus = "Initializing"
-	// SelfHostedIntegrationRuntimeNodeStatusLimited ...
-	SelfHostedIntegrationRuntimeNodeStatusLimited SelfHostedIntegrationRuntimeNodeStatus = "Limited"
-	// SelfHostedIntegrationRuntimeNodeStatusNeedRegistration ...
-	SelfHostedIntegrationRuntimeNodeStatusNeedRegistration SelfHostedIntegrationRuntimeNodeStatus = "NeedRegistration"
-	// SelfHostedIntegrationRuntimeNodeStatusOffline ...
-	SelfHostedIntegrationRuntimeNodeStatusOffline SelfHostedIntegrationRuntimeNodeStatus = "Offline"
-	// SelfHostedIntegrationRuntimeNodeStatusOnline ...
-	SelfHostedIntegrationRuntimeNodeStatusOnline SelfHostedIntegrationRuntimeNodeStatus = "Online"
-	// SelfHostedIntegrationRuntimeNodeStatusUpgrading ...
-	SelfHostedIntegrationRuntimeNodeStatusUpgrading SelfHostedIntegrationRuntimeNodeStatus = "Upgrading"
-)
-
-// PossibleSelfHostedIntegrationRuntimeNodeStatusValues returns an array of possible values for the SelfHostedIntegrationRuntimeNodeStatus const type.
-func PossibleSelfHostedIntegrationRuntimeNodeStatusValues() []SelfHostedIntegrationRuntimeNodeStatus {
-	return []SelfHostedIntegrationRuntimeNodeStatus{SelfHostedIntegrationRuntimeNodeStatusInitializeFailed, SelfHostedIntegrationRuntimeNodeStatusInitializing, SelfHostedIntegrationRuntimeNodeStatusLimited, SelfHostedIntegrationRuntimeNodeStatusNeedRegistration, SelfHostedIntegrationRuntimeNodeStatusOffline, SelfHostedIntegrationRuntimeNodeStatusOnline, SelfHostedIntegrationRuntimeNodeStatusUpgrading}
-}
-
-// ServiceNowAuthenticationType enumerates the values for service now authentication type.
-type ServiceNowAuthenticationType string
-
-const (
-	// ServiceNowAuthenticationTypeBasic ...
-	ServiceNowAuthenticationTypeBasic ServiceNowAuthenticationType = "Basic"
-	// ServiceNowAuthenticationTypeOAuth2 ...
-	ServiceNowAuthenticationTypeOAuth2 ServiceNowAuthenticationType = "OAuth2"
-)
-
-// PossibleServiceNowAuthenticationTypeValues returns an array of possible values for the ServiceNowAuthenticationType const type.
-func PossibleServiceNowAuthenticationTypeValues() []ServiceNowAuthenticationType {
-	return []ServiceNowAuthenticationType{ServiceNowAuthenticationTypeBasic, ServiceNowAuthenticationTypeOAuth2}
-}
-
-// SftpAuthenticationType enumerates the values for sftp authentication type.
-type SftpAuthenticationType string
-
-const (
-	// SftpAuthenticationTypeBasic ...
-	SftpAuthenticationTypeBasic SftpAuthenticationType = "Basic"
-	// SftpAuthenticationTypeSSHPublicKey ...
-	SftpAuthenticationTypeSSHPublicKey SftpAuthenticationType = "SshPublicKey"
-)
-
-// PossibleSftpAuthenticationTypeValues returns an array of possible values for the SftpAuthenticationType const type.
-func PossibleSftpAuthenticationTypeValues() []SftpAuthenticationType {
-	return []SftpAuthenticationType{SftpAuthenticationTypeBasic, SftpAuthenticationTypeSSHPublicKey}
-}
-
-// SparkAuthenticationType enumerates the values for spark authentication type.
-type SparkAuthenticationType string
-
-const (
-	// SparkAuthenticationTypeAnonymous ...
-	SparkAuthenticationTypeAnonymous SparkAuthenticationType = "Anonymous"
-	// SparkAuthenticationTypeUsername ...
-	SparkAuthenticationTypeUsername SparkAuthenticationType = "Username"
-	// SparkAuthenticationTypeUsernameAndPassword ...
-	SparkAuthenticationTypeUsernameAndPassword SparkAuthenticationType = "UsernameAndPassword"
-	// SparkAuthenticationTypeWindowsAzureHDInsightService ...
-	SparkAuthenticationTypeWindowsAzureHDInsightService SparkAuthenticationType = "WindowsAzureHDInsightService"
-)
-
-// PossibleSparkAuthenticationTypeValues returns an array of possible values for the SparkAuthenticationType const type.
-func PossibleSparkAuthenticationTypeValues() []SparkAuthenticationType {
-	return []SparkAuthenticationType{SparkAuthenticationTypeAnonymous, SparkAuthenticationTypeUsername, SparkAuthenticationTypeUsernameAndPassword, SparkAuthenticationTypeWindowsAzureHDInsightService}
-}
-
-// SparkServerType enumerates the values for spark server type.
-type SparkServerType string
-
-const (
-	// SharkServer ...
-	SharkServer SparkServerType = "SharkServer"
-	// SharkServer2 ...
-	SharkServer2 SparkServerType = "SharkServer2"
-	// SparkThriftServer ...
-	SparkThriftServer SparkServerType = "SparkThriftServer"
-)
-
-// PossibleSparkServerTypeValues returns an array of possible values for the SparkServerType const type.
-func PossibleSparkServerTypeValues() []SparkServerType {
-	return []SparkServerType{SharkServer, SharkServer2, SparkThriftServer}
-}
-
-// SparkThriftTransportProtocol enumerates the values for spark thrift transport protocol.
-type SparkThriftTransportProtocol string
-
-const (
-	// SparkThriftTransportProtocolBinary ...
-	SparkThriftTransportProtocolBinary SparkThriftTransportProtocol = "Binary"
-	// SparkThriftTransportProtocolHTTP ...
-	SparkThriftTransportProtocolHTTP SparkThriftTransportProtocol = "HTTP "
-	// SparkThriftTransportProtocolSASL ...
-	SparkThriftTransportProtocolSASL SparkThriftTransportProtocol = "SASL"
-)
-
-// PossibleSparkThriftTransportProtocolValues returns an array of possible values for the SparkThriftTransportProtocol const type.
-func PossibleSparkThriftTransportProtocolValues() []SparkThriftTransportProtocol {
-	return []SparkThriftTransportProtocol{SparkThriftTransportProtocolBinary, SparkThriftTransportProtocolHTTP, SparkThriftTransportProtocolSASL}
-}
-
-// SQLPartitionOption enumerates the values for sql partition option.
-type SQLPartitionOption string
-
-const (
-	// SQLPartitionOptionDynamicRange ...
-	SQLPartitionOptionDynamicRange SQLPartitionOption = "DynamicRange"
-	// SQLPartitionOptionNone ...
-	SQLPartitionOptionNone SQLPartitionOption = "None"
-	// SQLPartitionOptionPhysicalPartitionsOfTable ...
-	SQLPartitionOptionPhysicalPartitionsOfTable SQLPartitionOption = "PhysicalPartitionsOfTable"
-)
-
-// PossibleSQLPartitionOptionValues returns an array of possible values for the SQLPartitionOption const type.
-func PossibleSQLPartitionOptionValues() []SQLPartitionOption {
-	return []SQLPartitionOption{SQLPartitionOptionDynamicRange, SQLPartitionOptionNone, SQLPartitionOptionPhysicalPartitionsOfTable}
-}
-
-// SsisObjectMetadataType enumerates the values for ssis object metadata type.
-type SsisObjectMetadataType string
-
-const (
-	// Environment ...
-	Environment SsisObjectMetadataType = "Environment"
-	// Folder ...
-	Folder SsisObjectMetadataType = "Folder"
-	// Package ...
-	Package SsisObjectMetadataType = "Package"
-	// Project ...
-	Project SsisObjectMetadataType = "Project"
-)
-
-// PossibleSsisObjectMetadataTypeValues returns an array of possible values for the SsisObjectMetadataType const type.
-func PossibleSsisObjectMetadataTypeValues() []SsisObjectMetadataType {
-	return []SsisObjectMetadataType{Environment, Folder, Package, Project}
-}
-
-// SsisPackageLocationType enumerates the values for ssis package location type.
-type SsisPackageLocationType string
-
-const (
-	// SsisPackageLocationTypeFile ...
-	SsisPackageLocationTypeFile SsisPackageLocationType = "File"
-	// SsisPackageLocationTypeInlinePackage ...
-	SsisPackageLocationTypeInlinePackage SsisPackageLocationType = "InlinePackage"
-	// SsisPackageLocationTypePackageStore ...
-	SsisPackageLocationTypePackageStore SsisPackageLocationType = "PackageStore"
-	// SsisPackageLocationTypeSSISDB ...
-	SsisPackageLocationTypeSSISDB SsisPackageLocationType = "SSISDB"
-)
-
-// PossibleSsisPackageLocationTypeValues returns an array of possible values for the SsisPackageLocationType const type.
-func PossibleSsisPackageLocationTypeValues() []SsisPackageLocationType {
-	return []SsisPackageLocationType{SsisPackageLocationTypeFile, SsisPackageLocationTypeInlinePackage, SsisPackageLocationTypePackageStore, SsisPackageLocationTypeSSISDB}
-}
-
-// StoredProcedureParameterType enumerates the values for stored procedure parameter type.
-type StoredProcedureParameterType string
-
-const (
-	// StoredProcedureParameterTypeBoolean ...
-	StoredProcedureParameterTypeBoolean StoredProcedureParameterType = "Boolean"
-	// StoredProcedureParameterTypeDate ...
-	StoredProcedureParameterTypeDate StoredProcedureParameterType = "Date"
-	// StoredProcedureParameterTypeDecimal ...
-	StoredProcedureParameterTypeDecimal StoredProcedureParameterType = "Decimal"
-	// StoredProcedureParameterTypeGUID ...
-	StoredProcedureParameterTypeGUID StoredProcedureParameterType = "Guid"
-	// StoredProcedureParameterTypeInt ...
-	StoredProcedureParameterTypeInt StoredProcedureParameterType = "Int"
-	// StoredProcedureParameterTypeInt64 ...
-	StoredProcedureParameterTypeInt64 StoredProcedureParameterType = "Int64"
-	// StoredProcedureParameterTypeString ...
-	StoredProcedureParameterTypeString StoredProcedureParameterType = "String"
-)
-
-// PossibleStoredProcedureParameterTypeValues returns an array of possible values for the StoredProcedureParameterType const type.
-func PossibleStoredProcedureParameterTypeValues() []StoredProcedureParameterType {
-	return []StoredProcedureParameterType{StoredProcedureParameterTypeBoolean, StoredProcedureParameterTypeDate, StoredProcedureParameterTypeDecimal, StoredProcedureParameterTypeGUID, StoredProcedureParameterTypeInt, StoredProcedureParameterTypeInt64, StoredProcedureParameterTypeString}
-}
-
-// SybaseAuthenticationType enumerates the values for sybase authentication type.
-type SybaseAuthenticationType string
-
-const (
-	// SybaseAuthenticationTypeBasic ...
-	SybaseAuthenticationTypeBasic SybaseAuthenticationType = "Basic"
-	// SybaseAuthenticationTypeWindows ...
-	SybaseAuthenticationTypeWindows SybaseAuthenticationType = "Windows"
-)
-
-// PossibleSybaseAuthenticationTypeValues returns an array of possible values for the SybaseAuthenticationType const type.
-func PossibleSybaseAuthenticationTypeValues() []SybaseAuthenticationType {
-	return []SybaseAuthenticationType{SybaseAuthenticationTypeBasic, SybaseAuthenticationTypeWindows}
-}
-
-// TeradataAuthenticationType enumerates the values for teradata authentication type.
-type TeradataAuthenticationType string
-
-const (
-	// TeradataAuthenticationTypeBasic ...
-	TeradataAuthenticationTypeBasic TeradataAuthenticationType = "Basic"
-	// TeradataAuthenticationTypeWindows ...
-	TeradataAuthenticationTypeWindows TeradataAuthenticationType = "Windows"
-)
-
-// PossibleTeradataAuthenticationTypeValues returns an array of possible values for the TeradataAuthenticationType const type.
-func PossibleTeradataAuthenticationTypeValues() []TeradataAuthenticationType {
-	return []TeradataAuthenticationType{TeradataAuthenticationTypeBasic, TeradataAuthenticationTypeWindows}
-}
-
-// TeradataPartitionOption enumerates the values for teradata partition option.
-type TeradataPartitionOption string
-
-const (
-	// TeradataPartitionOptionDynamicRange ...
-	TeradataPartitionOptionDynamicRange TeradataPartitionOption = "DynamicRange"
-	// TeradataPartitionOptionHash ...
-	TeradataPartitionOptionHash TeradataPartitionOption = "Hash"
-	// TeradataPartitionOptionNone ...
-	TeradataPartitionOptionNone TeradataPartitionOption = "None"
-)
-
-// PossibleTeradataPartitionOptionValues returns an array of possible values for the TeradataPartitionOption const type.
-func PossibleTeradataPartitionOptionValues() []TeradataPartitionOption {
-	return []TeradataPartitionOption{TeradataPartitionOptionDynamicRange, TeradataPartitionOptionHash, TeradataPartitionOptionNone}
-}
-
-// TriggerRunStatus enumerates the values for trigger run status.
-type TriggerRunStatus string
-
-const (
-	// TriggerRunStatusFailed ...
-	TriggerRunStatusFailed TriggerRunStatus = "Failed"
-	// TriggerRunStatusInprogress ...
-	TriggerRunStatusInprogress TriggerRunStatus = "Inprogress"
-	// TriggerRunStatusSucceeded ...
-	TriggerRunStatusSucceeded TriggerRunStatus = "Succeeded"
-)
-
-// PossibleTriggerRunStatusValues returns an array of possible values for the TriggerRunStatus const type.
-func PossibleTriggerRunStatusValues() []TriggerRunStatus {
-	return []TriggerRunStatus{TriggerRunStatusFailed, TriggerRunStatusInprogress, TriggerRunStatusSucceeded}
-}
-
-// TriggerRuntimeState enumerates the values for trigger runtime state.
-type TriggerRuntimeState string
-
-const (
-	// TriggerRuntimeStateDisabled ...
-	TriggerRuntimeStateDisabled TriggerRuntimeState = "Disabled"
-	// TriggerRuntimeStateStarted ...
-	TriggerRuntimeStateStarted TriggerRuntimeState = "Started"
-	// TriggerRuntimeStateStopped ...
-	TriggerRuntimeStateStopped TriggerRuntimeState = "Stopped"
-)
-
-// PossibleTriggerRuntimeStateValues returns an array of possible values for the TriggerRuntimeState const type.
-func PossibleTriggerRuntimeStateValues() []TriggerRuntimeState {
-	return []TriggerRuntimeState{TriggerRuntimeStateDisabled, TriggerRuntimeStateStarted, TriggerRuntimeStateStopped}
-}
-
-// TumblingWindowFrequency enumerates the values for tumbling window frequency.
-type TumblingWindowFrequency string
-
-const (
-	// TumblingWindowFrequencyHour ...
-	TumblingWindowFrequencyHour TumblingWindowFrequency = "Hour"
-	// TumblingWindowFrequencyMinute ...
-	TumblingWindowFrequencyMinute TumblingWindowFrequency = "Minute"
-)
-
-// PossibleTumblingWindowFrequencyValues returns an array of possible values for the TumblingWindowFrequency const type.
-func PossibleTumblingWindowFrequencyValues() []TumblingWindowFrequency {
-	return []TumblingWindowFrequency{TumblingWindowFrequencyHour, TumblingWindowFrequencyMinute}
-}
-
-// Type enumerates the values for type.
-type Type string
-
-const (
-	// TypeAzureKeyVaultSecret ...
-	TypeAzureKeyVaultSecret Type = "AzureKeyVaultSecret"
-	// TypeSecretBase ...
-	TypeSecretBase Type = "SecretBase"
-	// TypeSecureString ...
-	TypeSecureString Type = "SecureString"
-)
-
-// PossibleTypeValues returns an array of possible values for the Type const type.
-func PossibleTypeValues() []Type {
-	return []Type{TypeAzureKeyVaultSecret, TypeSecretBase, TypeSecureString}
-}
-
-// TypeBasicActivity enumerates the values for type basic activity.
-type TypeBasicActivity string
-
-const (
-	// TypeActivity ...
-	TypeActivity TypeBasicActivity = "Activity"
-	// TypeAppendVariable ...
-	TypeAppendVariable TypeBasicActivity = "AppendVariable"
-	// TypeAzureDataExplorerCommand ...
-	TypeAzureDataExplorerCommand TypeBasicActivity = "AzureDataExplorerCommand"
-	// TypeAzureFunctionActivity ...
-	TypeAzureFunctionActivity TypeBasicActivity = "AzureFunctionActivity"
-	// TypeAzureMLBatchExecution ...
-	TypeAzureMLBatchExecution TypeBasicActivity = "AzureMLBatchExecution"
-	// TypeAzureMLExecutePipeline ...
-	TypeAzureMLExecutePipeline TypeBasicActivity = "AzureMLExecutePipeline"
-	// TypeAzureMLUpdateResource ...
-	TypeAzureMLUpdateResource TypeBasicActivity = "AzureMLUpdateResource"
-	// TypeContainer ...
-	TypeContainer TypeBasicActivity = "Container"
-	// TypeCopy ...
-	TypeCopy TypeBasicActivity = "Copy"
-	// TypeCustom ...
-	TypeCustom TypeBasicActivity = "Custom"
-	// TypeDatabricksNotebook ...
-	TypeDatabricksNotebook TypeBasicActivity = "DatabricksNotebook"
-	// TypeDatabricksSparkJar ...
-	TypeDatabricksSparkJar TypeBasicActivity = "DatabricksSparkJar"
-	// TypeDatabricksSparkPython ...
-	TypeDatabricksSparkPython TypeBasicActivity = "DatabricksSparkPython"
-	// TypeDataLakeAnalyticsUSQL ...
-	TypeDataLakeAnalyticsUSQL TypeBasicActivity = "DataLakeAnalyticsU-SQL"
-	// TypeDelete ...
-	TypeDelete TypeBasicActivity = "Delete"
-	// TypeExecuteDataFlow ...
-	TypeExecuteDataFlow TypeBasicActivity = "ExecuteDataFlow"
-	// TypeExecutePipeline ...
-	TypeExecutePipeline TypeBasicActivity = "ExecutePipeline"
-	// TypeExecuteSSISPackage ...
-	TypeExecuteSSISPackage TypeBasicActivity = "ExecuteSSISPackage"
-	// TypeExecution ...
-	TypeExecution TypeBasicActivity = "Execution"
-	// TypeFilter ...
-	TypeFilter TypeBasicActivity = "Filter"
-	// TypeForEach ...
-	TypeForEach TypeBasicActivity = "ForEach"
-	// TypeGetMetadata ...
-	TypeGetMetadata TypeBasicActivity = "GetMetadata"
-	// TypeHDInsightHive ...
-	TypeHDInsightHive TypeBasicActivity = "HDInsightHive"
-	// TypeHDInsightMapReduce ...
-	TypeHDInsightMapReduce TypeBasicActivity = "HDInsightMapReduce"
-	// TypeHDInsightPig ...
-	TypeHDInsightPig TypeBasicActivity = "HDInsightPig"
-	// TypeHDInsightSpark ...
-	TypeHDInsightSpark TypeBasicActivity = "HDInsightSpark"
-	// TypeHDInsightStreaming ...
-	TypeHDInsightStreaming TypeBasicActivity = "HDInsightStreaming"
-	// TypeIfCondition ...
-	TypeIfCondition TypeBasicActivity = "IfCondition"
-	// TypeLookup ...
-	TypeLookup TypeBasicActivity = "Lookup"
-	// TypeSetVariable ...
-	TypeSetVariable TypeBasicActivity = "SetVariable"
-	// TypeSQLServerStoredProcedure ...
-	TypeSQLServerStoredProcedure TypeBasicActivity = "SqlServerStoredProcedure"
-	// TypeSwitch ...
-	TypeSwitch TypeBasicActivity = "Switch"
-	// TypeUntil ...
-	TypeUntil TypeBasicActivity = "Until"
-	// TypeValidation ...
-	TypeValidation TypeBasicActivity = "Validation"
-	// TypeWait ...
-	TypeWait TypeBasicActivity = "Wait"
-	// TypeWebActivity ...
-	TypeWebActivity TypeBasicActivity = "WebActivity"
-	// TypeWebHook ...
-	TypeWebHook TypeBasicActivity = "WebHook"
-)
-
-// PossibleTypeBasicActivityValues returns an array of possible values for the TypeBasicActivity const type.
-func PossibleTypeBasicActivityValues() []TypeBasicActivity {
-	return []TypeBasicActivity{TypeActivity, TypeAppendVariable, TypeAzureDataExplorerCommand, TypeAzureFunctionActivity, TypeAzureMLBatchExecution, TypeAzureMLExecutePipeline, TypeAzureMLUpdateResource, TypeContainer, TypeCopy, TypeCustom, TypeDatabricksNotebook, TypeDatabricksSparkJar, TypeDatabricksSparkPython, TypeDataLakeAnalyticsUSQL, TypeDelete, TypeExecuteDataFlow, TypeExecutePipeline, TypeExecuteSSISPackage, TypeExecution, TypeFilter, TypeForEach, TypeGetMetadata, TypeHDInsightHive, TypeHDInsightMapReduce, TypeHDInsightPig, TypeHDInsightSpark, TypeHDInsightStreaming, TypeIfCondition, TypeLookup, TypeSetVariable, TypeSQLServerStoredProcedure, TypeSwitch, TypeUntil, TypeValidation, TypeWait, TypeWebActivity, TypeWebHook}
-}
-
-// TypeBasicCompressionReadSettings enumerates the values for type basic compression read settings.
-type TypeBasicCompressionReadSettings string
-
-const (
-	// TypeCompressionReadSettings ...
-	TypeCompressionReadSettings TypeBasicCompressionReadSettings = "CompressionReadSettings"
-	// TypeZipDeflateReadSettings ...
-	TypeZipDeflateReadSettings TypeBasicCompressionReadSettings = "ZipDeflateReadSettings"
-)
-
-// PossibleTypeBasicCompressionReadSettingsValues returns an array of possible values for the TypeBasicCompressionReadSettings const type.
-func PossibleTypeBasicCompressionReadSettingsValues() []TypeBasicCompressionReadSettings {
-	return []TypeBasicCompressionReadSettings{TypeCompressionReadSettings, TypeZipDeflateReadSettings}
-}
-
-// TypeBasicCopySink enumerates the values for type basic copy sink.
-type TypeBasicCopySink string
-
-const (
-	// TypeAvroSink ...
-	TypeAvroSink TypeBasicCopySink = "AvroSink"
-	// TypeAzureBlobFSSink ...
-	TypeAzureBlobFSSink TypeBasicCopySink = "AzureBlobFSSink"
-	// TypeAzureDataExplorerSink ...
-	TypeAzureDataExplorerSink TypeBasicCopySink = "AzureDataExplorerSink"
-	// TypeAzureDataLakeStoreSink ...
-	TypeAzureDataLakeStoreSink TypeBasicCopySink = "AzureDataLakeStoreSink"
-	// TypeAzureMySQLSink ...
-	TypeAzureMySQLSink TypeBasicCopySink = "AzureMySqlSink"
-	// TypeAzurePostgreSQLSink ...
-	TypeAzurePostgreSQLSink TypeBasicCopySink = "AzurePostgreSqlSink"
-	// TypeAzureQueueSink ...
-	TypeAzureQueueSink TypeBasicCopySink = "AzureQueueSink"
-	// TypeAzureSearchIndexSink ...
-	TypeAzureSearchIndexSink TypeBasicCopySink = "AzureSearchIndexSink"
-	// TypeAzureSQLSink ...
-	TypeAzureSQLSink TypeBasicCopySink = "AzureSqlSink"
-	// TypeAzureTableSink ...
-	TypeAzureTableSink TypeBasicCopySink = "AzureTableSink"
-	// TypeBinarySink ...
-	TypeBinarySink TypeBasicCopySink = "BinarySink"
-	// TypeBlobSink ...
-	TypeBlobSink TypeBasicCopySink = "BlobSink"
-	// TypeCommonDataServiceForAppsSink ...
-	TypeCommonDataServiceForAppsSink TypeBasicCopySink = "CommonDataServiceForAppsSink"
-	// TypeCopySink ...
-	TypeCopySink TypeBasicCopySink = "CopySink"
-	// TypeCosmosDbMongoDbAPISink ...
-	TypeCosmosDbMongoDbAPISink TypeBasicCopySink = "CosmosDbMongoDbApiSink"
-	// TypeCosmosDbSQLAPISink ...
-	TypeCosmosDbSQLAPISink TypeBasicCopySink = "CosmosDbSqlApiSink"
-	// TypeDelimitedTextSink ...
-	TypeDelimitedTextSink TypeBasicCopySink = "DelimitedTextSink"
-	// TypeDocumentDbCollectionSink ...
-	TypeDocumentDbCollectionSink TypeBasicCopySink = "DocumentDbCollectionSink"
-	// TypeDynamicsCrmSink ...
-	TypeDynamicsCrmSink TypeBasicCopySink = "DynamicsCrmSink"
-	// TypeDynamicsSink ...
-	TypeDynamicsSink TypeBasicCopySink = "DynamicsSink"
-	// TypeFileSystemSink ...
-	TypeFileSystemSink TypeBasicCopySink = "FileSystemSink"
-	// TypeInformixSink ...
-	TypeInformixSink TypeBasicCopySink = "InformixSink"
-	// TypeJSONSink ...
-	TypeJSONSink TypeBasicCopySink = "JsonSink"
-	// TypeMicrosoftAccessSink ...
-	TypeMicrosoftAccessSink TypeBasicCopySink = "MicrosoftAccessSink"
-	// TypeOdbcSink ...
-	TypeOdbcSink TypeBasicCopySink = "OdbcSink"
-	// TypeOracleSink ...
-	TypeOracleSink TypeBasicCopySink = "OracleSink"
-	// TypeOrcSink ...
-	TypeOrcSink TypeBasicCopySink = "OrcSink"
-	// TypeParquetSink ...
-	TypeParquetSink TypeBasicCopySink = "ParquetSink"
-	// TypeSalesforceServiceCloudSink ...
-	TypeSalesforceServiceCloudSink TypeBasicCopySink = "SalesforceServiceCloudSink"
-	// TypeSalesforceSink ...
-	TypeSalesforceSink TypeBasicCopySink = "SalesforceSink"
-	// TypeSapCloudForCustomerSink ...
-	TypeSapCloudForCustomerSink TypeBasicCopySink = "SapCloudForCustomerSink"
-	// TypeSnowflakeSink ...
-	TypeSnowflakeSink TypeBasicCopySink = "SnowflakeSink"
-	// TypeSQLDWSink ...
-	TypeSQLDWSink TypeBasicCopySink = "SqlDWSink"
-	// TypeSQLMISink ...
-	TypeSQLMISink TypeBasicCopySink = "SqlMISink"
-	// TypeSQLServerSink ...
-	TypeSQLServerSink TypeBasicCopySink = "SqlServerSink"
-	// TypeSQLSink ...
-	TypeSQLSink TypeBasicCopySink = "SqlSink"
-)
-
-// PossibleTypeBasicCopySinkValues returns an array of possible values for the TypeBasicCopySink const type.
-func PossibleTypeBasicCopySinkValues() []TypeBasicCopySink {
-	return []TypeBasicCopySink{TypeAvroSink, TypeAzureBlobFSSink, TypeAzureDataExplorerSink, TypeAzureDataLakeStoreSink, TypeAzureMySQLSink, TypeAzurePostgreSQLSink, TypeAzureQueueSink, TypeAzureSearchIndexSink, TypeAzureSQLSink, TypeAzureTableSink, TypeBinarySink, TypeBlobSink, TypeCommonDataServiceForAppsSink, TypeCopySink, TypeCosmosDbMongoDbAPISink, TypeCosmosDbSQLAPISink, TypeDelimitedTextSink, TypeDocumentDbCollectionSink, TypeDynamicsCrmSink, TypeDynamicsSink, TypeFileSystemSink, TypeInformixSink, TypeJSONSink, TypeMicrosoftAccessSink, TypeOdbcSink, TypeOracleSink, TypeOrcSink, TypeParquetSink, TypeSalesforceServiceCloudSink, TypeSalesforceSink, TypeSapCloudForCustomerSink, TypeSnowflakeSink, TypeSQLDWSink, TypeSQLMISink, TypeSQLServerSink, TypeSQLSink}
-}
-
-// TypeBasicCopySource enumerates the values for type basic copy source.
-type TypeBasicCopySource string
-
-const (
-	// TypeAmazonMWSSource ...
-	TypeAmazonMWSSource TypeBasicCopySource = "AmazonMWSSource"
-	// TypeAmazonRedshiftSource ...
-	TypeAmazonRedshiftSource TypeBasicCopySource = "AmazonRedshiftSource"
-	// TypeAvroSource ...
-	TypeAvroSource TypeBasicCopySource = "AvroSource"
-	// TypeAzureBlobFSSource ...
-	TypeAzureBlobFSSource TypeBasicCopySource = "AzureBlobFSSource"
-	// TypeAzureDataExplorerSource ...
-	TypeAzureDataExplorerSource TypeBasicCopySource = "AzureDataExplorerSource"
-	// TypeAzureDataLakeStoreSource ...
-	TypeAzureDataLakeStoreSource TypeBasicCopySource = "AzureDataLakeStoreSource"
-	// TypeAzureMariaDBSource ...
-	TypeAzureMariaDBSource TypeBasicCopySource = "AzureMariaDBSource"
-	// TypeAzureMySQLSource ...
-	TypeAzureMySQLSource TypeBasicCopySource = "AzureMySqlSource"
-	// TypeAzurePostgreSQLSource ...
-	TypeAzurePostgreSQLSource TypeBasicCopySource = "AzurePostgreSqlSource"
-	// TypeAzureSQLSource ...
-	TypeAzureSQLSource TypeBasicCopySource = "AzureSqlSource"
-	// TypeAzureTableSource ...
-	TypeAzureTableSource TypeBasicCopySource = "AzureTableSource"
-	// TypeBinarySource ...
-	TypeBinarySource TypeBasicCopySource = "BinarySource"
-	// TypeBlobSource ...
-	TypeBlobSource TypeBasicCopySource = "BlobSource"
-	// TypeCassandraSource ...
-	TypeCassandraSource TypeBasicCopySource = "CassandraSource"
-	// TypeCommonDataServiceForAppsSource ...
-	TypeCommonDataServiceForAppsSource TypeBasicCopySource = "CommonDataServiceForAppsSource"
-	// TypeConcurSource ...
-	TypeConcurSource TypeBasicCopySource = "ConcurSource"
-	// TypeCopySource ...
-	TypeCopySource TypeBasicCopySource = "CopySource"
-	// TypeCosmosDbMongoDbAPISource ...
-	TypeCosmosDbMongoDbAPISource TypeBasicCopySource = "CosmosDbMongoDbApiSource"
-	// TypeCosmosDbSQLAPISource ...
-	TypeCosmosDbSQLAPISource TypeBasicCopySource = "CosmosDbSqlApiSource"
-	// TypeCouchbaseSource ...
-	TypeCouchbaseSource TypeBasicCopySource = "CouchbaseSource"
-	// TypeDb2Source ...
-	TypeDb2Source TypeBasicCopySource = "Db2Source"
-	// TypeDelimitedTextSource ...
-	TypeDelimitedTextSource TypeBasicCopySource = "DelimitedTextSource"
-	// TypeDocumentDbCollectionSource ...
-	TypeDocumentDbCollectionSource TypeBasicCopySource = "DocumentDbCollectionSource"
-	// TypeDrillSource ...
-	TypeDrillSource TypeBasicCopySource = "DrillSource"
-	// TypeDynamicsAXSource ...
-	TypeDynamicsAXSource TypeBasicCopySource = "DynamicsAXSource"
-	// TypeDynamicsCrmSource ...
-	TypeDynamicsCrmSource TypeBasicCopySource = "DynamicsCrmSource"
-	// TypeDynamicsSource ...
-	TypeDynamicsSource TypeBasicCopySource = "DynamicsSource"
-	// TypeEloquaSource ...
-	TypeEloquaSource TypeBasicCopySource = "EloquaSource"
-	// TypeExcelSource ...
-	TypeExcelSource TypeBasicCopySource = "ExcelSource"
-	// TypeFileSystemSource ...
-	TypeFileSystemSource TypeBasicCopySource = "FileSystemSource"
-	// TypeGoogleAdWordsSource ...
-	TypeGoogleAdWordsSource TypeBasicCopySource = "GoogleAdWordsSource"
-	// TypeGoogleBigQuerySource ...
-	TypeGoogleBigQuerySource TypeBasicCopySource = "GoogleBigQuerySource"
-	// TypeGreenplumSource ...
-	TypeGreenplumSource TypeBasicCopySource = "GreenplumSource"
-	// TypeHBaseSource ...
-	TypeHBaseSource TypeBasicCopySource = "HBaseSource"
-	// TypeHdfsSource ...
-	TypeHdfsSource TypeBasicCopySource = "HdfsSource"
-	// TypeHiveSource ...
-	TypeHiveSource TypeBasicCopySource = "HiveSource"
-	// TypeHTTPSource ...
-	TypeHTTPSource TypeBasicCopySource = "HttpSource"
-	// TypeHubspotSource ...
-	TypeHubspotSource TypeBasicCopySource = "HubspotSource"
-	// TypeImpalaSource ...
-	TypeImpalaSource TypeBasicCopySource = "ImpalaSource"
-	// TypeInformixSource ...
-	TypeInformixSource TypeBasicCopySource = "InformixSource"
-	// TypeJiraSource ...
-	TypeJiraSource TypeBasicCopySource = "JiraSource"
-	// TypeJSONSource ...
-	TypeJSONSource TypeBasicCopySource = "JsonSource"
-	// TypeMagentoSource ...
-	TypeMagentoSource TypeBasicCopySource = "MagentoSource"
-	// TypeMariaDBSource ...
-	TypeMariaDBSource TypeBasicCopySource = "MariaDBSource"
-	// TypeMarketoSource ...
-	TypeMarketoSource TypeBasicCopySource = "MarketoSource"
-	// TypeMicrosoftAccessSource ...
-	TypeMicrosoftAccessSource TypeBasicCopySource = "MicrosoftAccessSource"
-	// TypeMongoDbSource ...
-	TypeMongoDbSource TypeBasicCopySource = "MongoDbSource"
-	// TypeMongoDbV2Source ...
-	TypeMongoDbV2Source TypeBasicCopySource = "MongoDbV2Source"
-	// TypeMySQLSource ...
-	TypeMySQLSource TypeBasicCopySource = "MySqlSource"
-	// TypeNetezzaSource ...
-	TypeNetezzaSource TypeBasicCopySource = "NetezzaSource"
-	// TypeODataSource ...
-	TypeODataSource TypeBasicCopySource = "ODataSource"
-	// TypeOdbcSource ...
-	TypeOdbcSource TypeBasicCopySource = "OdbcSource"
-	// TypeOffice365Source ...
-	TypeOffice365Source TypeBasicCopySource = "Office365Source"
-	// TypeOracleServiceCloudSource ...
-	TypeOracleServiceCloudSource TypeBasicCopySource = "OracleServiceCloudSource"
-	// TypeOracleSource ...
-	TypeOracleSource TypeBasicCopySource = "OracleSource"
-	// TypeOrcSource ...
-	TypeOrcSource TypeBasicCopySource = "OrcSource"
-	// TypeParquetSource ...
-	TypeParquetSource TypeBasicCopySource = "ParquetSource"
-	// TypePaypalSource ...
-	TypePaypalSource TypeBasicCopySource = "PaypalSource"
-	// TypePhoenixSource ...
-	TypePhoenixSource TypeBasicCopySource = "PhoenixSource"
-	// TypePostgreSQLSource ...
-	TypePostgreSQLSource TypeBasicCopySource = "PostgreSqlSource"
-	// TypePrestoSource ...
-	TypePrestoSource TypeBasicCopySource = "PrestoSource"
-	// TypeQuickBooksSource ...
-	TypeQuickBooksSource TypeBasicCopySource = "QuickBooksSource"
-	// TypeRelationalSource ...
-	TypeRelationalSource TypeBasicCopySource = "RelationalSource"
-	// TypeResponsysSource ...
-	TypeResponsysSource TypeBasicCopySource = "ResponsysSource"
-	// TypeRestSource ...
-	TypeRestSource TypeBasicCopySource = "RestSource"
-	// TypeSalesforceMarketingCloudSource ...
-	TypeSalesforceMarketingCloudSource TypeBasicCopySource = "SalesforceMarketingCloudSource"
-	// TypeSalesforceServiceCloudSource ...
-	TypeSalesforceServiceCloudSource TypeBasicCopySource = "SalesforceServiceCloudSource"
-	// TypeSalesforceSource ...
-	TypeSalesforceSource TypeBasicCopySource = "SalesforceSource"
-	// TypeSapBwSource ...
-	TypeSapBwSource TypeBasicCopySource = "SapBwSource"
-	// TypeSapCloudForCustomerSource ...
-	TypeSapCloudForCustomerSource TypeBasicCopySource = "SapCloudForCustomerSource"
-	// TypeSapEccSource ...
-	TypeSapEccSource TypeBasicCopySource = "SapEccSource"
-	// TypeSapHanaSource ...
-	TypeSapHanaSource TypeBasicCopySource = "SapHanaSource"
-	// TypeSapOpenHubSource ...
-	TypeSapOpenHubSource TypeBasicCopySource = "SapOpenHubSource"
-	// TypeSapTableSource ...
-	TypeSapTableSource TypeBasicCopySource = "SapTableSource"
-	// TypeServiceNowSource ...
-	TypeServiceNowSource TypeBasicCopySource = "ServiceNowSource"
-	// TypeSharePointOnlineListSource ...
-	TypeSharePointOnlineListSource TypeBasicCopySource = "SharePointOnlineListSource"
-	// TypeShopifySource ...
-	TypeShopifySource TypeBasicCopySource = "ShopifySource"
-	// TypeSnowflakeSource ...
-	TypeSnowflakeSource TypeBasicCopySource = "SnowflakeSource"
-	// TypeSparkSource ...
-	TypeSparkSource TypeBasicCopySource = "SparkSource"
-	// TypeSQLDWSource ...
-	TypeSQLDWSource TypeBasicCopySource = "SqlDWSource"
-	// TypeSQLMISource ...
-	TypeSQLMISource TypeBasicCopySource = "SqlMISource"
-	// TypeSQLServerSource ...
-	TypeSQLServerSource TypeBasicCopySource = "SqlServerSource"
-	// TypeSQLSource ...
-	TypeSQLSource TypeBasicCopySource = "SqlSource"
-	// TypeSquareSource ...
-	TypeSquareSource TypeBasicCopySource = "SquareSource"
-	// TypeSybaseSource ...
-	TypeSybaseSource TypeBasicCopySource = "SybaseSource"
-	// TypeTabularSource ...
-	TypeTabularSource TypeBasicCopySource = "TabularSource"
-	// TypeTeradataSource ...
-	TypeTeradataSource TypeBasicCopySource = "TeradataSource"
-	// TypeVerticaSource ...
-	TypeVerticaSource TypeBasicCopySource = "VerticaSource"
-	// TypeWebSource ...
-	TypeWebSource TypeBasicCopySource = "WebSource"
-	// TypeXeroSource ...
-	TypeXeroSource TypeBasicCopySource = "XeroSource"
-	// TypeXMLSource ...
-	TypeXMLSource TypeBasicCopySource = "XmlSource"
-	// TypeZohoSource ...
-	TypeZohoSource TypeBasicCopySource = "ZohoSource"
-)
-
-// PossibleTypeBasicCopySourceValues returns an array of possible values for the TypeBasicCopySource const type.
-func PossibleTypeBasicCopySourceValues() []TypeBasicCopySource {
-	return []TypeBasicCopySource{TypeAmazonMWSSource, TypeAmazonRedshiftSource, TypeAvroSource, TypeAzureBlobFSSource, TypeAzureDataExplorerSource, TypeAzureDataLakeStoreSource, TypeAzureMariaDBSource, TypeAzureMySQLSource, TypeAzurePostgreSQLSource, TypeAzureSQLSource, TypeAzureTableSource, TypeBinarySource, TypeBlobSource, TypeCassandraSource, TypeCommonDataServiceForAppsSource, TypeConcurSource, TypeCopySource, TypeCosmosDbMongoDbAPISource, TypeCosmosDbSQLAPISource, TypeCouchbaseSource, TypeDb2Source, TypeDelimitedTextSource, TypeDocumentDbCollectionSource, TypeDrillSource, TypeDynamicsAXSource, TypeDynamicsCrmSource, TypeDynamicsSource, TypeEloquaSource, TypeExcelSource, TypeFileSystemSource, TypeGoogleAdWordsSource, TypeGoogleBigQuerySource, TypeGreenplumSource, TypeHBaseSource, TypeHdfsSource, TypeHiveSource, TypeHTTPSource, TypeHubspotSource, TypeImpalaSource, TypeInformixSource, TypeJiraSource, TypeJSONSource, TypeMagentoSource, TypeMariaDBSource, TypeMarketoSource, TypeMicrosoftAccessSource, TypeMongoDbSource, TypeMongoDbV2Source, TypeMySQLSource, TypeNetezzaSource, TypeODataSource, TypeOdbcSource, TypeOffice365Source, TypeOracleServiceCloudSource, TypeOracleSource, TypeOrcSource, TypeParquetSource, TypePaypalSource, TypePhoenixSource, TypePostgreSQLSource, TypePrestoSource, TypeQuickBooksSource, TypeRelationalSource, TypeResponsysSource, TypeRestSource, TypeSalesforceMarketingCloudSource, TypeSalesforceServiceCloudSource, TypeSalesforceSource, TypeSapBwSource, TypeSapCloudForCustomerSource, TypeSapEccSource, TypeSapHanaSource, TypeSapOpenHubSource, TypeSapTableSource, TypeServiceNowSource, TypeSharePointOnlineListSource, TypeShopifySource, TypeSnowflakeSource, TypeSparkSource, TypeSQLDWSource, TypeSQLMISource, TypeSQLServerSource, TypeSQLSource, TypeSquareSource, TypeSybaseSource, TypeTabularSource, TypeTeradataSource, TypeVerticaSource, TypeWebSource, TypeXeroSource, TypeXMLSource, TypeZohoSource}
-}
-
-// TypeBasicCustomSetupBase enumerates the values for type basic custom setup base.
-type TypeBasicCustomSetupBase string
-
-const (
-	// TypeCmdkeySetup ...
-	TypeCmdkeySetup TypeBasicCustomSetupBase = "CmdkeySetup"
-	// TypeComponentSetup ...
-	TypeComponentSetup TypeBasicCustomSetupBase = "ComponentSetup"
-	// TypeCustomSetupBase ...
-	TypeCustomSetupBase TypeBasicCustomSetupBase = "CustomSetupBase"
-	// TypeEnvironmentVariableSetup ...
-	TypeEnvironmentVariableSetup TypeBasicCustomSetupBase = "EnvironmentVariableSetup"
-)
-
-// PossibleTypeBasicCustomSetupBaseValues returns an array of possible values for the TypeBasicCustomSetupBase const type.
-func PossibleTypeBasicCustomSetupBaseValues() []TypeBasicCustomSetupBase {
-	return []TypeBasicCustomSetupBase{TypeCmdkeySetup, TypeComponentSetup, TypeCustomSetupBase, TypeEnvironmentVariableSetup}
-}
-
-// TypeBasicDataFlow enumerates the values for type basic data flow.
-type TypeBasicDataFlow string
-
-const (
-	// TypeDataFlow ...
-	TypeDataFlow TypeBasicDataFlow = "DataFlow"
-	// TypeMappingDataFlow ...
-	TypeMappingDataFlow TypeBasicDataFlow = "MappingDataFlow"
-)
-
-// PossibleTypeBasicDataFlowValues returns an array of possible values for the TypeBasicDataFlow const type.
-func PossibleTypeBasicDataFlowValues() []TypeBasicDataFlow {
-	return []TypeBasicDataFlow{TypeDataFlow, TypeMappingDataFlow}
-}
-
-// TypeBasicDataset enumerates the values for type basic dataset.
-type TypeBasicDataset string
-
-const (
-	// TypeAmazonMWSObject ...
-	TypeAmazonMWSObject TypeBasicDataset = "AmazonMWSObject"
-	// TypeAmazonRedshiftTable ...
-	TypeAmazonRedshiftTable TypeBasicDataset = "AmazonRedshiftTable"
-	// TypeAmazonS3Object ...
-	TypeAmazonS3Object TypeBasicDataset = "AmazonS3Object"
-	// TypeAvro ...
-	TypeAvro TypeBasicDataset = "Avro"
-	// TypeAzureBlob ...
-	TypeAzureBlob TypeBasicDataset = "AzureBlob"
-	// TypeAzureBlobFSFile ...
-	TypeAzureBlobFSFile TypeBasicDataset = "AzureBlobFSFile"
-	// TypeAzureDataExplorerTable ...
-	TypeAzureDataExplorerTable TypeBasicDataset = "AzureDataExplorerTable"
-	// TypeAzureDataLakeStoreFile ...
-	TypeAzureDataLakeStoreFile TypeBasicDataset = "AzureDataLakeStoreFile"
-	// TypeAzureMariaDBTable ...
-	TypeAzureMariaDBTable TypeBasicDataset = "AzureMariaDBTable"
-	// TypeAzureMySQLTable ...
-	TypeAzureMySQLTable TypeBasicDataset = "AzureMySqlTable"
-	// TypeAzurePostgreSQLTable ...
-	TypeAzurePostgreSQLTable TypeBasicDataset = "AzurePostgreSqlTable"
-	// TypeAzureSearchIndex ...
-	TypeAzureSearchIndex TypeBasicDataset = "AzureSearchIndex"
-	// TypeAzureSQLDWTable ...
-	TypeAzureSQLDWTable TypeBasicDataset = "AzureSqlDWTable"
-	// TypeAzureSQLMITable ...
-	TypeAzureSQLMITable TypeBasicDataset = "AzureSqlMITable"
-	// TypeAzureSQLTable ...
-	TypeAzureSQLTable TypeBasicDataset = "AzureSqlTable"
-	// TypeAzureTable ...
-	TypeAzureTable TypeBasicDataset = "AzureTable"
-	// TypeBinary ...
-	TypeBinary TypeBasicDataset = "Binary"
-	// TypeCassandraTable ...
-	TypeCassandraTable TypeBasicDataset = "CassandraTable"
-	// TypeCommonDataServiceForAppsEntity ...
-	TypeCommonDataServiceForAppsEntity TypeBasicDataset = "CommonDataServiceForAppsEntity"
-	// TypeConcurObject ...
-	TypeConcurObject TypeBasicDataset = "ConcurObject"
-	// TypeCosmosDbMongoDbAPICollection ...
-	TypeCosmosDbMongoDbAPICollection TypeBasicDataset = "CosmosDbMongoDbApiCollection"
-	// TypeCosmosDbSQLAPICollection ...
-	TypeCosmosDbSQLAPICollection TypeBasicDataset = "CosmosDbSqlApiCollection"
-	// TypeCouchbaseTable ...
-	TypeCouchbaseTable TypeBasicDataset = "CouchbaseTable"
-	// TypeCustomDataset ...
-	TypeCustomDataset TypeBasicDataset = "CustomDataset"
-	// TypeDataset ...
-	TypeDataset TypeBasicDataset = "Dataset"
-	// TypeDb2Table ...
-	TypeDb2Table TypeBasicDataset = "Db2Table"
-	// TypeDelimitedText ...
-	TypeDelimitedText TypeBasicDataset = "DelimitedText"
-	// TypeDocumentDbCollection ...
-	TypeDocumentDbCollection TypeBasicDataset = "DocumentDbCollection"
-	// TypeDrillTable ...
-	TypeDrillTable TypeBasicDataset = "DrillTable"
-	// TypeDynamicsAXResource ...
-	TypeDynamicsAXResource TypeBasicDataset = "DynamicsAXResource"
-	// TypeDynamicsCrmEntity ...
-	TypeDynamicsCrmEntity TypeBasicDataset = "DynamicsCrmEntity"
-	// TypeDynamicsEntity ...
-	TypeDynamicsEntity TypeBasicDataset = "DynamicsEntity"
-	// TypeEloquaObject ...
-	TypeEloquaObject TypeBasicDataset = "EloquaObject"
-	// TypeExcel ...
-	TypeExcel TypeBasicDataset = "Excel"
-	// TypeFileShare ...
-	TypeFileShare TypeBasicDataset = "FileShare"
-	// TypeGoogleAdWordsObject ...
-	TypeGoogleAdWordsObject TypeBasicDataset = "GoogleAdWordsObject"
-	// TypeGoogleBigQueryObject ...
-	TypeGoogleBigQueryObject TypeBasicDataset = "GoogleBigQueryObject"
-	// TypeGreenplumTable ...
-	TypeGreenplumTable TypeBasicDataset = "GreenplumTable"
-	// TypeHBaseObject ...
-	TypeHBaseObject TypeBasicDataset = "HBaseObject"
-	// TypeHiveObject ...
-	TypeHiveObject TypeBasicDataset = "HiveObject"
-	// TypeHTTPFile ...
-	TypeHTTPFile TypeBasicDataset = "HttpFile"
-	// TypeHubspotObject ...
-	TypeHubspotObject TypeBasicDataset = "HubspotObject"
-	// TypeImpalaObject ...
-	TypeImpalaObject TypeBasicDataset = "ImpalaObject"
-	// TypeInformixTable ...
-	TypeInformixTable TypeBasicDataset = "InformixTable"
-	// TypeJiraObject ...
-	TypeJiraObject TypeBasicDataset = "JiraObject"
-	// TypeJSON ...
-	TypeJSON TypeBasicDataset = "Json"
-	// TypeMagentoObject ...
-	TypeMagentoObject TypeBasicDataset = "MagentoObject"
-	// TypeMariaDBTable ...
-	TypeMariaDBTable TypeBasicDataset = "MariaDBTable"
-	// TypeMarketoObject ...
-	TypeMarketoObject TypeBasicDataset = "MarketoObject"
-	// TypeMicrosoftAccessTable ...
-	TypeMicrosoftAccessTable TypeBasicDataset = "MicrosoftAccessTable"
-	// TypeMongoDbCollection ...
-	TypeMongoDbCollection TypeBasicDataset = "MongoDbCollection"
-	// TypeMongoDbV2Collection ...
-	TypeMongoDbV2Collection TypeBasicDataset = "MongoDbV2Collection"
-	// TypeMySQLTable ...
-	TypeMySQLTable TypeBasicDataset = "MySqlTable"
-	// TypeNetezzaTable ...
-	TypeNetezzaTable TypeBasicDataset = "NetezzaTable"
-	// TypeODataResource ...
-	TypeODataResource TypeBasicDataset = "ODataResource"
-	// TypeOdbcTable ...
-	TypeOdbcTable TypeBasicDataset = "OdbcTable"
-	// TypeOffice365Table ...
-	TypeOffice365Table TypeBasicDataset = "Office365Table"
-	// TypeOracleServiceCloudObject ...
-	TypeOracleServiceCloudObject TypeBasicDataset = "OracleServiceCloudObject"
-	// TypeOracleTable ...
-	TypeOracleTable TypeBasicDataset = "OracleTable"
-	// TypeOrc ...
-	TypeOrc TypeBasicDataset = "Orc"
-	// TypeParquet ...
-	TypeParquet TypeBasicDataset = "Parquet"
-	// TypePaypalObject ...
-	TypePaypalObject TypeBasicDataset = "PaypalObject"
-	// TypePhoenixObject ...
-	TypePhoenixObject TypeBasicDataset = "PhoenixObject"
-	// TypePostgreSQLTable ...
-	TypePostgreSQLTable TypeBasicDataset = "PostgreSqlTable"
-	// TypePrestoObject ...
-	TypePrestoObject TypeBasicDataset = "PrestoObject"
-	// TypeQuickBooksObject ...
-	TypeQuickBooksObject TypeBasicDataset = "QuickBooksObject"
-	// TypeRelationalTable ...
-	TypeRelationalTable TypeBasicDataset = "RelationalTable"
-	// TypeResponsysObject ...
-	TypeResponsysObject TypeBasicDataset = "ResponsysObject"
-	// TypeRestResource ...
-	TypeRestResource TypeBasicDataset = "RestResource"
-	// TypeSalesforceMarketingCloudObject ...
-	TypeSalesforceMarketingCloudObject TypeBasicDataset = "SalesforceMarketingCloudObject"
-	// TypeSalesforceObject ...
-	TypeSalesforceObject TypeBasicDataset = "SalesforceObject"
-	// TypeSalesforceServiceCloudObject ...
-	TypeSalesforceServiceCloudObject TypeBasicDataset = "SalesforceServiceCloudObject"
-	// TypeSapBwCube ...
-	TypeSapBwCube TypeBasicDataset = "SapBwCube"
-	// TypeSapCloudForCustomerResource ...
-	TypeSapCloudForCustomerResource TypeBasicDataset = "SapCloudForCustomerResource"
-	// TypeSapEccResource ...
-	TypeSapEccResource TypeBasicDataset = "SapEccResource"
-	// TypeSapHanaTable ...
-	TypeSapHanaTable TypeBasicDataset = "SapHanaTable"
-	// TypeSapOpenHubTable ...
-	TypeSapOpenHubTable TypeBasicDataset = "SapOpenHubTable"
-	// TypeSapTableResource ...
-	TypeSapTableResource TypeBasicDataset = "SapTableResource"
-	// TypeServiceNowObject ...
-	TypeServiceNowObject TypeBasicDataset = "ServiceNowObject"
-	// TypeSharePointOnlineListResource ...
-	TypeSharePointOnlineListResource TypeBasicDataset = "SharePointOnlineListResource"
-	// TypeShopifyObject ...
-	TypeShopifyObject TypeBasicDataset = "ShopifyObject"
-	// TypeSnowflakeTable ...
-	TypeSnowflakeTable TypeBasicDataset = "SnowflakeTable"
-	// TypeSparkObject ...
-	TypeSparkObject TypeBasicDataset = "SparkObject"
-	// TypeSQLServerTable ...
-	TypeSQLServerTable TypeBasicDataset = "SqlServerTable"
-	// TypeSquareObject ...
-	TypeSquareObject TypeBasicDataset = "SquareObject"
-	// TypeSybaseTable ...
-	TypeSybaseTable TypeBasicDataset = "SybaseTable"
-	// TypeTeradataTable ...
-	TypeTeradataTable TypeBasicDataset = "TeradataTable"
-	// TypeVerticaTable ...
-	TypeVerticaTable TypeBasicDataset = "VerticaTable"
-	// TypeWebTable ...
-	TypeWebTable TypeBasicDataset = "WebTable"
-	// TypeXeroObject ...
-	TypeXeroObject TypeBasicDataset = "XeroObject"
-	// TypeXML ...
-	TypeXML TypeBasicDataset = "Xml"
-	// TypeZohoObject ...
-	TypeZohoObject TypeBasicDataset = "ZohoObject"
-)
-
-// PossibleTypeBasicDatasetValues returns an array of possible values for the TypeBasicDataset const type.
-func PossibleTypeBasicDatasetValues() []TypeBasicDataset {
-	return []TypeBasicDataset{TypeAmazonMWSObject, TypeAmazonRedshiftTable, TypeAmazonS3Object, TypeAvro, TypeAzureBlob, TypeAzureBlobFSFile, TypeAzureDataExplorerTable, TypeAzureDataLakeStoreFile, TypeAzureMariaDBTable, TypeAzureMySQLTable, TypeAzurePostgreSQLTable, TypeAzureSearchIndex, TypeAzureSQLDWTable, TypeAzureSQLMITable, TypeAzureSQLTable, TypeAzureTable, TypeBinary, TypeCassandraTable, TypeCommonDataServiceForAppsEntity, TypeConcurObject, TypeCosmosDbMongoDbAPICollection, TypeCosmosDbSQLAPICollection, TypeCouchbaseTable, TypeCustomDataset, TypeDataset, TypeDb2Table, TypeDelimitedText, TypeDocumentDbCollection, TypeDrillTable, TypeDynamicsAXResource, TypeDynamicsCrmEntity, TypeDynamicsEntity, TypeEloquaObject, TypeExcel, TypeFileShare, TypeGoogleAdWordsObject, TypeGoogleBigQueryObject, TypeGreenplumTable, TypeHBaseObject, TypeHiveObject, TypeHTTPFile, TypeHubspotObject, TypeImpalaObject, TypeInformixTable, TypeJiraObject, TypeJSON, TypeMagentoObject, TypeMariaDBTable, TypeMarketoObject, TypeMicrosoftAccessTable, TypeMongoDbCollection, TypeMongoDbV2Collection, TypeMySQLTable, TypeNetezzaTable, TypeODataResource, TypeOdbcTable, TypeOffice365Table, TypeOracleServiceCloudObject, TypeOracleTable, TypeOrc, TypeParquet, TypePaypalObject, TypePhoenixObject, TypePostgreSQLTable, TypePrestoObject, TypeQuickBooksObject, TypeRelationalTable, TypeResponsysObject, TypeRestResource, TypeSalesforceMarketingCloudObject, TypeSalesforceObject, TypeSalesforceServiceCloudObject, TypeSapBwCube, TypeSapCloudForCustomerResource, TypeSapEccResource, TypeSapHanaTable, TypeSapOpenHubTable, TypeSapTableResource, TypeServiceNowObject, TypeSharePointOnlineListResource, TypeShopifyObject, TypeSnowflakeTable, TypeSparkObject, TypeSQLServerTable, TypeSquareObject, TypeSybaseTable, TypeTeradataTable, TypeVerticaTable, TypeWebTable, TypeXeroObject, TypeXML, TypeZohoObject}
-}
-
-// TypeBasicDatasetCompression enumerates the values for type basic dataset compression.
-type TypeBasicDatasetCompression string
-
-const (
-	// TypeBZip2 ...
-	TypeBZip2 TypeBasicDatasetCompression = "BZip2"
-	// TypeDatasetCompression ...
-	TypeDatasetCompression TypeBasicDatasetCompression = "DatasetCompression"
-	// TypeDeflate ...
-	TypeDeflate TypeBasicDatasetCompression = "Deflate"
-	// TypeGZip ...
-	TypeGZip TypeBasicDatasetCompression = "GZip"
-	// TypeZipDeflate ...
-	TypeZipDeflate TypeBasicDatasetCompression = "ZipDeflate"
-)
-
-// PossibleTypeBasicDatasetCompressionValues returns an array of possible values for the TypeBasicDatasetCompression const type.
-func PossibleTypeBasicDatasetCompressionValues() []TypeBasicDatasetCompression {
-	return []TypeBasicDatasetCompression{TypeBZip2, TypeDatasetCompression, TypeDeflate, TypeGZip, TypeZipDeflate}
-}
-
-// TypeBasicDatasetLocation enumerates the values for type basic dataset location.
-type TypeBasicDatasetLocation string
-
-const (
-	// TypeAmazonS3Location ...
-	TypeAmazonS3Location TypeBasicDatasetLocation = "AmazonS3Location"
-	// TypeAzureBlobFSLocation ...
-	TypeAzureBlobFSLocation TypeBasicDatasetLocation = "AzureBlobFSLocation"
-	// TypeAzureBlobStorageLocation ...
-	TypeAzureBlobStorageLocation TypeBasicDatasetLocation = "AzureBlobStorageLocation"
-	// TypeAzureDataLakeStoreLocation ...
-	TypeAzureDataLakeStoreLocation TypeBasicDatasetLocation = "AzureDataLakeStoreLocation"
-	// TypeAzureFileStorageLocation ...
-	TypeAzureFileStorageLocation TypeBasicDatasetLocation = "AzureFileStorageLocation"
-	// TypeDatasetLocation ...
-	TypeDatasetLocation TypeBasicDatasetLocation = "DatasetLocation"
-	// TypeFileServerLocation ...
-	TypeFileServerLocation TypeBasicDatasetLocation = "FileServerLocation"
-	// TypeFtpServerLocation ...
-	TypeFtpServerLocation TypeBasicDatasetLocation = "FtpServerLocation"
-	// TypeGoogleCloudStorageLocation ...
-	TypeGoogleCloudStorageLocation TypeBasicDatasetLocation = "GoogleCloudStorageLocation"
-	// TypeHdfsLocation ...
-	TypeHdfsLocation TypeBasicDatasetLocation = "HdfsLocation"
-	// TypeHTTPServerLocation ...
-	TypeHTTPServerLocation TypeBasicDatasetLocation = "HttpServerLocation"
-	// TypeSftpLocation ...
-	TypeSftpLocation TypeBasicDatasetLocation = "SftpLocation"
-)
-
-// PossibleTypeBasicDatasetLocationValues returns an array of possible values for the TypeBasicDatasetLocation const type.
-func PossibleTypeBasicDatasetLocationValues() []TypeBasicDatasetLocation {
-	return []TypeBasicDatasetLocation{TypeAmazonS3Location, TypeAzureBlobFSLocation, TypeAzureBlobStorageLocation, TypeAzureDataLakeStoreLocation, TypeAzureFileStorageLocation, TypeDatasetLocation, TypeFileServerLocation, TypeFtpServerLocation, TypeGoogleCloudStorageLocation, TypeHdfsLocation, TypeHTTPServerLocation, TypeSftpLocation}
-}
-
-// TypeBasicDatasetStorageFormat enumerates the values for type basic dataset storage format.
-type TypeBasicDatasetStorageFormat string
-
-const (
-	// TypeAvroFormat ...
-	TypeAvroFormat TypeBasicDatasetStorageFormat = "AvroFormat"
-	// TypeDatasetStorageFormat ...
-	TypeDatasetStorageFormat TypeBasicDatasetStorageFormat = "DatasetStorageFormat"
-	// TypeJSONFormat ...
-	TypeJSONFormat TypeBasicDatasetStorageFormat = "JsonFormat"
-	// TypeOrcFormat ...
-	TypeOrcFormat TypeBasicDatasetStorageFormat = "OrcFormat"
-	// TypeParquetFormat ...
-	TypeParquetFormat TypeBasicDatasetStorageFormat = "ParquetFormat"
-	// TypeTextFormat ...
-	TypeTextFormat TypeBasicDatasetStorageFormat = "TextFormat"
-)
-
-// PossibleTypeBasicDatasetStorageFormatValues returns an array of possible values for the TypeBasicDatasetStorageFormat const type.
-func PossibleTypeBasicDatasetStorageFormatValues() []TypeBasicDatasetStorageFormat {
-	return []TypeBasicDatasetStorageFormat{TypeAvroFormat, TypeDatasetStorageFormat, TypeJSONFormat, TypeOrcFormat, TypeParquetFormat, TypeTextFormat}
-}
-
-// TypeBasicDependencyReference enumerates the values for type basic dependency reference.
-type TypeBasicDependencyReference string
-
-const (
-	// TypeDependencyReference ...
-	TypeDependencyReference TypeBasicDependencyReference = "DependencyReference"
-	// TypeSelfDependencyTumblingWindowTriggerReference ...
-	TypeSelfDependencyTumblingWindowTriggerReference TypeBasicDependencyReference = "SelfDependencyTumblingWindowTriggerReference"
-	// TypeTriggerDependencyReference ...
-	TypeTriggerDependencyReference TypeBasicDependencyReference = "TriggerDependencyReference"
-	// TypeTumblingWindowTriggerDependencyReference ...
-	TypeTumblingWindowTriggerDependencyReference TypeBasicDependencyReference = "TumblingWindowTriggerDependencyReference"
-)
-
-// PossibleTypeBasicDependencyReferenceValues returns an array of possible values for the TypeBasicDependencyReference const type.
-func PossibleTypeBasicDependencyReferenceValues() []TypeBasicDependencyReference {
-	return []TypeBasicDependencyReference{TypeDependencyReference, TypeSelfDependencyTumblingWindowTriggerReference, TypeTriggerDependencyReference, TypeTumblingWindowTriggerDependencyReference}
-}
-
-// TypeBasicExportSettings enumerates the values for type basic export settings.
-type TypeBasicExportSettings string
-
-const (
-	// TypeExportSettings ...
-	TypeExportSettings TypeBasicExportSettings = "ExportSettings"
-	// TypeSnowflakeExportCopyCommand ...
-	TypeSnowflakeExportCopyCommand TypeBasicExportSettings = "SnowflakeExportCopyCommand"
-)
-
-// PossibleTypeBasicExportSettingsValues returns an array of possible values for the TypeBasicExportSettings const type.
-func PossibleTypeBasicExportSettingsValues() []TypeBasicExportSettings {
-	return []TypeBasicExportSettings{TypeExportSettings, TypeSnowflakeExportCopyCommand}
-}
-
-// TypeBasicFactoryRepoConfiguration enumerates the values for type basic factory repo configuration.
-type TypeBasicFactoryRepoConfiguration string
-
-const (
-	// TypeFactoryGitHubConfiguration ...
-	TypeFactoryGitHubConfiguration TypeBasicFactoryRepoConfiguration = "FactoryGitHubConfiguration"
-	// TypeFactoryRepoConfiguration ...
-	TypeFactoryRepoConfiguration TypeBasicFactoryRepoConfiguration = "FactoryRepoConfiguration"
-	// TypeFactoryVSTSConfiguration ...
-	TypeFactoryVSTSConfiguration TypeBasicFactoryRepoConfiguration = "FactoryVSTSConfiguration"
-)
-
-// PossibleTypeBasicFactoryRepoConfigurationValues returns an array of possible values for the TypeBasicFactoryRepoConfiguration const type.
-func PossibleTypeBasicFactoryRepoConfigurationValues() []TypeBasicFactoryRepoConfiguration {
-	return []TypeBasicFactoryRepoConfiguration{TypeFactoryGitHubConfiguration, TypeFactoryRepoConfiguration, TypeFactoryVSTSConfiguration}
-}
-
-// TypeBasicFormatReadSettings enumerates the values for type basic format read settings.
-type TypeBasicFormatReadSettings string
-
-const (
-	// TypeBinaryReadSettings ...
-	TypeBinaryReadSettings TypeBasicFormatReadSettings = "BinaryReadSettings"
-	// TypeDelimitedTextReadSettings ...
-	TypeDelimitedTextReadSettings TypeBasicFormatReadSettings = "DelimitedTextReadSettings"
-	// TypeFormatReadSettings ...
-	TypeFormatReadSettings TypeBasicFormatReadSettings = "FormatReadSettings"
-	// TypeJSONReadSettings ...
-	TypeJSONReadSettings TypeBasicFormatReadSettings = "JsonReadSettings"
-	// TypeXMLReadSettings ...
-	TypeXMLReadSettings TypeBasicFormatReadSettings = "XmlReadSettings"
-)
-
-// PossibleTypeBasicFormatReadSettingsValues returns an array of possible values for the TypeBasicFormatReadSettings const type.
-func PossibleTypeBasicFormatReadSettingsValues() []TypeBasicFormatReadSettings {
-	return []TypeBasicFormatReadSettings{TypeBinaryReadSettings, TypeDelimitedTextReadSettings, TypeFormatReadSettings, TypeJSONReadSettings, TypeXMLReadSettings}
-}
-
-// TypeBasicFormatWriteSettings enumerates the values for type basic format write settings.
-type TypeBasicFormatWriteSettings string
-
-const (
-	// TypeAvroWriteSettings ...
-	TypeAvroWriteSettings TypeBasicFormatWriteSettings = "AvroWriteSettings"
-	// TypeDelimitedTextWriteSettings ...
-	TypeDelimitedTextWriteSettings TypeBasicFormatWriteSettings = "DelimitedTextWriteSettings"
-	// TypeFormatWriteSettings ...
-	TypeFormatWriteSettings TypeBasicFormatWriteSettings = "FormatWriteSettings"
-	// TypeJSONWriteSettings ...
-	TypeJSONWriteSettings TypeBasicFormatWriteSettings = "JsonWriteSettings"
-)
-
-// PossibleTypeBasicFormatWriteSettingsValues returns an array of possible values for the TypeBasicFormatWriteSettings const type.
-func PossibleTypeBasicFormatWriteSettingsValues() []TypeBasicFormatWriteSettings {
-	return []TypeBasicFormatWriteSettings{TypeAvroWriteSettings, TypeDelimitedTextWriteSettings, TypeFormatWriteSettings, TypeJSONWriteSettings}
-}
-
-// TypeBasicImportSettings enumerates the values for type basic import settings.
-type TypeBasicImportSettings string
-
-const (
-	// TypeImportSettings ...
-	TypeImportSettings TypeBasicImportSettings = "ImportSettings"
-	// TypeSnowflakeImportCopyCommand ...
-	TypeSnowflakeImportCopyCommand TypeBasicImportSettings = "SnowflakeImportCopyCommand"
-)
-
-// PossibleTypeBasicImportSettingsValues returns an array of possible values for the TypeBasicImportSettings const type.
-func PossibleTypeBasicImportSettingsValues() []TypeBasicImportSettings {
-	return []TypeBasicImportSettings{TypeImportSettings, TypeSnowflakeImportCopyCommand}
-}
-
-// TypeBasicIntegrationRuntime enumerates the values for type basic integration runtime.
-type TypeBasicIntegrationRuntime string
-
-const (
-	// TypeIntegrationRuntime ...
-	TypeIntegrationRuntime TypeBasicIntegrationRuntime = "IntegrationRuntime"
-	// TypeManaged ...
-	TypeManaged TypeBasicIntegrationRuntime = "Managed"
-	// TypeSelfHosted ...
-	TypeSelfHosted TypeBasicIntegrationRuntime = "SelfHosted"
-)
-
-// PossibleTypeBasicIntegrationRuntimeValues returns an array of possible values for the TypeBasicIntegrationRuntime const type.
-func PossibleTypeBasicIntegrationRuntimeValues() []TypeBasicIntegrationRuntime {
-	return []TypeBasicIntegrationRuntime{TypeIntegrationRuntime, TypeManaged, TypeSelfHosted}
-}
-
-// TypeBasicIntegrationRuntimeStatus enumerates the values for type basic integration runtime status.
-type TypeBasicIntegrationRuntimeStatus string
-
-const (
-	// TypeBasicIntegrationRuntimeStatusTypeIntegrationRuntimeStatus ...
-	TypeBasicIntegrationRuntimeStatusTypeIntegrationRuntimeStatus TypeBasicIntegrationRuntimeStatus = "IntegrationRuntimeStatus"
-	// TypeBasicIntegrationRuntimeStatusTypeManaged ...
-	TypeBasicIntegrationRuntimeStatusTypeManaged TypeBasicIntegrationRuntimeStatus = "Managed"
-	// TypeBasicIntegrationRuntimeStatusTypeSelfHosted ...
-	TypeBasicIntegrationRuntimeStatusTypeSelfHosted TypeBasicIntegrationRuntimeStatus = "SelfHosted"
-)
-
-// PossibleTypeBasicIntegrationRuntimeStatusValues returns an array of possible values for the TypeBasicIntegrationRuntimeStatus const type.
-func PossibleTypeBasicIntegrationRuntimeStatusValues() []TypeBasicIntegrationRuntimeStatus {
-	return []TypeBasicIntegrationRuntimeStatus{TypeBasicIntegrationRuntimeStatusTypeIntegrationRuntimeStatus, TypeBasicIntegrationRuntimeStatusTypeManaged, TypeBasicIntegrationRuntimeStatusTypeSelfHosted}
-}
-
-// TypeBasicLinkedService enumerates the values for type basic linked service.
-type TypeBasicLinkedService string
-
-const (
-	// TypeAmazonMWS ...
-	TypeAmazonMWS TypeBasicLinkedService = "AmazonMWS"
-	// TypeAmazonRedshift ...
-	TypeAmazonRedshift TypeBasicLinkedService = "AmazonRedshift"
-	// TypeAmazonS3 ...
-	TypeAmazonS3 TypeBasicLinkedService = "AmazonS3"
-	// TypeAzureBatch ...
-	TypeAzureBatch TypeBasicLinkedService = "AzureBatch"
-	// TypeAzureBlobFS ...
-	TypeAzureBlobFS TypeBasicLinkedService = "AzureBlobFS"
-	// TypeAzureBlobStorage ...
-	TypeAzureBlobStorage TypeBasicLinkedService = "AzureBlobStorage"
-	// TypeAzureDatabricks ...
-	TypeAzureDatabricks TypeBasicLinkedService = "AzureDatabricks"
-	// TypeAzureDataExplorer ...
-	TypeAzureDataExplorer TypeBasicLinkedService = "AzureDataExplorer"
-	// TypeAzureDataLakeAnalytics ...
-	TypeAzureDataLakeAnalytics TypeBasicLinkedService = "AzureDataLakeAnalytics"
-	// TypeAzureDataLakeStore ...
-	TypeAzureDataLakeStore TypeBasicLinkedService = "AzureDataLakeStore"
-	// TypeAzureFileStorage ...
-	TypeAzureFileStorage TypeBasicLinkedService = "AzureFileStorage"
-	// TypeAzureFunction ...
-	TypeAzureFunction TypeBasicLinkedService = "AzureFunction"
-	// TypeAzureKeyVault ...
-	TypeAzureKeyVault TypeBasicLinkedService = "AzureKeyVault"
-	// TypeAzureMariaDB ...
-	TypeAzureMariaDB TypeBasicLinkedService = "AzureMariaDB"
-	// TypeAzureML ...
-	TypeAzureML TypeBasicLinkedService = "AzureML"
-	// TypeAzureMLService ...
-	TypeAzureMLService TypeBasicLinkedService = "AzureMLService"
-	// TypeAzureMySQL ...
-	TypeAzureMySQL TypeBasicLinkedService = "AzureMySql"
-	// TypeAzurePostgreSQL ...
-	TypeAzurePostgreSQL TypeBasicLinkedService = "AzurePostgreSql"
-	// TypeAzureSearch ...
-	TypeAzureSearch TypeBasicLinkedService = "AzureSearch"
-	// TypeAzureSQLDatabase ...
-	TypeAzureSQLDatabase TypeBasicLinkedService = "AzureSqlDatabase"
-	// TypeAzureSQLDW ...
-	TypeAzureSQLDW TypeBasicLinkedService = "AzureSqlDW"
-	// TypeAzureSQLMI ...
-	TypeAzureSQLMI TypeBasicLinkedService = "AzureSqlMI"
-	// TypeAzureStorage ...
-	TypeAzureStorage TypeBasicLinkedService = "AzureStorage"
-	// TypeAzureTableStorage ...
-	TypeAzureTableStorage TypeBasicLinkedService = "AzureTableStorage"
-	// TypeCassandra ...
-	TypeCassandra TypeBasicLinkedService = "Cassandra"
-	// TypeCommonDataServiceForApps ...
-	TypeCommonDataServiceForApps TypeBasicLinkedService = "CommonDataServiceForApps"
-	// TypeConcur ...
-	TypeConcur TypeBasicLinkedService = "Concur"
-	// TypeCosmosDb ...
-	TypeCosmosDb TypeBasicLinkedService = "CosmosDb"
-	// TypeCosmosDbMongoDbAPI ...
-	TypeCosmosDbMongoDbAPI TypeBasicLinkedService = "CosmosDbMongoDbApi"
-	// TypeCouchbase ...
-	TypeCouchbase TypeBasicLinkedService = "Couchbase"
-	// TypeCustomDataSource ...
-	TypeCustomDataSource TypeBasicLinkedService = "CustomDataSource"
-	// TypeDb2 ...
-	TypeDb2 TypeBasicLinkedService = "Db2"
-	// TypeDrill ...
-	TypeDrill TypeBasicLinkedService = "Drill"
-	// TypeDynamics ...
-	TypeDynamics TypeBasicLinkedService = "Dynamics"
-	// TypeDynamicsAX ...
-	TypeDynamicsAX TypeBasicLinkedService = "DynamicsAX"
-	// TypeDynamicsCrm ...
-	TypeDynamicsCrm TypeBasicLinkedService = "DynamicsCrm"
-	// TypeEloqua ...
-	TypeEloqua TypeBasicLinkedService = "Eloqua"
-	// TypeFileServer ...
-	TypeFileServer TypeBasicLinkedService = "FileServer"
-	// TypeFtpServer ...
-	TypeFtpServer TypeBasicLinkedService = "FtpServer"
-	// TypeGoogleAdWords ...
-	TypeGoogleAdWords TypeBasicLinkedService = "GoogleAdWords"
-	// TypeGoogleBigQuery ...
-	TypeGoogleBigQuery TypeBasicLinkedService = "GoogleBigQuery"
-	// TypeGoogleCloudStorage ...
-	TypeGoogleCloudStorage TypeBasicLinkedService = "GoogleCloudStorage"
-	// TypeGreenplum ...
-	TypeGreenplum TypeBasicLinkedService = "Greenplum"
-	// TypeHBase ...
-	TypeHBase TypeBasicLinkedService = "HBase"
-	// TypeHdfs ...
-	TypeHdfs TypeBasicLinkedService = "Hdfs"
-	// TypeHDInsight ...
-	TypeHDInsight TypeBasicLinkedService = "HDInsight"
-	// TypeHDInsightOnDemand ...
-	TypeHDInsightOnDemand TypeBasicLinkedService = "HDInsightOnDemand"
-	// TypeHive ...
-	TypeHive TypeBasicLinkedService = "Hive"
-	// TypeHTTPServer ...
-	TypeHTTPServer TypeBasicLinkedService = "HttpServer"
-	// TypeHubspot ...
-	TypeHubspot TypeBasicLinkedService = "Hubspot"
-	// TypeImpala ...
-	TypeImpala TypeBasicLinkedService = "Impala"
-	// TypeInformix ...
-	TypeInformix TypeBasicLinkedService = "Informix"
-	// TypeJira ...
-	TypeJira TypeBasicLinkedService = "Jira"
-	// TypeLinkedService ...
-	TypeLinkedService TypeBasicLinkedService = "LinkedService"
-	// TypeMagento ...
-	TypeMagento TypeBasicLinkedService = "Magento"
-	// TypeMariaDB ...
-	TypeMariaDB TypeBasicLinkedService = "MariaDB"
-	// TypeMarketo ...
-	TypeMarketo TypeBasicLinkedService = "Marketo"
-	// TypeMicrosoftAccess ...
-	TypeMicrosoftAccess TypeBasicLinkedService = "MicrosoftAccess"
-	// TypeMongoDb ...
-	TypeMongoDb TypeBasicLinkedService = "MongoDb"
-	// TypeMongoDbV2 ...
-	TypeMongoDbV2 TypeBasicLinkedService = "MongoDbV2"
-	// TypeMySQL ...
-	TypeMySQL TypeBasicLinkedService = "MySql"
-	// TypeNetezza ...
-	TypeNetezza TypeBasicLinkedService = "Netezza"
-	// TypeOData ...
-	TypeOData TypeBasicLinkedService = "OData"
-	// TypeOdbc ...
-	TypeOdbc TypeBasicLinkedService = "Odbc"
-	// TypeOffice365 ...
-	TypeOffice365 TypeBasicLinkedService = "Office365"
-	// TypeOracle ...
-	TypeOracle TypeBasicLinkedService = "Oracle"
-	// TypeOracleServiceCloud ...
-	TypeOracleServiceCloud TypeBasicLinkedService = "OracleServiceCloud"
-	// TypePaypal ...
-	TypePaypal TypeBasicLinkedService = "Paypal"
-	// TypePhoenix ...
-	TypePhoenix TypeBasicLinkedService = "Phoenix"
-	// TypePostgreSQL ...
-	TypePostgreSQL TypeBasicLinkedService = "PostgreSql"
-	// TypePresto ...
-	TypePresto TypeBasicLinkedService = "Presto"
-	// TypeQuickBooks ...
-	TypeQuickBooks TypeBasicLinkedService = "QuickBooks"
-	// TypeResponsys ...
-	TypeResponsys TypeBasicLinkedService = "Responsys"
-	// TypeRestService ...
-	TypeRestService TypeBasicLinkedService = "RestService"
-	// TypeSalesforce ...
-	TypeSalesforce TypeBasicLinkedService = "Salesforce"
-	// TypeSalesforceMarketingCloud ...
-	TypeSalesforceMarketingCloud TypeBasicLinkedService = "SalesforceMarketingCloud"
-	// TypeSalesforceServiceCloud ...
-	TypeSalesforceServiceCloud TypeBasicLinkedService = "SalesforceServiceCloud"
-	// TypeSapBW ...
-	TypeSapBW TypeBasicLinkedService = "SapBW"
-	// TypeSapCloudForCustomer ...
-	TypeSapCloudForCustomer TypeBasicLinkedService = "SapCloudForCustomer"
-	// TypeSapEcc ...
-	TypeSapEcc TypeBasicLinkedService = "SapEcc"
-	// TypeSapHana ...
-	TypeSapHana TypeBasicLinkedService = "SapHana"
-	// TypeSapOpenHub ...
-	TypeSapOpenHub TypeBasicLinkedService = "SapOpenHub"
-	// TypeSapTable ...
-	TypeSapTable TypeBasicLinkedService = "SapTable"
-	// TypeServiceNow ...
-	TypeServiceNow TypeBasicLinkedService = "ServiceNow"
-	// TypeSftp ...
-	TypeSftp TypeBasicLinkedService = "Sftp"
-	// TypeSharePointOnlineList ...
-	TypeSharePointOnlineList TypeBasicLinkedService = "SharePointOnlineList"
-	// TypeShopify ...
-	TypeShopify TypeBasicLinkedService = "Shopify"
-	// TypeSnowflake ...
-	TypeSnowflake TypeBasicLinkedService = "Snowflake"
-	// TypeSpark ...
-	TypeSpark TypeBasicLinkedService = "Spark"
-	// TypeSQLServer ...
-	TypeSQLServer TypeBasicLinkedService = "SqlServer"
-	// TypeSquare ...
-	TypeSquare TypeBasicLinkedService = "Square"
-	// TypeSybase ...
-	TypeSybase TypeBasicLinkedService = "Sybase"
-	// TypeTeradata ...
-	TypeTeradata TypeBasicLinkedService = "Teradata"
-	// TypeVertica ...
-	TypeVertica TypeBasicLinkedService = "Vertica"
-	// TypeWeb ...
-	TypeWeb TypeBasicLinkedService = "Web"
-	// TypeXero ...
-	TypeXero TypeBasicLinkedService = "Xero"
-	// TypeZoho ...
-	TypeZoho TypeBasicLinkedService = "Zoho"
-)
-
-// PossibleTypeBasicLinkedServiceValues returns an array of possible values for the TypeBasicLinkedService const type.
-func PossibleTypeBasicLinkedServiceValues() []TypeBasicLinkedService {
-	return []TypeBasicLinkedService{TypeAmazonMWS, TypeAmazonRedshift, TypeAmazonS3, TypeAzureBatch, TypeAzureBlobFS, TypeAzureBlobStorage, TypeAzureDatabricks, TypeAzureDataExplorer, TypeAzureDataLakeAnalytics, TypeAzureDataLakeStore, TypeAzureFileStorage, TypeAzureFunction, TypeAzureKeyVault, TypeAzureMariaDB, TypeAzureML, TypeAzureMLService, TypeAzureMySQL, TypeAzurePostgreSQL, TypeAzureSearch, TypeAzureSQLDatabase, TypeAzureSQLDW, TypeAzureSQLMI, TypeAzureStorage, TypeAzureTableStorage, TypeCassandra, TypeCommonDataServiceForApps, TypeConcur, TypeCosmosDb, TypeCosmosDbMongoDbAPI, TypeCouchbase, TypeCustomDataSource, TypeDb2, TypeDrill, TypeDynamics, TypeDynamicsAX, TypeDynamicsCrm, TypeEloqua, TypeFileServer, TypeFtpServer, TypeGoogleAdWords, TypeGoogleBigQuery, TypeGoogleCloudStorage, TypeGreenplum, TypeHBase, TypeHdfs, TypeHDInsight, TypeHDInsightOnDemand, TypeHive, TypeHTTPServer, TypeHubspot, TypeImpala, TypeInformix, TypeJira, TypeLinkedService, TypeMagento, TypeMariaDB, TypeMarketo, TypeMicrosoftAccess, TypeMongoDb, TypeMongoDbV2, TypeMySQL, TypeNetezza, TypeOData, TypeOdbc, TypeOffice365, TypeOracle, TypeOracleServiceCloud, TypePaypal, TypePhoenix, TypePostgreSQL, TypePresto, TypeQuickBooks, TypeResponsys, TypeRestService, TypeSalesforce, TypeSalesforceMarketingCloud, TypeSalesforceServiceCloud, TypeSapBW, TypeSapCloudForCustomer, TypeSapEcc, TypeSapHana, TypeSapOpenHub, TypeSapTable, TypeServiceNow, TypeSftp, TypeSharePointOnlineList, TypeShopify, TypeSnowflake, TypeSpark, TypeSQLServer, TypeSquare, TypeSybase, TypeTeradata, TypeVertica, TypeWeb, TypeXero, TypeZoho}
-}
-
-// TypeBasicSsisObjectMetadata enumerates the values for type basic ssis object metadata.
-type TypeBasicSsisObjectMetadata string
-
-const (
-	// TypeEnvironment ...
-	TypeEnvironment TypeBasicSsisObjectMetadata = "Environment"
-	// TypeFolder ...
-	TypeFolder TypeBasicSsisObjectMetadata = "Folder"
-	// TypePackage ...
-	TypePackage TypeBasicSsisObjectMetadata = "Package"
-	// TypeProject ...
-	TypeProject TypeBasicSsisObjectMetadata = "Project"
-	// TypeSsisObjectMetadata ...
-	TypeSsisObjectMetadata TypeBasicSsisObjectMetadata = "SsisObjectMetadata"
-)
-
-// PossibleTypeBasicSsisObjectMetadataValues returns an array of possible values for the TypeBasicSsisObjectMetadata const type.
-func PossibleTypeBasicSsisObjectMetadataValues() []TypeBasicSsisObjectMetadata {
-	return []TypeBasicSsisObjectMetadata{TypeEnvironment, TypeFolder, TypePackage, TypeProject, TypeSsisObjectMetadata}
-}
-
-// TypeBasicStoreReadSettings enumerates the values for type basic store read settings.
-type TypeBasicStoreReadSettings string
-
-const (
-	// TypeAmazonS3ReadSettings ...
-	TypeAmazonS3ReadSettings TypeBasicStoreReadSettings = "AmazonS3ReadSettings"
-	// TypeAzureBlobFSReadSettings ...
-	TypeAzureBlobFSReadSettings TypeBasicStoreReadSettings = "AzureBlobFSReadSettings"
-	// TypeAzureBlobStorageReadSettings ...
-	TypeAzureBlobStorageReadSettings TypeBasicStoreReadSettings = "AzureBlobStorageReadSettings"
-	// TypeAzureDataLakeStoreReadSettings ...
-	TypeAzureDataLakeStoreReadSettings TypeBasicStoreReadSettings = "AzureDataLakeStoreReadSettings"
-	// TypeAzureFileStorageReadSettings ...
-	TypeAzureFileStorageReadSettings TypeBasicStoreReadSettings = "AzureFileStorageReadSettings"
-	// TypeFileServerReadSettings ...
-	TypeFileServerReadSettings TypeBasicStoreReadSettings = "FileServerReadSettings"
-	// TypeFtpReadSettings ...
-	TypeFtpReadSettings TypeBasicStoreReadSettings = "FtpReadSettings"
-	// TypeGoogleCloudStorageReadSettings ...
-	TypeGoogleCloudStorageReadSettings TypeBasicStoreReadSettings = "GoogleCloudStorageReadSettings"
-	// TypeHdfsReadSettings ...
-	TypeHdfsReadSettings TypeBasicStoreReadSettings = "HdfsReadSettings"
-	// TypeHTTPReadSettings ...
-	TypeHTTPReadSettings TypeBasicStoreReadSettings = "HttpReadSettings"
-	// TypeSftpReadSettings ...
-	TypeSftpReadSettings TypeBasicStoreReadSettings = "SftpReadSettings"
-	// TypeStoreReadSettings ...
-	TypeStoreReadSettings TypeBasicStoreReadSettings = "StoreReadSettings"
-)
-
-// PossibleTypeBasicStoreReadSettingsValues returns an array of possible values for the TypeBasicStoreReadSettings const type.
-func PossibleTypeBasicStoreReadSettingsValues() []TypeBasicStoreReadSettings {
-	return []TypeBasicStoreReadSettings{TypeAmazonS3ReadSettings, TypeAzureBlobFSReadSettings, TypeAzureBlobStorageReadSettings, TypeAzureDataLakeStoreReadSettings, TypeAzureFileStorageReadSettings, TypeFileServerReadSettings, TypeFtpReadSettings, TypeGoogleCloudStorageReadSettings, TypeHdfsReadSettings, TypeHTTPReadSettings, TypeSftpReadSettings, TypeStoreReadSettings}
-}
-
-// TypeBasicStoreWriteSettings enumerates the values for type basic store write settings.
-type TypeBasicStoreWriteSettings string
-
-const (
-	// TypeAzureBlobFSWriteSettings ...
-	TypeAzureBlobFSWriteSettings TypeBasicStoreWriteSettings = "AzureBlobFSWriteSettings"
-	// TypeAzureBlobStorageWriteSettings ...
-	TypeAzureBlobStorageWriteSettings TypeBasicStoreWriteSettings = "AzureBlobStorageWriteSettings"
-	// TypeAzureDataLakeStoreWriteSettings ...
-	TypeAzureDataLakeStoreWriteSettings TypeBasicStoreWriteSettings = "AzureDataLakeStoreWriteSettings"
-	// TypeFileServerWriteSettings ...
-	TypeFileServerWriteSettings TypeBasicStoreWriteSettings = "FileServerWriteSettings"
-	// TypeSftpWriteSettings ...
-	TypeSftpWriteSettings TypeBasicStoreWriteSettings = "SftpWriteSettings"
-	// TypeStoreWriteSettings ...
-	TypeStoreWriteSettings TypeBasicStoreWriteSettings = "StoreWriteSettings"
-)
-
-// PossibleTypeBasicStoreWriteSettingsValues returns an array of possible values for the TypeBasicStoreWriteSettings const type.
-func PossibleTypeBasicStoreWriteSettingsValues() []TypeBasicStoreWriteSettings {
-	return []TypeBasicStoreWriteSettings{TypeAzureBlobFSWriteSettings, TypeAzureBlobStorageWriteSettings, TypeAzureDataLakeStoreWriteSettings, TypeFileServerWriteSettings, TypeSftpWriteSettings, TypeStoreWriteSettings}
-}
-
-// TypeBasicTrigger enumerates the values for type basic trigger.
-type TypeBasicTrigger string
-
-const (
-	// TypeBlobEventsTrigger ...
-	TypeBlobEventsTrigger TypeBasicTrigger = "BlobEventsTrigger"
-	// TypeBlobTrigger ...
-	TypeBlobTrigger TypeBasicTrigger = "BlobTrigger"
-	// TypeChainingTrigger ...
-	TypeChainingTrigger TypeBasicTrigger = "ChainingTrigger"
-	// TypeMultiplePipelineTrigger ...
-	TypeMultiplePipelineTrigger TypeBasicTrigger = "MultiplePipelineTrigger"
-	// TypeRerunTumblingWindowTrigger ...
-	TypeRerunTumblingWindowTrigger TypeBasicTrigger = "RerunTumblingWindowTrigger"
-	// TypeScheduleTrigger ...
-	TypeScheduleTrigger TypeBasicTrigger = "ScheduleTrigger"
-	// TypeTrigger ...
-	TypeTrigger TypeBasicTrigger = "Trigger"
-	// TypeTumblingWindowTrigger ...
-	TypeTumblingWindowTrigger TypeBasicTrigger = "TumblingWindowTrigger"
-)
-
-// PossibleTypeBasicTriggerValues returns an array of possible values for the TypeBasicTrigger const type.
-func PossibleTypeBasicTriggerValues() []TypeBasicTrigger {
-	return []TypeBasicTrigger{TypeBlobEventsTrigger, TypeBlobTrigger, TypeChainingTrigger, TypeMultiplePipelineTrigger, TypeRerunTumblingWindowTrigger, TypeScheduleTrigger, TypeTrigger, TypeTumblingWindowTrigger}
-}
-
-// VariableType enumerates the values for variable type.
-type VariableType string
-
-const (
-	// VariableTypeArray ...
-	VariableTypeArray VariableType = "Array"
-	// VariableTypeBool ...
-	VariableTypeBool VariableType = "Bool"
-	// VariableTypeString ...
-	VariableTypeString VariableType = "String"
-)
-
-// PossibleVariableTypeValues returns an array of possible values for the VariableType const type.
-func PossibleVariableTypeValues() []VariableType {
-	return []VariableType{VariableTypeArray, VariableTypeBool, VariableTypeString}
-}
-
-// WebActivityMethod enumerates the values for web activity method.
-type WebActivityMethod string
-
-const (
-	// WebActivityMethodDELETE ...
-	WebActivityMethodDELETE WebActivityMethod = "DELETE"
-	// WebActivityMethodGET ...
-	WebActivityMethodGET WebActivityMethod = "GET"
-	// WebActivityMethodPOST ...
-	WebActivityMethodPOST WebActivityMethod = "POST"
-	// WebActivityMethodPUT ...
-	WebActivityMethodPUT WebActivityMethod = "PUT"
-)
-
-// PossibleWebActivityMethodValues returns an array of possible values for the WebActivityMethod const type.
-func PossibleWebActivityMethodValues() []WebActivityMethod {
-	return []WebActivityMethod{WebActivityMethodDELETE, WebActivityMethodGET, WebActivityMethodPOST, WebActivityMethodPUT}
-}
-
-// WebHookActivityMethod enumerates the values for web hook activity method.
-type WebHookActivityMethod string
-
-const (
-	// WebHookActivityMethodPOST ...
-	WebHookActivityMethodPOST WebHookActivityMethod = "POST"
-)
-
-// PossibleWebHookActivityMethodValues returns an array of possible values for the WebHookActivityMethod const type.
-func PossibleWebHookActivityMethodValues() []WebHookActivityMethod {
-	return []WebHookActivityMethod{WebHookActivityMethodPOST}
-}
-
 // AccessPolicyResponse get Data Plane read only token response definition.
 type AccessPolicyResponse struct {
 	autorest.Response `json:"-"`
@@ -10573,7 +7955,7 @@ type AvroSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -10766,6 +8148,11 @@ func (as AvroSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AvroSink.
 func (as AvroSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AvroSink.
+func (as AvroSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -11594,6 +8981,96 @@ func (aws *AvroWriteSettings) UnmarshalJSON(body []byte) error {
 	}
 
 	return nil
+}
+
+// AzPowerShellSetup the express custom setup of installing Azure PowerShell.
+type AzPowerShellSetup struct {
+	// AzPowerShellSetupTypeProperties - Install Azure PowerShell type properties.
+	*AzPowerShellSetupTypeProperties `json:"typeProperties,omitempty"`
+	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeAzPowerShellSetup', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
+	Type TypeBasicCustomSetupBase `json:"type,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for AzPowerShellSetup.
+func (apss AzPowerShellSetup) MarshalJSON() ([]byte, error) {
+	apss.Type = TypeAzPowerShellSetup
+	objectMap := make(map[string]interface{})
+	if apss.AzPowerShellSetupTypeProperties != nil {
+		objectMap["typeProperties"] = apss.AzPowerShellSetupTypeProperties
+	}
+	if apss.Type != "" {
+		objectMap["type"] = apss.Type
+	}
+	return json.Marshal(objectMap)
+}
+
+// AsAzPowerShellSetup is the BasicCustomSetupBase implementation for AzPowerShellSetup.
+func (apss AzPowerShellSetup) AsAzPowerShellSetup() (*AzPowerShellSetup, bool) {
+	return &apss, true
+}
+
+// AsComponentSetup is the BasicCustomSetupBase implementation for AzPowerShellSetup.
+func (apss AzPowerShellSetup) AsComponentSetup() (*ComponentSetup, bool) {
+	return nil, false
+}
+
+// AsEnvironmentVariableSetup is the BasicCustomSetupBase implementation for AzPowerShellSetup.
+func (apss AzPowerShellSetup) AsEnvironmentVariableSetup() (*EnvironmentVariableSetup, bool) {
+	return nil, false
+}
+
+// AsCmdkeySetup is the BasicCustomSetupBase implementation for AzPowerShellSetup.
+func (apss AzPowerShellSetup) AsCmdkeySetup() (*CmdkeySetup, bool) {
+	return nil, false
+}
+
+// AsCustomSetupBase is the BasicCustomSetupBase implementation for AzPowerShellSetup.
+func (apss AzPowerShellSetup) AsCustomSetupBase() (*CustomSetupBase, bool) {
+	return nil, false
+}
+
+// AsBasicCustomSetupBase is the BasicCustomSetupBase implementation for AzPowerShellSetup.
+func (apss AzPowerShellSetup) AsBasicCustomSetupBase() (BasicCustomSetupBase, bool) {
+	return &apss, true
+}
+
+// UnmarshalJSON is the custom unmarshaler for AzPowerShellSetup struct.
+func (apss *AzPowerShellSetup) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		case "typeProperties":
+			if v != nil {
+				var azPowerShellSetupTypeProperties AzPowerShellSetupTypeProperties
+				err = json.Unmarshal(*v, &azPowerShellSetupTypeProperties)
+				if err != nil {
+					return err
+				}
+				apss.AzPowerShellSetupTypeProperties = &azPowerShellSetupTypeProperties
+			}
+		case "type":
+			if v != nil {
+				var typeVar TypeBasicCustomSetupBase
+				err = json.Unmarshal(*v, &typeVar)
+				if err != nil {
+					return err
+				}
+				apss.Type = typeVar
+			}
+		}
+	}
+
+	return nil
+}
+
+// AzPowerShellSetupTypeProperties installation of Azure PowerShell type properties.
+type AzPowerShellSetupTypeProperties struct {
+	// Version - The required version of Azure PowerShell to install.
+	Version *string `json:"version,omitempty"`
 }
 
 // AzureBatchLinkedService azure Batch linked service.
@@ -14349,6 +11826,8 @@ type AzureBlobFSLinkedServiceTypeProperties struct {
 	ServicePrincipalKey BasicSecretBase `json:"servicePrincipalKey,omitempty"`
 	// Tenant - The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 	Tenant interface{} `json:"tenant,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 	EncryptedCredential interface{} `json:"encryptedCredential,omitempty"`
 }
@@ -14405,6 +11884,15 @@ func (abflstp *AzureBlobFSLinkedServiceTypeProperties) UnmarshalJSON(body []byte
 					return err
 				}
 				abflstp.Tenant = tenant
+			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				abflstp.AzureCloudType = azureCloudType
 			}
 		case "encryptedCredential":
 			if v != nil {
@@ -14863,7 +12351,7 @@ type AzureBlobFSSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -15055,6 +12543,11 @@ func (abfs AzureBlobFSSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureBlobFSSink.
 func (abfs AzureBlobFSSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureBlobFSSink.
+func (abfs AzureBlobFSSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -15794,7 +13287,7 @@ type AzureBlobFSWriteSettings struct {
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
 	// CopyBehavior - The type of copy behavior for copy sink.
 	CopyBehavior interface{} `json:"copyBehavior,omitempty"`
-	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
+	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeAzureFileStorageWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
 	Type TypeBasicStoreWriteSettings `json:"type,omitempty"`
 }
 
@@ -15818,6 +13311,11 @@ func (abfws AzureBlobFSWriteSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzureFileStorageWriteSettings is the BasicStoreWriteSettings implementation for AzureBlobFSWriteSettings.
+func (abfws AzureBlobFSWriteSettings) AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool) {
+	return nil, false
 }
 
 // AsFileServerWriteSettings is the BasicStoreWriteSettings implementation for AzureBlobFSWriteSettings.
@@ -16553,6 +14051,8 @@ type AzureBlobStorageLinkedServiceTypeProperties struct {
 	ServicePrincipalKey BasicSecretBase `json:"servicePrincipalKey,omitempty"`
 	// Tenant - The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 	Tenant interface{} `json:"tenant,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 	EncryptedCredential *string `json:"encryptedCredential,omitempty"`
 }
@@ -16636,6 +14136,15 @@ func (abslstp *AzureBlobStorageLinkedServiceTypeProperties) UnmarshalJSON(body [
 					return err
 				}
 				abslstp.Tenant = tenant
+			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				abslstp.AzureCloudType = azureCloudType
 			}
 		case "encryptedCredential":
 			if v != nil {
@@ -17102,7 +14611,7 @@ type AzureBlobStorageWriteSettings struct {
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
 	// CopyBehavior - The type of copy behavior for copy sink.
 	CopyBehavior interface{} `json:"copyBehavior,omitempty"`
-	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
+	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeAzureFileStorageWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
 	Type TypeBasicStoreWriteSettings `json:"type,omitempty"`
 }
 
@@ -17126,6 +14635,11 @@ func (absws AzureBlobStorageWriteSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzureFileStorageWriteSettings is the BasicStoreWriteSettings implementation for AzureBlobStorageWriteSettings.
+func (absws AzureBlobStorageWriteSettings) AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool) {
+	return nil, false
 }
 
 // AsFileServerWriteSettings is the BasicStoreWriteSettings implementation for AzureBlobStorageWriteSettings.
@@ -17865,6 +15379,8 @@ type AzureDatabricksLinkedServiceTypeProperties struct {
 	NewClusterSparkEnvVars map[string]interface{} `json:"newClusterSparkEnvVars"`
 	// NewClusterCustomTags - Additional tags for cluster resources. This property is ignored in instance pool configurations.
 	NewClusterCustomTags map[string]interface{} `json:"newClusterCustomTags"`
+	// NewClusterLogDestination - Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+	NewClusterLogDestination interface{} `json:"newClusterLogDestination,omitempty"`
 	// NewClusterDriverNodeType - The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
 	NewClusterDriverNodeType interface{} `json:"newClusterDriverNodeType,omitempty"`
 	// NewClusterInitScripts - User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
@@ -17905,6 +15421,9 @@ func (adlstp AzureDatabricksLinkedServiceTypeProperties) MarshalJSON() ([]byte, 
 	}
 	if adlstp.NewClusterCustomTags != nil {
 		objectMap["newClusterCustomTags"] = adlstp.NewClusterCustomTags
+	}
+	if adlstp.NewClusterLogDestination != nil {
+		objectMap["newClusterLogDestination"] = adlstp.NewClusterLogDestination
 	}
 	if adlstp.NewClusterDriverNodeType != nil {
 		objectMap["newClusterDriverNodeType"] = adlstp.NewClusterDriverNodeType
@@ -18018,6 +15537,15 @@ func (adlstp *AzureDatabricksLinkedServiceTypeProperties) UnmarshalJSON(body []b
 					return err
 				}
 				adlstp.NewClusterCustomTags = newClusterCustomTags
+			}
+		case "newClusterLogDestination":
+			if v != nil {
+				var newClusterLogDestination interface{}
+				err = json.Unmarshal(*v, &newClusterLogDestination)
+				if err != nil {
+					return err
+				}
+				adlstp.NewClusterLogDestination = newClusterLogDestination
 			}
 		case "newClusterDriverNodeType":
 			if v != nil {
@@ -19140,7 +16668,7 @@ type AzureDataExplorerSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -19338,6 +16866,11 @@ func (ades AzureDataExplorerSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureDataExplorerSink.
 func (ades AzureDataExplorerSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureDataExplorerSink.
+func (ades AzureDataExplorerSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -22778,6 +20311,8 @@ type AzureDataLakeStoreLinkedServiceTypeProperties struct {
 	ServicePrincipalKey BasicSecretBase `json:"servicePrincipalKey,omitempty"`
 	// Tenant - The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 	Tenant interface{} `json:"tenant,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// AccountName - Data Lake Store account name. Type: string (or Expression with resultType string).
 	AccountName interface{} `json:"accountName,omitempty"`
 	// SubscriptionID - Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
@@ -22831,6 +20366,15 @@ func (adlslstp *AzureDataLakeStoreLinkedServiceTypeProperties) UnmarshalJSON(bod
 					return err
 				}
 				adlslstp.Tenant = tenant
+			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				adlslstp.AzureCloudType = azureCloudType
 			}
 		case "accountName":
 			if v != nil {
@@ -23332,7 +20876,7 @@ type AzureDataLakeStoreSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -23527,6 +21071,11 @@ func (adlss AzureDataLakeStoreSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureDataLakeStoreSink.
 func (adlss AzureDataLakeStoreSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureDataLakeStoreSink.
+func (adlss AzureDataLakeStoreSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -24247,7 +21796,7 @@ type AzureDataLakeStoreWriteSettings struct {
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
 	// CopyBehavior - The type of copy behavior for copy sink.
 	CopyBehavior interface{} `json:"copyBehavior,omitempty"`
-	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
+	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeAzureFileStorageWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
 	Type TypeBasicStoreWriteSettings `json:"type,omitempty"`
 }
 
@@ -24271,6 +21820,11 @@ func (adlsws AzureDataLakeStoreWriteSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzureFileStorageWriteSettings is the BasicStoreWriteSettings implementation for AzureDataLakeStoreWriteSettings.
+func (adlsws AzureDataLakeStoreWriteSettings) AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool) {
+	return nil, false
 }
 
 // AsFileServerWriteSettings is the BasicStoreWriteSettings implementation for AzureDataLakeStoreWriteSettings.
@@ -25006,6 +22560,8 @@ type AzureFileStorageLinkedServiceTypeProperties struct {
 	SasToken *AzureKeyVaultSecretReference `json:"sasToken,omitempty"`
 	// FileShare - The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
 	FileShare interface{} `json:"fileShare,omitempty"`
+	// Snapshot - The azure file share snapshot version. Type: string (or Expression with resultType string).
+	Snapshot interface{} `json:"snapshot,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 	EncryptedCredential interface{} `json:"encryptedCredential,omitempty"`
 }
@@ -25089,6 +22645,15 @@ func (afslstp *AzureFileStorageLinkedServiceTypeProperties) UnmarshalJSON(body [
 					return err
 				}
 				afslstp.FileShare = fileShare
+			}
+		case "snapshot":
+			if v != nil {
+				var snapshot interface{}
+				err = json.Unmarshal(*v, &snapshot)
+				if err != nil {
+					return err
+				}
+				afslstp.Snapshot = snapshot
 			}
 		case "encryptedCredential":
 			if v != nil {
@@ -25524,6 +23089,131 @@ func (afsrs *AzureFileStorageReadSettings) UnmarshalJSON(body []byte) error {
 					return err
 				}
 				afsrs.Type = typeVar
+			}
+		}
+	}
+
+	return nil
+}
+
+// AzureFileStorageWriteSettings azure File Storage write settings.
+type AzureFileStorageWriteSettings struct {
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// MaxConcurrentConnections - The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
+	// CopyBehavior - The type of copy behavior for copy sink.
+	CopyBehavior interface{} `json:"copyBehavior,omitempty"`
+	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeAzureFileStorageWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
+	Type TypeBasicStoreWriteSettings `json:"type,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) MarshalJSON() ([]byte, error) {
+	afsws.Type = TypeAzureFileStorageWriteSettings
+	objectMap := make(map[string]interface{})
+	if afsws.MaxConcurrentConnections != nil {
+		objectMap["maxConcurrentConnections"] = afsws.MaxConcurrentConnections
+	}
+	if afsws.CopyBehavior != nil {
+		objectMap["copyBehavior"] = afsws.CopyBehavior
+	}
+	if afsws.Type != "" {
+		objectMap["type"] = afsws.Type
+	}
+	for k, v := range afsws.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// AsAzureFileStorageWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool) {
+	return &afsws, true
+}
+
+// AsFileServerWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsFileServerWriteSettings() (*FileServerWriteSettings, bool) {
+	return nil, false
+}
+
+// AsAzureDataLakeStoreWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsAzureDataLakeStoreWriteSettings() (*AzureDataLakeStoreWriteSettings, bool) {
+	return nil, false
+}
+
+// AsAzureBlobFSWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsAzureBlobFSWriteSettings() (*AzureBlobFSWriteSettings, bool) {
+	return nil, false
+}
+
+// AsAzureBlobStorageWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsAzureBlobStorageWriteSettings() (*AzureBlobStorageWriteSettings, bool) {
+	return nil, false
+}
+
+// AsSftpWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsSftpWriteSettings() (*SftpWriteSettings, bool) {
+	return nil, false
+}
+
+// AsStoreWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsStoreWriteSettings() (*StoreWriteSettings, bool) {
+	return nil, false
+}
+
+// AsBasicStoreWriteSettings is the BasicStoreWriteSettings implementation for AzureFileStorageWriteSettings.
+func (afsws AzureFileStorageWriteSettings) AsBasicStoreWriteSettings() (BasicStoreWriteSettings, bool) {
+	return &afsws, true
+}
+
+// UnmarshalJSON is the custom unmarshaler for AzureFileStorageWriteSettings struct.
+func (afsws *AzureFileStorageWriteSettings) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if afsws.AdditionalProperties == nil {
+					afsws.AdditionalProperties = make(map[string]interface{})
+				}
+				afsws.AdditionalProperties[k] = additionalProperties
+			}
+		case "maxConcurrentConnections":
+			if v != nil {
+				var maxConcurrentConnections interface{}
+				err = json.Unmarshal(*v, &maxConcurrentConnections)
+				if err != nil {
+					return err
+				}
+				afsws.MaxConcurrentConnections = maxConcurrentConnections
+			}
+		case "copyBehavior":
+			if v != nil {
+				var copyBehavior interface{}
+				err = json.Unmarshal(*v, &copyBehavior)
+				if err != nil {
+					return err
+				}
+				afsws.CopyBehavior = copyBehavior
+			}
+		case "type":
+			if v != nil {
+				var typeVar TypeBasicStoreWriteSettings
+				err = json.Unmarshal(*v, &typeVar)
+				if err != nil {
+					return err
+				}
+				afsws.Type = typeVar
 			}
 		}
 	}
@@ -32300,7 +29990,7 @@ type AzureMySQLSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -32492,6 +30182,11 @@ func (amss AzureMySQLSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureMySQLSink.
 func (amss AzureMySQLSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureMySQLSink.
+func (amss AzureMySQLSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -34506,7 +32201,7 @@ type AzurePostgreSQLSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -34699,6 +32394,11 @@ func (apss AzurePostgreSQLSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzurePostgreSQLSink.
 func (apss AzurePostgreSQLSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
 	return &apss, true
+}
+
+// AsRestSink is the BasicCopySink implementation for AzurePostgreSQLSink.
+func (apss AzurePostgreSQLSink) AsRestSink() (*RestSink, bool) {
+	return nil, false
 }
 
 // AsOrcSink is the BasicCopySink implementation for AzurePostgreSQLSink.
@@ -36085,7 +33785,7 @@ type AzureQueueSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -36274,6 +33974,11 @@ func (aqs AzureQueueSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureQueueSink.
 func (aqs AzureQueueSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureQueueSink.
+func (aqs AzureQueueSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -37039,7 +34744,7 @@ type AzureSearchIndexSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -37231,6 +34936,11 @@ func (asis AzureSearchIndexSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureSearchIndexSink.
 func (asis AzureSearchIndexSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureSearchIndexSink.
+func (asis AzureSearchIndexSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -38646,6 +36356,8 @@ type AzureSQLDatabaseLinkedServiceTypeProperties struct {
 	ServicePrincipalKey BasicSecretBase `json:"servicePrincipalKey,omitempty"`
 	// Tenant - The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 	Tenant interface{} `json:"tenant,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 	EncryptedCredential interface{} `json:"encryptedCredential,omitempty"`
 }
@@ -38702,6 +36414,15 @@ func (asdlstp *AzureSQLDatabaseLinkedServiceTypeProperties) UnmarshalJSON(body [
 					return err
 				}
 				asdlstp.Tenant = tenant
+			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				asdlstp.AzureCloudType = azureCloudType
 			}
 		case "encryptedCredential":
 			if v != nil {
@@ -39347,6 +37068,8 @@ type AzureSQLDWLinkedServiceTypeProperties struct {
 	ServicePrincipalKey BasicSecretBase `json:"servicePrincipalKey,omitempty"`
 	// Tenant - The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 	Tenant interface{} `json:"tenant,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 	EncryptedCredential interface{} `json:"encryptedCredential,omitempty"`
 }
@@ -39403,6 +37126,15 @@ func (asdlstp *AzureSQLDWLinkedServiceTypeProperties) UnmarshalJSON(body []byte)
 					return err
 				}
 				asdlstp.Tenant = tenant
+			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				asdlstp.AzureCloudType = azureCloudType
 			}
 		case "encryptedCredential":
 			if v != nil {
@@ -40692,6 +38424,8 @@ type AzureSQLMILinkedServiceTypeProperties struct {
 	ServicePrincipalKey BasicSecretBase `json:"servicePrincipalKey,omitempty"`
 	// Tenant - The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 	Tenant interface{} `json:"tenant,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 	EncryptedCredential interface{} `json:"encryptedCredential,omitempty"`
 }
@@ -40748,6 +38482,15 @@ func (asmlstp *AzureSQLMILinkedServiceTypeProperties) UnmarshalJSON(body []byte)
 					return err
 				}
 				asmlstp.Tenant = tenant
+			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				asmlstp.AzureCloudType = azureCloudType
 			}
 		case "encryptedCredential":
 			if v != nil {
@@ -41434,7 +39177,7 @@ type AzureSQLSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -41641,6 +39384,11 @@ func (ass AzureSQLSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureSQLSink.
 func (ass AzureSQLSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureSQLSink.
+func (ass AzureSQLSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -44422,7 +42170,7 @@ type AzureTableSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -44623,6 +42371,11 @@ func (ats AzureTableSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for AzureTableSink.
 func (ats AzureTableSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for AzureTableSink.
+func (ats AzureTableSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -46797,7 +44550,7 @@ type BinarySink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -46987,6 +44740,11 @@ func (bs BinarySink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for BinarySink.
 func (bs BinarySink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for BinarySink.
+func (bs BinarySink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -47908,7 +45666,7 @@ type BlobSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -48109,6 +45867,11 @@ func (bs BlobSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for BlobSink.
 func (bs BlobSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for BlobSink.
+func (bs BlobSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -51018,9 +48781,9 @@ type CassandraTableDatasetTypeProperties struct {
 }
 
 // ChainingTrigger trigger that allows the referenced pipeline to depend on other pipeline runs based on
-// runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their
-// runs should have the values for those runDimensions. The referenced pipeline run would be triggered if
-// the values for the runDimension match for all upstream pipeline runs.
+// runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs
+// should have the values for those runDimensions. The referenced pipeline run would be triggered if the values
+// for the runDimension match for all upstream pipeline runs.
 type ChainingTrigger struct {
 	// Pipeline - Pipeline for which runs are created when all upstream pipelines complete successfully.
 	Pipeline *TriggerPipelineReference `json:"pipeline,omitempty"`
@@ -51257,7 +49020,7 @@ type CloudErrorBody struct {
 type CmdkeySetup struct {
 	// CmdkeySetupTypeProperties - Cmdkey command custom setup type properties.
 	*CmdkeySetupTypeProperties `json:"typeProperties,omitempty"`
-	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
+	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeAzPowerShellSetup', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
 	Type TypeBasicCustomSetupBase `json:"type,omitempty"`
 }
 
@@ -51272,6 +49035,11 @@ func (cs CmdkeySetup) MarshalJSON() ([]byte, error) {
 		objectMap["type"] = cs.Type
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzPowerShellSetup is the BasicCustomSetupBase implementation for CmdkeySetup.
+func (cs CmdkeySetup) AsAzPowerShellSetup() (*AzPowerShellSetup, bool) {
+	return nil, false
 }
 
 // AsComponentSetup is the BasicCustomSetupBase implementation for CmdkeySetup.
@@ -52017,8 +49785,7 @@ func (cdsfaed *CommonDataServiceForAppsEntityDataset) UnmarshalJSON(body []byte)
 	return nil
 }
 
-// CommonDataServiceForAppsEntityDatasetTypeProperties common Data Service for Apps entity dataset
-// properties.
+// CommonDataServiceForAppsEntityDatasetTypeProperties common Data Service for Apps entity dataset properties.
 type CommonDataServiceForAppsEntityDatasetTypeProperties struct {
 	// EntityName - The logical name of the entity. Type: string (or Expression with resultType string).
 	EntityName interface{} `json:"entityName,omitempty"`
@@ -52641,8 +50408,7 @@ func (cdsfals *CommonDataServiceForAppsLinkedService) UnmarshalJSON(body []byte)
 	return nil
 }
 
-// CommonDataServiceForAppsLinkedServiceTypeProperties common Data Service for Apps linked service
-// properties.
+// CommonDataServiceForAppsLinkedServiceTypeProperties common Data Service for Apps linked service properties.
 type CommonDataServiceForAppsLinkedServiceTypeProperties struct {
 	// DeploymentType - The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string). Possible values include: 'Online', 'OnPremisesWithIfd'
 	DeploymentType DynamicsDeploymentType `json:"deploymentType,omitempty"`
@@ -52811,7 +50577,7 @@ type CommonDataServiceForAppsSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -53009,6 +50775,11 @@ func (cdsfas CommonDataServiceForAppsSink) AsAzureMySQLSink() (*AzureMySQLSink, 
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for CommonDataServiceForAppsSink.
 func (cdsfas CommonDataServiceForAppsSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for CommonDataServiceForAppsSink.
+func (cdsfas CommonDataServiceForAppsSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -53746,7 +51517,7 @@ func (cdsfas *CommonDataServiceForAppsSource) UnmarshalJSON(body []byte) error {
 type ComponentSetup struct {
 	// LicensedComponentSetupTypeProperties - Install 3rd party component type properties.
 	*LicensedComponentSetupTypeProperties `json:"typeProperties,omitempty"`
-	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
+	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeAzPowerShellSetup', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
 	Type TypeBasicCustomSetupBase `json:"type,omitempty"`
 }
 
@@ -53761,6 +51532,11 @@ func (cs ComponentSetup) MarshalJSON() ([]byte, error) {
 		objectMap["type"] = cs.Type
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzPowerShellSetup is the BasicCustomSetupBase implementation for ComponentSetup.
+func (cs ComponentSetup) AsAzPowerShellSetup() (*AzPowerShellSetup, bool) {
+	return nil, false
 }
 
 // AsComponentSetup is the BasicCustomSetupBase implementation for ComponentSetup.
@@ -53823,6 +51599,8 @@ func (cs *ComponentSetup) UnmarshalJSON(body []byte) error {
 
 // BasicCompressionReadSettings compression read settings.
 type BasicCompressionReadSettings interface {
+	AsTarGZipReadSettings() (*TarGZipReadSettings, bool)
+	AsTarReadSettings() (*TarReadSettings, bool)
 	AsZipDeflateReadSettings() (*ZipDeflateReadSettings, bool)
 	AsCompressionReadSettings() (*CompressionReadSettings, bool)
 }
@@ -53831,7 +51609,7 @@ type BasicCompressionReadSettings interface {
 type CompressionReadSettings struct {
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
-	// Type - Possible values include: 'TypeCompressionReadSettings', 'TypeZipDeflateReadSettings'
+	// Type - Possible values include: 'TypeCompressionReadSettings', 'TypeTarGZipReadSettings', 'TypeTarReadSettings', 'TypeZipDeflateReadSettings'
 	Type TypeBasicCompressionReadSettings `json:"type,omitempty"`
 }
 
@@ -53843,6 +51621,14 @@ func unmarshalBasicCompressionReadSettings(body []byte) (BasicCompressionReadSet
 	}
 
 	switch m["type"] {
+	case string(TypeTarGZipReadSettings):
+		var tgzrs TarGZipReadSettings
+		err := json.Unmarshal(body, &tgzrs)
+		return tgzrs, err
+	case string(TypeTarReadSettings):
+		var trs TarReadSettings
+		err := json.Unmarshal(body, &trs)
+		return trs, err
 	case string(TypeZipDeflateReadSettings):
 		var zdrs ZipDeflateReadSettings
 		err := json.Unmarshal(body, &zdrs)
@@ -53883,6 +51669,16 @@ func (crs CompressionReadSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsTarGZipReadSettings is the BasicCompressionReadSettings implementation for CompressionReadSettings.
+func (crs CompressionReadSettings) AsTarGZipReadSettings() (*TarGZipReadSettings, bool) {
+	return nil, false
+}
+
+// AsTarReadSettings is the BasicCompressionReadSettings implementation for CompressionReadSettings.
+func (crs CompressionReadSettings) AsTarReadSettings() (*TarReadSettings, bool) {
+	return nil, false
 }
 
 // AsZipDeflateReadSettings is the BasicCompressionReadSettings implementation for CompressionReadSettings.
@@ -55893,6 +53689,16 @@ func (cs *ConcurSource) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
+// ConnectionStateProperties the connection state of a managed private endpoint
+type ConnectionStateProperties struct {
+	// ActionsRequired - READ-ONLY; The actions required on the managed private endpoint
+	ActionsRequired *string `json:"actionsRequired,omitempty"`
+	// Description - READ-ONLY; The managed private endpoint description
+	Description *string `json:"description,omitempty"`
+	// Status - READ-ONLY; The approval status
+	Status *string `json:"status,omitempty"`
+}
+
 // BasicControlActivity base class for all control activities like IfCondition, ForEach , Until.
 type BasicControlActivity interface {
 	AsWebHookActivity() (*WebHookActivity, bool)
@@ -56887,6 +54693,7 @@ type BasicCopySink interface {
 	AsSapCloudForCustomerSink() (*SapCloudForCustomerSink, bool)
 	AsAzureMySQLSink() (*AzureMySQLSink, bool)
 	AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool)
+	AsRestSink() (*RestSink, bool)
 	AsOrcSink() (*OrcSink, bool)
 	AsJSONSink() (*JSONSink, bool)
 	AsDelimitedTextSink() (*DelimitedTextSink, bool)
@@ -56907,7 +54714,7 @@ type CopySink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -57047,6 +54854,10 @@ func unmarshalBasicCopySink(body []byte) (BasicCopySink, error) {
 		var apss AzurePostgreSQLSink
 		err := json.Unmarshal(body, &apss)
 		return apss, err
+	case string(TypeRestSink):
+		var rs RestSink
+		err := json.Unmarshal(body, &rs)
+		return rs, err
 	case string(TypeOrcSink):
 		var osVar OrcSink
 		err := json.Unmarshal(body, &osVar)
@@ -57269,6 +55080,11 @@ func (cs CopySink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for CopySink.
 func (cs CopySink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for CopySink.
+func (cs CopySink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -60412,7 +58228,7 @@ type CosmosDbMongoDbAPISink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -60604,6 +58420,11 @@ func (cdmdas CosmosDbMongoDbAPISink) AsAzureMySQLSink() (*AzureMySQLSink, bool) 
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for CosmosDbMongoDbAPISink.
 func (cdmdas CosmosDbMongoDbAPISink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for CosmosDbMongoDbAPISink.
+func (cdmdas CosmosDbMongoDbAPISink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -62017,7 +59838,7 @@ type CosmosDbSQLAPISink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -62212,6 +60033,11 @@ func (cdsas CosmosDbSQLAPISink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, b
 	return nil, false
 }
 
+// AsRestSink is the BasicCopySink implementation for CosmosDbSQLAPISink.
+func (cdsas CosmosDbSQLAPISink) AsRestSink() (*RestSink, bool) {
+	return nil, false
+}
+
 // AsOrcSink is the BasicCopySink implementation for CosmosDbSQLAPISink.
 func (cdsas CosmosDbSQLAPISink) AsOrcSink() (*OrcSink, bool) {
 	return nil, false
@@ -62335,6 +60161,8 @@ type CosmosDbSQLAPISource struct {
 	PageSize interface{} `json:"pageSize,omitempty"`
 	// PreferredRegions - Preferred regions. Type: array of strings (or Expression with resultType array of strings).
 	PreferredRegions interface{} `json:"preferredRegions,omitempty"`
+	// DetectDatetime - Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+	DetectDatetime interface{} `json:"detectDatetime,omitempty"`
 	// AdditionalColumns - Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).
 	AdditionalColumns *[]AdditionalColumns `json:"additionalColumns,omitempty"`
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
@@ -62361,6 +60189,9 @@ func (cdsas CosmosDbSQLAPISource) MarshalJSON() ([]byte, error) {
 	}
 	if cdsas.PreferredRegions != nil {
 		objectMap["preferredRegions"] = cdsas.PreferredRegions
+	}
+	if cdsas.DetectDatetime != nil {
+		objectMap["detectDatetime"] = cdsas.DetectDatetime
 	}
 	if cdsas.AdditionalColumns != nil {
 		objectMap["additionalColumns"] = cdsas.AdditionalColumns
@@ -62888,6 +60719,15 @@ func (cdsas *CosmosDbSQLAPISource) UnmarshalJSON(body []byte) error {
 					return err
 				}
 				cdsas.PreferredRegions = preferredRegions
+			}
+		case "detectDatetime":
+			if v != nil {
+				var detectDatetime interface{}
+				err = json.Unmarshal(*v, &detectDatetime)
+				if err != nil {
+					return err
+				}
+				cdsas.DetectDatetime = detectDatetime
 			}
 		case "additionalColumns":
 			if v != nil {
@@ -66520,6 +64360,7 @@ func (cdsls *CustomDataSourceLinkedService) UnmarshalJSON(body []byte) error {
 
 // BasicCustomSetupBase the base definition of the custom setup.
 type BasicCustomSetupBase interface {
+	AsAzPowerShellSetup() (*AzPowerShellSetup, bool)
 	AsComponentSetup() (*ComponentSetup, bool)
 	AsEnvironmentVariableSetup() (*EnvironmentVariableSetup, bool)
 	AsCmdkeySetup() (*CmdkeySetup, bool)
@@ -66528,7 +64369,7 @@ type BasicCustomSetupBase interface {
 
 // CustomSetupBase the base definition of the custom setup.
 type CustomSetupBase struct {
-	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
+	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeAzPowerShellSetup', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
 	Type TypeBasicCustomSetupBase `json:"type,omitempty"`
 }
 
@@ -66540,6 +64381,10 @@ func unmarshalBasicCustomSetupBase(body []byte) (BasicCustomSetupBase, error) {
 	}
 
 	switch m["type"] {
+	case string(TypeAzPowerShellSetup):
+		var apss AzPowerShellSetup
+		err := json.Unmarshal(body, &apss)
+		return apss, err
 	case string(TypeComponentSetup):
 		var cs ComponentSetup
 		err := json.Unmarshal(body, &cs)
@@ -66585,6 +64430,11 @@ func (csb CustomSetupBase) MarshalJSON() ([]byte, error) {
 		objectMap["type"] = csb.Type
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzPowerShellSetup is the BasicCustomSetupBase implementation for CustomSetupBase.
+func (csb CustomSetupBase) AsAzPowerShellSetup() (*AzPowerShellSetup, bool) {
+	return nil, false
 }
 
 // AsComponentSetup is the BasicCustomSetupBase implementation for CustomSetupBase.
@@ -68034,8 +65884,8 @@ func (dfdr *DataFlowDebugResource) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// DataFlowDebugSessionCreateFuture an abstraction for monitoring and retrieving the results of a
-// long-running operation.
+// DataFlowDebugSessionCreateFuture an abstraction for monitoring and retrieving the results of a long-running
+// operation.
 type DataFlowDebugSessionCreateFuture struct {
 	azure.Future
 }
@@ -68344,10 +66194,15 @@ func (dflr DataFlowListResponse) IsEmpty() bool {
 	return dflr.Value == nil || len(*dflr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (dflr DataFlowListResponse) hasNextLink() bool {
+	return dflr.NextLink != nil && len(*dflr.NextLink) != 0
+}
+
 // dataFlowListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (dflr DataFlowListResponse) dataFlowListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if dflr.NextLink == nil || len(to.String(dflr.NextLink)) < 1 {
+	if !dflr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -68375,11 +66230,16 @@ func (page *DataFlowListResponsePage) NextWithContext(ctx context.Context) (err 
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.dflr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.dflr)
+		if err != nil {
+			return err
+		}
+		page.dflr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.dflr = next
 	return nil
 }
 
@@ -68436,6 +66296,13 @@ type DataFlowResource struct {
 	Type *string `json:"type,omitempty"`
 	// Etag - READ-ONLY; Etag identifies change in the resource.
 	Etag *string `json:"etag,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for DataFlowResource.
+func (dfr DataFlowResource) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	objectMap["properties"] = dfr.Properties
+	return json.Marshal(objectMap)
 }
 
 // UnmarshalJSON is the custom unmarshaler for DataFlowResource struct.
@@ -68599,8 +66466,8 @@ func (dfss *DataFlowSourceSetting) UnmarshalJSON(body []byte) error {
 type DataFlowStagingInfo struct {
 	// LinkedService - Staging linked service reference.
 	LinkedService *LinkedServiceReference `json:"linkedService,omitempty"`
-	// FolderPath - Folder path for staging blob.
-	FolderPath *string `json:"folderPath,omitempty"`
+	// FolderPath - Folder path for staging blob. Type: string (or Expression with resultType string)
+	FolderPath interface{} `json:"folderPath,omitempty"`
 }
 
 // DataLakeAnalyticsUSQLActivity data Lake Analytics U-SQL activity.
@@ -70122,7 +67989,7 @@ func (d *Dataset) UnmarshalJSON(body []byte) error {
 type DatasetBZip2Compression struct {
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
-	// Type - Possible values include: 'TypeDatasetCompression', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
+	// Type - Possible values include: 'TypeDatasetCompression', 'TypeTarGZip', 'TypeTar', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
 	Type TypeBasicDatasetCompression `json:"type,omitempty"`
 }
 
@@ -70137,6 +68004,16 @@ func (dbz2c DatasetBZip2Compression) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsDatasetTarGZipCompression is the BasicDatasetCompression implementation for DatasetBZip2Compression.
+func (dbz2c DatasetBZip2Compression) AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetTarCompression is the BasicDatasetCompression implementation for DatasetBZip2Compression.
+func (dbz2c DatasetBZip2Compression) AsDatasetTarCompression() (*DatasetTarCompression, bool) {
+	return nil, false
 }
 
 // AsDatasetZipDeflateCompression is the BasicDatasetCompression implementation for DatasetBZip2Compression.
@@ -70207,6 +68084,8 @@ func (dbz2c *DatasetBZip2Compression) UnmarshalJSON(body []byte) error {
 
 // BasicDatasetCompression the compression method used on a dataset.
 type BasicDatasetCompression interface {
+	AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool)
+	AsDatasetTarCompression() (*DatasetTarCompression, bool)
 	AsDatasetZipDeflateCompression() (*DatasetZipDeflateCompression, bool)
 	AsDatasetDeflateCompression() (*DatasetDeflateCompression, bool)
 	AsDatasetGZipCompression() (*DatasetGZipCompression, bool)
@@ -70218,7 +68097,7 @@ type BasicDatasetCompression interface {
 type DatasetCompression struct {
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
-	// Type - Possible values include: 'TypeDatasetCompression', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
+	// Type - Possible values include: 'TypeDatasetCompression', 'TypeTarGZip', 'TypeTar', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
 	Type TypeBasicDatasetCompression `json:"type,omitempty"`
 }
 
@@ -70230,6 +68109,14 @@ func unmarshalBasicDatasetCompression(body []byte) (BasicDatasetCompression, err
 	}
 
 	switch m["type"] {
+	case string(TypeTarGZip):
+		var dtgzc DatasetTarGZipCompression
+		err := json.Unmarshal(body, &dtgzc)
+		return dtgzc, err
+	case string(TypeTar):
+		var dtc DatasetTarCompression
+		err := json.Unmarshal(body, &dtc)
+		return dtc, err
 	case string(TypeZipDeflate):
 		var dzdc DatasetZipDeflateCompression
 		err := json.Unmarshal(body, &dzdc)
@@ -70282,6 +68169,16 @@ func (dc DatasetCompression) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsDatasetTarGZipCompression is the BasicDatasetCompression implementation for DatasetCompression.
+func (dc DatasetCompression) AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetTarCompression is the BasicDatasetCompression implementation for DatasetCompression.
+func (dc DatasetCompression) AsDatasetTarCompression() (*DatasetTarCompression, bool) {
+	return nil, false
 }
 
 // AsDatasetZipDeflateCompression is the BasicDatasetCompression implementation for DatasetCompression.
@@ -70396,7 +68293,7 @@ type DatasetDeflateCompression struct {
 	Level interface{} `json:"level,omitempty"`
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
-	// Type - Possible values include: 'TypeDatasetCompression', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
+	// Type - Possible values include: 'TypeDatasetCompression', 'TypeTarGZip', 'TypeTar', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
 	Type TypeBasicDatasetCompression `json:"type,omitempty"`
 }
 
@@ -70414,6 +68311,16 @@ func (ddc DatasetDeflateCompression) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsDatasetTarGZipCompression is the BasicDatasetCompression implementation for DatasetDeflateCompression.
+func (ddc DatasetDeflateCompression) AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetTarCompression is the BasicDatasetCompression implementation for DatasetDeflateCompression.
+func (ddc DatasetDeflateCompression) AsDatasetTarCompression() (*DatasetTarCompression, bool) {
+	return nil, false
 }
 
 // AsDatasetZipDeflateCompression is the BasicDatasetCompression implementation for DatasetDeflateCompression.
@@ -70491,8 +68398,7 @@ func (ddc *DatasetDeflateCompression) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// DatasetFolder the folder that this Dataset is in. If not specified, Dataset will appear at the root
-// level.
+// DatasetFolder the folder that this Dataset is in. If not specified, Dataset will appear at the root level.
 type DatasetFolder struct {
 	// Name - The name of the folder that this Dataset is in.
 	Name *string `json:"name,omitempty"`
@@ -70504,7 +68410,7 @@ type DatasetGZipCompression struct {
 	Level interface{} `json:"level,omitempty"`
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
-	// Type - Possible values include: 'TypeDatasetCompression', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
+	// Type - Possible values include: 'TypeDatasetCompression', 'TypeTarGZip', 'TypeTar', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
 	Type TypeBasicDatasetCompression `json:"type,omitempty"`
 }
 
@@ -70522,6 +68428,16 @@ func (dgzc DatasetGZipCompression) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsDatasetTarGZipCompression is the BasicDatasetCompression implementation for DatasetGZipCompression.
+func (dgzc DatasetGZipCompression) AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetTarCompression is the BasicDatasetCompression implementation for DatasetGZipCompression.
+func (dgzc DatasetGZipCompression) AsDatasetTarCompression() (*DatasetTarCompression, bool) {
+	return nil, false
 }
 
 // AsDatasetZipDeflateCompression is the BasicDatasetCompression implementation for DatasetGZipCompression.
@@ -70676,10 +68592,15 @@ func (dlr DatasetListResponse) IsEmpty() bool {
 	return dlr.Value == nil || len(*dlr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (dlr DatasetListResponse) hasNextLink() bool {
+	return dlr.NextLink != nil && len(*dlr.NextLink) != 0
+}
+
 // datasetListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (dlr DatasetListResponse) datasetListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if dlr.NextLink == nil || len(to.String(dlr.NextLink)) < 1 {
+	if !dlr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -70707,11 +68628,16 @@ func (page *DatasetListResponsePage) NextWithContext(ctx context.Context) (err e
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.dlr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.dlr)
+		if err != nil {
+			return err
+		}
+		page.dlr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.dlr = next
 	return nil
 }
 
@@ -71028,6 +68954,13 @@ type DatasetResource struct {
 	Etag *string `json:"etag,omitempty"`
 }
 
+// MarshalJSON is the custom marshaler for DatasetResource.
+func (dr DatasetResource) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	objectMap["properties"] = dr.Properties
+	return json.Marshal(objectMap)
+}
+
 // UnmarshalJSON is the custom unmarshaler for DatasetResource struct.
 func (dr *DatasetResource) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -71270,13 +69203,221 @@ func (dsf *DatasetStorageFormat) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
+// DatasetTarCompression the Tar archive method used on a dataset.
+type DatasetTarCompression struct {
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// Type - Possible values include: 'TypeDatasetCompression', 'TypeTarGZip', 'TypeTar', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
+	Type TypeBasicDatasetCompression `json:"type,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for DatasetTarCompression.
+func (dtc DatasetTarCompression) MarshalJSON() ([]byte, error) {
+	dtc.Type = TypeTar
+	objectMap := make(map[string]interface{})
+	if dtc.Type != "" {
+		objectMap["type"] = dtc.Type
+	}
+	for k, v := range dtc.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// AsDatasetTarGZipCompression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetTarCompression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsDatasetTarCompression() (*DatasetTarCompression, bool) {
+	return &dtc, true
+}
+
+// AsDatasetZipDeflateCompression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsDatasetZipDeflateCompression() (*DatasetZipDeflateCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetDeflateCompression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsDatasetDeflateCompression() (*DatasetDeflateCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetGZipCompression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsDatasetGZipCompression() (*DatasetGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetBZip2Compression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsDatasetBZip2Compression() (*DatasetBZip2Compression, bool) {
+	return nil, false
+}
+
+// AsDatasetCompression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsDatasetCompression() (*DatasetCompression, bool) {
+	return nil, false
+}
+
+// AsBasicDatasetCompression is the BasicDatasetCompression implementation for DatasetTarCompression.
+func (dtc DatasetTarCompression) AsBasicDatasetCompression() (BasicDatasetCompression, bool) {
+	return &dtc, true
+}
+
+// UnmarshalJSON is the custom unmarshaler for DatasetTarCompression struct.
+func (dtc *DatasetTarCompression) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if dtc.AdditionalProperties == nil {
+					dtc.AdditionalProperties = make(map[string]interface{})
+				}
+				dtc.AdditionalProperties[k] = additionalProperties
+			}
+		case "type":
+			if v != nil {
+				var typeVar TypeBasicDatasetCompression
+				err = json.Unmarshal(*v, &typeVar)
+				if err != nil {
+					return err
+				}
+				dtc.Type = typeVar
+			}
+		}
+	}
+
+	return nil
+}
+
+// DatasetTarGZipCompression the TarGZip compression method used on a dataset.
+type DatasetTarGZipCompression struct {
+	// Level - The TarGZip compression level.
+	Level interface{} `json:"level,omitempty"`
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// Type - Possible values include: 'TypeDatasetCompression', 'TypeTarGZip', 'TypeTar', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
+	Type TypeBasicDatasetCompression `json:"type,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) MarshalJSON() ([]byte, error) {
+	dtgzc.Type = TypeTarGZip
+	objectMap := make(map[string]interface{})
+	if dtgzc.Level != nil {
+		objectMap["level"] = dtgzc.Level
+	}
+	if dtgzc.Type != "" {
+		objectMap["type"] = dtgzc.Type
+	}
+	for k, v := range dtgzc.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// AsDatasetTarGZipCompression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool) {
+	return &dtgzc, true
+}
+
+// AsDatasetTarCompression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsDatasetTarCompression() (*DatasetTarCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetZipDeflateCompression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsDatasetZipDeflateCompression() (*DatasetZipDeflateCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetDeflateCompression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsDatasetDeflateCompression() (*DatasetDeflateCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetGZipCompression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsDatasetGZipCompression() (*DatasetGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetBZip2Compression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsDatasetBZip2Compression() (*DatasetBZip2Compression, bool) {
+	return nil, false
+}
+
+// AsDatasetCompression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsDatasetCompression() (*DatasetCompression, bool) {
+	return nil, false
+}
+
+// AsBasicDatasetCompression is the BasicDatasetCompression implementation for DatasetTarGZipCompression.
+func (dtgzc DatasetTarGZipCompression) AsBasicDatasetCompression() (BasicDatasetCompression, bool) {
+	return &dtgzc, true
+}
+
+// UnmarshalJSON is the custom unmarshaler for DatasetTarGZipCompression struct.
+func (dtgzc *DatasetTarGZipCompression) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		case "level":
+			if v != nil {
+				var level interface{}
+				err = json.Unmarshal(*v, &level)
+				if err != nil {
+					return err
+				}
+				dtgzc.Level = level
+			}
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if dtgzc.AdditionalProperties == nil {
+					dtgzc.AdditionalProperties = make(map[string]interface{})
+				}
+				dtgzc.AdditionalProperties[k] = additionalProperties
+			}
+		case "type":
+			if v != nil {
+				var typeVar TypeBasicDatasetCompression
+				err = json.Unmarshal(*v, &typeVar)
+				if err != nil {
+					return err
+				}
+				dtgzc.Type = typeVar
+			}
+		}
+	}
+
+	return nil
+}
+
 // DatasetZipDeflateCompression the ZipDeflate compression method used on a dataset.
 type DatasetZipDeflateCompression struct {
 	// Level - The ZipDeflate compression level.
 	Level interface{} `json:"level,omitempty"`
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
-	// Type - Possible values include: 'TypeDatasetCompression', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
+	// Type - Possible values include: 'TypeDatasetCompression', 'TypeTarGZip', 'TypeTar', 'TypeZipDeflate', 'TypeDeflate', 'TypeGZip', 'TypeBZip2'
 	Type TypeBasicDatasetCompression `json:"type,omitempty"`
 }
 
@@ -71294,6 +69435,16 @@ func (dzdc DatasetZipDeflateCompression) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsDatasetTarGZipCompression is the BasicDatasetCompression implementation for DatasetZipDeflateCompression.
+func (dzdc DatasetZipDeflateCompression) AsDatasetTarGZipCompression() (*DatasetTarGZipCompression, bool) {
+	return nil, false
+}
+
+// AsDatasetTarCompression is the BasicDatasetCompression implementation for DatasetZipDeflateCompression.
+func (dzdc DatasetZipDeflateCompression) AsDatasetTarCompression() (*DatasetTarCompression, bool) {
+	return nil, false
 }
 
 // AsDatasetZipDeflateCompression is the BasicDatasetCompression implementation for DatasetZipDeflateCompression.
@@ -74696,7 +72847,7 @@ type DelimitedTextSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -74889,6 +73040,11 @@ func (dts DelimitedTextSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for DelimitedTextSink.
 func (dts DelimitedTextSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for DelimitedTextSink.
+func (dts DelimitedTextSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -76501,7 +74657,7 @@ type DocumentDbCollectionSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -76696,6 +74852,11 @@ func (ddcs DocumentDbCollectionSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) 
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for DocumentDbCollectionSink.
 func (ddcs DocumentDbCollectionSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for DocumentDbCollectionSink.
+func (ddcs DocumentDbCollectionSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -82750,7 +80911,7 @@ type DynamicsCrmSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -82948,6 +81109,11 @@ func (dcs DynamicsCrmSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for DynamicsCrmSink.
 func (dcs DynamicsCrmSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for DynamicsCrmSink.
+func (dcs DynamicsCrmSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -85107,7 +83273,7 @@ type DynamicsSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -85305,6 +83471,11 @@ func (ds DynamicsSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for DynamicsSink.
 func (ds DynamicsSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for DynamicsSink.
+func (ds DynamicsSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -88007,7 +86178,7 @@ type EntityReference struct {
 type EnvironmentVariableSetup struct {
 	// EnvironmentVariableSetupTypeProperties - Add environment variable type properties.
 	*EnvironmentVariableSetupTypeProperties `json:"typeProperties,omitempty"`
-	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
+	// Type - Possible values include: 'TypeCustomSetupBase', 'TypeAzPowerShellSetup', 'TypeComponentSetup', 'TypeEnvironmentVariableSetup', 'TypeCmdkeySetup'
 	Type TypeBasicCustomSetupBase `json:"type,omitempty"`
 }
 
@@ -88022,6 +86193,11 @@ func (evs EnvironmentVariableSetup) MarshalJSON() ([]byte, error) {
 		objectMap["type"] = evs.Type
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzPowerShellSetup is the BasicCustomSetupBase implementation for EnvironmentVariableSetup.
+func (evs EnvironmentVariableSetup) AsAzPowerShellSetup() (*AzPowerShellSetup, bool) {
+	return nil, false
 }
 
 // AsComponentSetup is the BasicCustomSetupBase implementation for EnvironmentVariableSetup.
@@ -91162,6 +89338,19 @@ func (es *ExportSettings) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
+// ExposureControlBatchRequest a list of exposure control features.
+type ExposureControlBatchRequest struct {
+	// ExposureControlRequests - List of exposure control features.
+	ExposureControlRequests *[]ExposureControlRequest `json:"exposureControlRequests,omitempty"`
+}
+
+// ExposureControlBatchResponse a list of exposure control feature values.
+type ExposureControlBatchResponse struct {
+	autorest.Response `json:"-"`
+	// ExposureControlResponses - List of exposure control feature values.
+	ExposureControlResponses *[]ExposureControlResponse `json:"exposureControlResponses,omitempty"`
+}
+
 // ExposureControlRequest the exposure control request.
 type ExposureControlRequest struct {
 	// FeatureName - The feature name.
@@ -91406,6 +89595,15 @@ type FactoryIdentity struct {
 	TenantID *uuid.UUID `json:"tenantId,omitempty"`
 }
 
+// MarshalJSON is the custom marshaler for FactoryIdentity.
+func (fi FactoryIdentity) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	if fi.Type != nil {
+		objectMap["type"] = fi.Type
+	}
+	return json.Marshal(objectMap)
+}
+
 // FactoryListResponse a list of factory resources.
 type FactoryListResponse struct {
 	autorest.Response `json:"-"`
@@ -91483,10 +89681,15 @@ func (flr FactoryListResponse) IsEmpty() bool {
 	return flr.Value == nil || len(*flr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (flr FactoryListResponse) hasNextLink() bool {
+	return flr.NextLink != nil && len(*flr.NextLink) != 0
+}
+
 // factoryListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (flr FactoryListResponse) factoryListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if flr.NextLink == nil || len(to.String(flr.NextLink)) < 1 {
+	if !flr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -91514,11 +89717,16 @@ func (page *FactoryListResponsePage) NextWithContext(ctx context.Context) (err e
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.flr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.flr)
+		if err != nil {
+			return err
+		}
+		page.flr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.flr = next
 	return nil
 }
 
@@ -92988,7 +91196,7 @@ type FileServerWriteSettings struct {
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
 	// CopyBehavior - The type of copy behavior for copy sink.
 	CopyBehavior interface{} `json:"copyBehavior,omitempty"`
-	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
+	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeAzureFileStorageWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
 	Type TypeBasicStoreWriteSettings `json:"type,omitempty"`
 }
 
@@ -93009,6 +91217,11 @@ func (fsws FileServerWriteSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzureFileStorageWriteSettings is the BasicStoreWriteSettings implementation for FileServerWriteSettings.
+func (fsws FileServerWriteSettings) AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool) {
+	return nil, false
 }
 
 // AsFileServerWriteSettings is the BasicStoreWriteSettings implementation for FileServerWriteSettings.
@@ -93844,7 +92057,7 @@ type FileSystemSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -94036,6 +92249,11 @@ func (fss FileSystemSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for FileSystemSink.
 func (fss FileSystemSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for FileSystemSink.
+func (fss FileSystemSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -107281,6 +105499,8 @@ type HdfsReadSettings struct {
 	ModifiedDatetimeEnd interface{} `json:"modifiedDatetimeEnd,omitempty"`
 	// DistcpSettings - Specifies Distcp-related settings.
 	DistcpSettings *DistcpSettings `json:"distcpSettings,omitempty"`
+	// DeleteFilesAfterCompletion - Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+	DeleteFilesAfterCompletion interface{} `json:"deleteFilesAfterCompletion,omitempty"`
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
@@ -107319,6 +105539,9 @@ func (hrs HdfsReadSettings) MarshalJSON() ([]byte, error) {
 	}
 	if hrs.DistcpSettings != nil {
 		objectMap["distcpSettings"] = hrs.DistcpSettings
+	}
+	if hrs.DeleteFilesAfterCompletion != nil {
+		objectMap["deleteFilesAfterCompletion"] = hrs.DeleteFilesAfterCompletion
 	}
 	if hrs.MaxConcurrentConnections != nil {
 		objectMap["maxConcurrentConnections"] = hrs.MaxConcurrentConnections
@@ -107486,6 +105709,15 @@ func (hrs *HdfsReadSettings) UnmarshalJSON(body []byte) error {
 					return err
 				}
 				hrs.DistcpSettings = &distcpSettings
+			}
+		case "deleteFilesAfterCompletion":
+			if v != nil {
+				var deleteFilesAfterCompletion interface{}
+				err = json.Unmarshal(*v, &deleteFilesAfterCompletion)
+				if err != nil {
+					return err
+				}
+				hrs.DeleteFilesAfterCompletion = deleteFilesAfterCompletion
 			}
 		default:
 			if v != nil {
@@ -118326,9 +116558,8 @@ func (hs *HubspotSource) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// IfConditionActivity this activity evaluates a boolean expression and executes either the activities
-// under the ifTrueActivities property or the ifFalseActivities property depending on the result of the
-// expression.
+// IfConditionActivity this activity evaluates a boolean expression and executes either the activities under
+// the ifTrueActivities property or the ifFalseActivities property depending on the result of the expression.
 type IfConditionActivity struct {
 	// IfConditionActivityTypeProperties - IfCondition activity properties.
 	*IfConditionActivityTypeProperties `json:"typeProperties,omitempty"`
@@ -121547,7 +119778,7 @@ type InformixSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -121739,6 +119970,11 @@ func (is InformixSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for InformixSink.
 func (is InformixSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for InformixSink.
+func (is InformixSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -123644,8 +121880,8 @@ type IntegrationRuntimeListResponse struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// IntegrationRuntimeListResponseIterator provides access to a complete listing of
-// IntegrationRuntimeResource values.
+// IntegrationRuntimeListResponseIterator provides access to a complete listing of IntegrationRuntimeResource
+// values.
 type IntegrationRuntimeListResponseIterator struct {
 	i    int
 	page IntegrationRuntimeListResponsePage
@@ -123713,10 +121949,15 @@ func (irlr IntegrationRuntimeListResponse) IsEmpty() bool {
 	return irlr.Value == nil || len(*irlr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (irlr IntegrationRuntimeListResponse) hasNextLink() bool {
+	return irlr.NextLink != nil && len(*irlr.NextLink) != 0
+}
+
 // integrationRuntimeListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (irlr IntegrationRuntimeListResponse) integrationRuntimeListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if irlr.NextLink == nil || len(to.String(irlr.NextLink)) < 1 {
+	if !irlr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -123744,11 +121985,16 @@ func (page *IntegrationRuntimeListResponsePage) NextWithContext(ctx context.Cont
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.irlr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.irlr)
+		if err != nil {
+			return err
+		}
+		page.irlr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.irlr = next
 	return nil
 }
 
@@ -123928,8 +122174,8 @@ func (irnmd *IntegrationRuntimeNodeMonitoringData) UnmarshalJSON(body []byte) er
 	return nil
 }
 
-// IntegrationRuntimeObjectMetadataRefreshFuture an abstraction for monitoring and retrieving the results
-// of a long-running operation.
+// IntegrationRuntimeObjectMetadataRefreshFuture an abstraction for monitoring and retrieving the results of a
+// long-running operation.
 type IntegrationRuntimeObjectMetadataRefreshFuture struct {
 	azure.Future
 }
@@ -124001,6 +122247,13 @@ type IntegrationRuntimeResource struct {
 	Type *string `json:"type,omitempty"`
 	// Etag - READ-ONLY; Etag identifies change in the resource.
 	Etag *string `json:"etag,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for IntegrationRuntimeResource.
+func (irr IntegrationRuntimeResource) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	objectMap["properties"] = irr.Properties
+	return json.Marshal(objectMap)
 }
 
 // UnmarshalJSON is the custom unmarshaler for IntegrationRuntimeResource struct.
@@ -124299,8 +122552,8 @@ func (irsp *IntegrationRuntimeSsisProperties) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// IntegrationRuntimesStartFuture an abstraction for monitoring and retrieving the results of a
-// long-running operation.
+// IntegrationRuntimesStartFuture an abstraction for monitoring and retrieving the results of a long-running
+// operation.
 type IntegrationRuntimesStartFuture struct {
 	azure.Future
 }
@@ -124513,6 +122766,13 @@ type IntegrationRuntimeStatusResponse struct {
 	Name *string `json:"name,omitempty"`
 	// Properties - Integration runtime properties.
 	Properties BasicIntegrationRuntimeStatus `json:"properties,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for IntegrationRuntimeStatusResponse.
+func (irsr IntegrationRuntimeStatusResponse) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	objectMap["properties"] = irsr.Properties
+	return json.Marshal(objectMap)
 }
 
 // UnmarshalJSON is the custom unmarshaler for IntegrationRuntimeStatusResponse struct.
@@ -127589,7 +125849,7 @@ type JSONSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -127782,6 +126042,11 @@ func (js JSONSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for JSONSink.
 func (js JSONSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for JSONSink.
+func (js JSONSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -130079,10 +128344,15 @@ func (lslr LinkedServiceListResponse) IsEmpty() bool {
 	return lslr.Value == nil || len(*lslr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (lslr LinkedServiceListResponse) hasNextLink() bool {
+	return lslr.NextLink != nil && len(*lslr.NextLink) != 0
+}
+
 // linkedServiceListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (lslr LinkedServiceListResponse) linkedServiceListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if lslr.NextLink == nil || len(to.String(lslr.NextLink)) < 1 {
+	if !lslr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -130110,11 +128380,16 @@ func (page *LinkedServiceListResponsePage) NextWithContext(ctx context.Context) 
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.lslr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.lslr)
+		if err != nil {
+			return err
+		}
+		page.lslr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.lslr = next
 	return nil
 }
 
@@ -130188,6 +128463,13 @@ type LinkedServiceResource struct {
 	Etag *string `json:"etag,omitempty"`
 }
 
+// MarshalJSON is the custom marshaler for LinkedServiceResource.
+func (lsr LinkedServiceResource) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	objectMap["properties"] = lsr.Properties
+	return json.Marshal(objectMap)
+}
+
 // UnmarshalJSON is the custom unmarshaler for LinkedServiceResource struct.
 func (lsr *LinkedServiceResource) UnmarshalJSON(body []byte) error {
 	var m map[string]*json.RawMessage
@@ -130255,6 +128537,10 @@ type LogStorageSettings struct {
 	LinkedServiceName *LinkedServiceReference `json:"linkedServiceName,omitempty"`
 	// Path - The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
 	Path interface{} `json:"path,omitempty"`
+	// LogLevel - Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+	LogLevel interface{} `json:"logLevel,omitempty"`
+	// EnableReliableLogging - Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+	EnableReliableLogging interface{} `json:"enableReliableLogging,omitempty"`
 }
 
 // MarshalJSON is the custom marshaler for LogStorageSettings.
@@ -130265,6 +128551,12 @@ func (lss LogStorageSettings) MarshalJSON() ([]byte, error) {
 	}
 	if lss.Path != nil {
 		objectMap["path"] = lss.Path
+	}
+	if lss.LogLevel != nil {
+		objectMap["logLevel"] = lss.LogLevel
+	}
+	if lss.EnableReliableLogging != nil {
+		objectMap["enableReliableLogging"] = lss.EnableReliableLogging
 	}
 	for k, v := range lss.AdditionalProperties {
 		objectMap[k] = v
@@ -130310,6 +128602,24 @@ func (lss *LogStorageSettings) UnmarshalJSON(body []byte) error {
 					return err
 				}
 				lss.Path = pathVar
+			}
+		case "logLevel":
+			if v != nil {
+				var logLevel interface{}
+				err = json.Unmarshal(*v, &logLevel)
+				if err != nil {
+					return err
+				}
+				lss.LogLevel = logLevel
+			}
+		case "enableReliableLogging":
+			if v != nil {
+				var enableReliableLogging interface{}
+				err = json.Unmarshal(*v, &enableReliableLogging)
+				if err != nil {
+					return err
+				}
+				lss.EnableReliableLogging = enableReliableLogging
 			}
 		}
 	}
@@ -132808,6 +131118,15 @@ type ManagedIntegrationRuntimeNode struct {
 	Errors *[]ManagedIntegrationRuntimeError `json:"errors,omitempty"`
 }
 
+// MarshalJSON is the custom marshaler for ManagedIntegrationRuntimeNode.
+func (mirn ManagedIntegrationRuntimeNode) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	if mirn.Errors != nil {
+		objectMap["errors"] = mirn.Errors
+	}
+	return json.Marshal(objectMap)
+}
+
 // ManagedIntegrationRuntimeOperationResult properties of managed integration runtime operation result.
 type ManagedIntegrationRuntimeOperationResult struct {
 	// Type - READ-ONLY; The operation type. Could be start or stop.
@@ -132955,6 +131274,552 @@ type ManagedIntegrationRuntimeTypeProperties struct {
 	ComputeProperties *IntegrationRuntimeComputeProperties `json:"computeProperties,omitempty"`
 	// SsisProperties - SSIS properties for managed integration runtime.
 	SsisProperties *IntegrationRuntimeSsisProperties `json:"ssisProperties,omitempty"`
+}
+
+// ManagedPrivateEndpoint properties of a managed private endpoint
+type ManagedPrivateEndpoint struct {
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// ConnectionState - The managed private endpoint connection state
+	ConnectionState *ConnectionStateProperties `json:"connectionState,omitempty"`
+	// Fqdns - Fully qualified domain names
+	Fqdns *[]string `json:"fqdns,omitempty"`
+	// GroupID - The groupId to which the managed private endpoint is created
+	GroupID *string `json:"groupId,omitempty"`
+	// IsReserved - READ-ONLY; Denotes whether the managed private endpoint is reserved
+	IsReserved *bool `json:"isReserved,omitempty"`
+	// PrivateLinkResourceID - The ARM resource ID of the resource to which the managed private endpoint is created
+	PrivateLinkResourceID *string `json:"privateLinkResourceId,omitempty"`
+	// ProvisioningState - READ-ONLY; The managed private endpoint provisioning state
+	ProvisioningState *string `json:"provisioningState,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for ManagedPrivateEndpoint.
+func (mpe ManagedPrivateEndpoint) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	if mpe.ConnectionState != nil {
+		objectMap["connectionState"] = mpe.ConnectionState
+	}
+	if mpe.Fqdns != nil {
+		objectMap["fqdns"] = mpe.Fqdns
+	}
+	if mpe.GroupID != nil {
+		objectMap["groupId"] = mpe.GroupID
+	}
+	if mpe.PrivateLinkResourceID != nil {
+		objectMap["privateLinkResourceId"] = mpe.PrivateLinkResourceID
+	}
+	for k, v := range mpe.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// UnmarshalJSON is the custom unmarshaler for ManagedPrivateEndpoint struct.
+func (mpe *ManagedPrivateEndpoint) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if mpe.AdditionalProperties == nil {
+					mpe.AdditionalProperties = make(map[string]interface{})
+				}
+				mpe.AdditionalProperties[k] = additionalProperties
+			}
+		case "connectionState":
+			if v != nil {
+				var connectionState ConnectionStateProperties
+				err = json.Unmarshal(*v, &connectionState)
+				if err != nil {
+					return err
+				}
+				mpe.ConnectionState = &connectionState
+			}
+		case "fqdns":
+			if v != nil {
+				var fqdns []string
+				err = json.Unmarshal(*v, &fqdns)
+				if err != nil {
+					return err
+				}
+				mpe.Fqdns = &fqdns
+			}
+		case "groupId":
+			if v != nil {
+				var groupID string
+				err = json.Unmarshal(*v, &groupID)
+				if err != nil {
+					return err
+				}
+				mpe.GroupID = &groupID
+			}
+		case "isReserved":
+			if v != nil {
+				var isReserved bool
+				err = json.Unmarshal(*v, &isReserved)
+				if err != nil {
+					return err
+				}
+				mpe.IsReserved = &isReserved
+			}
+		case "privateLinkResourceId":
+			if v != nil {
+				var privateLinkResourceID string
+				err = json.Unmarshal(*v, &privateLinkResourceID)
+				if err != nil {
+					return err
+				}
+				mpe.PrivateLinkResourceID = &privateLinkResourceID
+			}
+		case "provisioningState":
+			if v != nil {
+				var provisioningState string
+				err = json.Unmarshal(*v, &provisioningState)
+				if err != nil {
+					return err
+				}
+				mpe.ProvisioningState = &provisioningState
+			}
+		}
+	}
+
+	return nil
+}
+
+// ManagedPrivateEndpointListResponse a list of managed private endpoint resources.
+type ManagedPrivateEndpointListResponse struct {
+	autorest.Response `json:"-"`
+	// Value - List of managed private endpoints.
+	Value *[]ManagedPrivateEndpointResource `json:"value,omitempty"`
+	// NextLink - The link to the next page of results, if any remaining results exist.
+	NextLink *string `json:"nextLink,omitempty"`
+}
+
+// ManagedPrivateEndpointListResponseIterator provides access to a complete listing of
+// ManagedPrivateEndpointResource values.
+type ManagedPrivateEndpointListResponseIterator struct {
+	i    int
+	page ManagedPrivateEndpointListResponsePage
+}
+
+// NextWithContext advances to the next value.  If there was an error making
+// the request the iterator does not advance and the error is returned.
+func (iter *ManagedPrivateEndpointListResponseIterator) NextWithContext(ctx context.Context) (err error) {
+	if tracing.IsEnabled() {
+		ctx = tracing.StartSpan(ctx, fqdn+"/ManagedPrivateEndpointListResponseIterator.NextWithContext")
+		defer func() {
+			sc := -1
+			if iter.Response().Response.Response != nil {
+				sc = iter.Response().Response.Response.StatusCode
+			}
+			tracing.EndSpan(ctx, sc, err)
+		}()
+	}
+	iter.i++
+	if iter.i < len(iter.page.Values()) {
+		return nil
+	}
+	err = iter.page.NextWithContext(ctx)
+	if err != nil {
+		iter.i--
+		return err
+	}
+	iter.i = 0
+	return nil
+}
+
+// Next advances to the next value.  If there was an error making
+// the request the iterator does not advance and the error is returned.
+// Deprecated: Use NextWithContext() instead.
+func (iter *ManagedPrivateEndpointListResponseIterator) Next() error {
+	return iter.NextWithContext(context.Background())
+}
+
+// NotDone returns true if the enumeration should be started or is not yet complete.
+func (iter ManagedPrivateEndpointListResponseIterator) NotDone() bool {
+	return iter.page.NotDone() && iter.i < len(iter.page.Values())
+}
+
+// Response returns the raw server response from the last page request.
+func (iter ManagedPrivateEndpointListResponseIterator) Response() ManagedPrivateEndpointListResponse {
+	return iter.page.Response()
+}
+
+// Value returns the current value or a zero-initialized value if the
+// iterator has advanced beyond the end of the collection.
+func (iter ManagedPrivateEndpointListResponseIterator) Value() ManagedPrivateEndpointResource {
+	if !iter.page.NotDone() {
+		return ManagedPrivateEndpointResource{}
+	}
+	return iter.page.Values()[iter.i]
+}
+
+// Creates a new instance of the ManagedPrivateEndpointListResponseIterator type.
+func NewManagedPrivateEndpointListResponseIterator(page ManagedPrivateEndpointListResponsePage) ManagedPrivateEndpointListResponseIterator {
+	return ManagedPrivateEndpointListResponseIterator{page: page}
+}
+
+// IsEmpty returns true if the ListResult contains no values.
+func (mpelr ManagedPrivateEndpointListResponse) IsEmpty() bool {
+	return mpelr.Value == nil || len(*mpelr.Value) == 0
+}
+
+// hasNextLink returns true if the NextLink is not empty.
+func (mpelr ManagedPrivateEndpointListResponse) hasNextLink() bool {
+	return mpelr.NextLink != nil && len(*mpelr.NextLink) != 0
+}
+
+// managedPrivateEndpointListResponsePreparer prepares a request to retrieve the next set of results.
+// It returns nil if no more results exist.
+func (mpelr ManagedPrivateEndpointListResponse) managedPrivateEndpointListResponsePreparer(ctx context.Context) (*http.Request, error) {
+	if !mpelr.hasNextLink() {
+		return nil, nil
+	}
+	return autorest.Prepare((&http.Request{}).WithContext(ctx),
+		autorest.AsJSON(),
+		autorest.AsGet(),
+		autorest.WithBaseURL(to.String(mpelr.NextLink)))
+}
+
+// ManagedPrivateEndpointListResponsePage contains a page of ManagedPrivateEndpointResource values.
+type ManagedPrivateEndpointListResponsePage struct {
+	fn    func(context.Context, ManagedPrivateEndpointListResponse) (ManagedPrivateEndpointListResponse, error)
+	mpelr ManagedPrivateEndpointListResponse
+}
+
+// NextWithContext advances to the next page of values.  If there was an error making
+// the request the page does not advance and the error is returned.
+func (page *ManagedPrivateEndpointListResponsePage) NextWithContext(ctx context.Context) (err error) {
+	if tracing.IsEnabled() {
+		ctx = tracing.StartSpan(ctx, fqdn+"/ManagedPrivateEndpointListResponsePage.NextWithContext")
+		defer func() {
+			sc := -1
+			if page.Response().Response.Response != nil {
+				sc = page.Response().Response.Response.StatusCode
+			}
+			tracing.EndSpan(ctx, sc, err)
+		}()
+	}
+	for {
+		next, err := page.fn(ctx, page.mpelr)
+		if err != nil {
+			return err
+		}
+		page.mpelr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
+	}
+	return nil
+}
+
+// Next advances to the next page of values.  If there was an error making
+// the request the page does not advance and the error is returned.
+// Deprecated: Use NextWithContext() instead.
+func (page *ManagedPrivateEndpointListResponsePage) Next() error {
+	return page.NextWithContext(context.Background())
+}
+
+// NotDone returns true if the page enumeration should be started or is not yet complete.
+func (page ManagedPrivateEndpointListResponsePage) NotDone() bool {
+	return !page.mpelr.IsEmpty()
+}
+
+// Response returns the raw server response from the last page request.
+func (page ManagedPrivateEndpointListResponsePage) Response() ManagedPrivateEndpointListResponse {
+	return page.mpelr
+}
+
+// Values returns the slice of values for the current page or nil if there are no values.
+func (page ManagedPrivateEndpointListResponsePage) Values() []ManagedPrivateEndpointResource {
+	if page.mpelr.IsEmpty() {
+		return nil
+	}
+	return *page.mpelr.Value
+}
+
+// Creates a new instance of the ManagedPrivateEndpointListResponsePage type.
+func NewManagedPrivateEndpointListResponsePage(getNextPage func(context.Context, ManagedPrivateEndpointListResponse) (ManagedPrivateEndpointListResponse, error)) ManagedPrivateEndpointListResponsePage {
+	return ManagedPrivateEndpointListResponsePage{fn: getNextPage}
+}
+
+// ManagedPrivateEndpointResource managed private endpoint resource type.
+type ManagedPrivateEndpointResource struct {
+	autorest.Response `json:"-"`
+	// Properties - Managed private endpoint properties.
+	Properties *ManagedPrivateEndpoint `json:"properties,omitempty"`
+	// ID - READ-ONLY; The resource identifier.
+	ID *string `json:"id,omitempty"`
+	// Name - READ-ONLY; The resource name.
+	Name *string `json:"name,omitempty"`
+	// Type - READ-ONLY; The resource type.
+	Type *string `json:"type,omitempty"`
+	// Etag - READ-ONLY; Etag identifies change in the resource.
+	Etag *string `json:"etag,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for ManagedPrivateEndpointResource.
+func (mper ManagedPrivateEndpointResource) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	if mper.Properties != nil {
+		objectMap["properties"] = mper.Properties
+	}
+	return json.Marshal(objectMap)
+}
+
+// ManagedVirtualNetwork a managed Virtual Network associated with the Azure Data Factory
+type ManagedVirtualNetwork struct {
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// VNetID - READ-ONLY; Managed Virtual Network ID.
+	VNetID *string `json:"vNetId,omitempty"`
+	// Alias - READ-ONLY; Managed Virtual Network alias.
+	Alias *string `json:"alias,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for ManagedVirtualNetwork.
+func (mvn ManagedVirtualNetwork) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	for k, v := range mvn.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// UnmarshalJSON is the custom unmarshaler for ManagedVirtualNetwork struct.
+func (mvn *ManagedVirtualNetwork) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if mvn.AdditionalProperties == nil {
+					mvn.AdditionalProperties = make(map[string]interface{})
+				}
+				mvn.AdditionalProperties[k] = additionalProperties
+			}
+		case "vNetId":
+			if v != nil {
+				var vNetID string
+				err = json.Unmarshal(*v, &vNetID)
+				if err != nil {
+					return err
+				}
+				mvn.VNetID = &vNetID
+			}
+		case "alias":
+			if v != nil {
+				var alias string
+				err = json.Unmarshal(*v, &alias)
+				if err != nil {
+					return err
+				}
+				mvn.Alias = &alias
+			}
+		}
+	}
+
+	return nil
+}
+
+// ManagedVirtualNetworkListResponse a list of managed Virtual Network resources.
+type ManagedVirtualNetworkListResponse struct {
+	autorest.Response `json:"-"`
+	// Value - List of managed Virtual Networks.
+	Value *[]ManagedVirtualNetworkResource `json:"value,omitempty"`
+	// NextLink - The link to the next page of results, if any remaining results exist.
+	NextLink *string `json:"nextLink,omitempty"`
+}
+
+// ManagedVirtualNetworkListResponseIterator provides access to a complete listing of
+// ManagedVirtualNetworkResource values.
+type ManagedVirtualNetworkListResponseIterator struct {
+	i    int
+	page ManagedVirtualNetworkListResponsePage
+}
+
+// NextWithContext advances to the next value.  If there was an error making
+// the request the iterator does not advance and the error is returned.
+func (iter *ManagedVirtualNetworkListResponseIterator) NextWithContext(ctx context.Context) (err error) {
+	if tracing.IsEnabled() {
+		ctx = tracing.StartSpan(ctx, fqdn+"/ManagedVirtualNetworkListResponseIterator.NextWithContext")
+		defer func() {
+			sc := -1
+			if iter.Response().Response.Response != nil {
+				sc = iter.Response().Response.Response.StatusCode
+			}
+			tracing.EndSpan(ctx, sc, err)
+		}()
+	}
+	iter.i++
+	if iter.i < len(iter.page.Values()) {
+		return nil
+	}
+	err = iter.page.NextWithContext(ctx)
+	if err != nil {
+		iter.i--
+		return err
+	}
+	iter.i = 0
+	return nil
+}
+
+// Next advances to the next value.  If there was an error making
+// the request the iterator does not advance and the error is returned.
+// Deprecated: Use NextWithContext() instead.
+func (iter *ManagedVirtualNetworkListResponseIterator) Next() error {
+	return iter.NextWithContext(context.Background())
+}
+
+// NotDone returns true if the enumeration should be started or is not yet complete.
+func (iter ManagedVirtualNetworkListResponseIterator) NotDone() bool {
+	return iter.page.NotDone() && iter.i < len(iter.page.Values())
+}
+
+// Response returns the raw server response from the last page request.
+func (iter ManagedVirtualNetworkListResponseIterator) Response() ManagedVirtualNetworkListResponse {
+	return iter.page.Response()
+}
+
+// Value returns the current value or a zero-initialized value if the
+// iterator has advanced beyond the end of the collection.
+func (iter ManagedVirtualNetworkListResponseIterator) Value() ManagedVirtualNetworkResource {
+	if !iter.page.NotDone() {
+		return ManagedVirtualNetworkResource{}
+	}
+	return iter.page.Values()[iter.i]
+}
+
+// Creates a new instance of the ManagedVirtualNetworkListResponseIterator type.
+func NewManagedVirtualNetworkListResponseIterator(page ManagedVirtualNetworkListResponsePage) ManagedVirtualNetworkListResponseIterator {
+	return ManagedVirtualNetworkListResponseIterator{page: page}
+}
+
+// IsEmpty returns true if the ListResult contains no values.
+func (mvnlr ManagedVirtualNetworkListResponse) IsEmpty() bool {
+	return mvnlr.Value == nil || len(*mvnlr.Value) == 0
+}
+
+// hasNextLink returns true if the NextLink is not empty.
+func (mvnlr ManagedVirtualNetworkListResponse) hasNextLink() bool {
+	return mvnlr.NextLink != nil && len(*mvnlr.NextLink) != 0
+}
+
+// managedVirtualNetworkListResponsePreparer prepares a request to retrieve the next set of results.
+// It returns nil if no more results exist.
+func (mvnlr ManagedVirtualNetworkListResponse) managedVirtualNetworkListResponsePreparer(ctx context.Context) (*http.Request, error) {
+	if !mvnlr.hasNextLink() {
+		return nil, nil
+	}
+	return autorest.Prepare((&http.Request{}).WithContext(ctx),
+		autorest.AsJSON(),
+		autorest.AsGet(),
+		autorest.WithBaseURL(to.String(mvnlr.NextLink)))
+}
+
+// ManagedVirtualNetworkListResponsePage contains a page of ManagedVirtualNetworkResource values.
+type ManagedVirtualNetworkListResponsePage struct {
+	fn    func(context.Context, ManagedVirtualNetworkListResponse) (ManagedVirtualNetworkListResponse, error)
+	mvnlr ManagedVirtualNetworkListResponse
+}
+
+// NextWithContext advances to the next page of values.  If there was an error making
+// the request the page does not advance and the error is returned.
+func (page *ManagedVirtualNetworkListResponsePage) NextWithContext(ctx context.Context) (err error) {
+	if tracing.IsEnabled() {
+		ctx = tracing.StartSpan(ctx, fqdn+"/ManagedVirtualNetworkListResponsePage.NextWithContext")
+		defer func() {
+			sc := -1
+			if page.Response().Response.Response != nil {
+				sc = page.Response().Response.Response.StatusCode
+			}
+			tracing.EndSpan(ctx, sc, err)
+		}()
+	}
+	for {
+		next, err := page.fn(ctx, page.mvnlr)
+		if err != nil {
+			return err
+		}
+		page.mvnlr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
+	}
+	return nil
+}
+
+// Next advances to the next page of values.  If there was an error making
+// the request the page does not advance and the error is returned.
+// Deprecated: Use NextWithContext() instead.
+func (page *ManagedVirtualNetworkListResponsePage) Next() error {
+	return page.NextWithContext(context.Background())
+}
+
+// NotDone returns true if the page enumeration should be started or is not yet complete.
+func (page ManagedVirtualNetworkListResponsePage) NotDone() bool {
+	return !page.mvnlr.IsEmpty()
+}
+
+// Response returns the raw server response from the last page request.
+func (page ManagedVirtualNetworkListResponsePage) Response() ManagedVirtualNetworkListResponse {
+	return page.mvnlr
+}
+
+// Values returns the slice of values for the current page or nil if there are no values.
+func (page ManagedVirtualNetworkListResponsePage) Values() []ManagedVirtualNetworkResource {
+	if page.mvnlr.IsEmpty() {
+		return nil
+	}
+	return *page.mvnlr.Value
+}
+
+// Creates a new instance of the ManagedVirtualNetworkListResponsePage type.
+func NewManagedVirtualNetworkListResponsePage(getNextPage func(context.Context, ManagedVirtualNetworkListResponse) (ManagedVirtualNetworkListResponse, error)) ManagedVirtualNetworkListResponsePage {
+	return ManagedVirtualNetworkListResponsePage{fn: getNextPage}
+}
+
+// ManagedVirtualNetworkResource managed Virtual Network resource type.
+type ManagedVirtualNetworkResource struct {
+	autorest.Response `json:"-"`
+	// Properties - Managed Virtual Network properties.
+	Properties *ManagedVirtualNetwork `json:"properties,omitempty"`
+	// ID - READ-ONLY; The resource identifier.
+	ID *string `json:"id,omitempty"`
+	// Name - READ-ONLY; The resource name.
+	Name *string `json:"name,omitempty"`
+	// Type - READ-ONLY; The resource type.
+	Type *string `json:"type,omitempty"`
+	// Etag - READ-ONLY; Etag identifies change in the resource.
+	Etag *string `json:"etag,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for ManagedVirtualNetworkResource.
+func (mvnr ManagedVirtualNetworkResource) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	if mvnr.Properties != nil {
+		objectMap["properties"] = mvnr.Properties
+	}
+	return json.Marshal(objectMap)
 }
 
 // MappingDataFlow mapping data flow.
@@ -137625,7 +136490,7 @@ type MicrosoftAccessSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -137817,6 +136682,11 @@ func (mas MicrosoftAccessSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for MicrosoftAccessSink.
 func (mas MicrosoftAccessSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for MicrosoftAccessSink.
+func (mas MicrosoftAccessSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -147798,6 +146668,8 @@ type ODataLinkedServiceTypeProperties struct {
 	Tenant interface{} `json:"tenant,omitempty"`
 	// ServicePrincipalID - Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
 	ServicePrincipalID interface{} `json:"servicePrincipalId,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// AadResourceID - Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
 	AadResourceID interface{} `json:"aadResourceId,omitempty"`
 	// AadServicePrincipalCredentialType - Specify the credential type (key or cert) is used for service principal. Possible values include: 'ServicePrincipalKey', 'ServicePrincipalCert'
@@ -147873,6 +146745,15 @@ func (odlstp *ODataLinkedServiceTypeProperties) UnmarshalJSON(body []byte) error
 					return err
 				}
 				odlstp.ServicePrincipalID = servicePrincipalID
+			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				odlstp.AzureCloudType = azureCloudType
 			}
 		case "aadResourceId":
 			if v != nil {
@@ -149898,7 +148779,7 @@ type OdbcSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -150090,6 +148971,11 @@ func (osVar OdbcSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for OdbcSink.
 func (osVar OdbcSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for OdbcSink.
+func (osVar OdbcSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -153614,10 +152500,15 @@ func (olr OperationListResponse) IsEmpty() bool {
 	return olr.Value == nil || len(*olr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (olr OperationListResponse) hasNextLink() bool {
+	return olr.NextLink != nil && len(*olr.NextLink) != 0
+}
+
 // operationListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (olr OperationListResponse) operationListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if olr.NextLink == nil || len(to.String(olr.NextLink)) < 1 {
+	if !olr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -153645,11 +152536,16 @@ func (page *OperationListResponsePage) NextWithContext(ctx context.Context) (err
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.olr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.olr)
+		if err != nil {
+			return err
+		}
+		page.olr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.olr = next
 	return nil
 }
 
@@ -156361,7 +155257,7 @@ type OracleSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -156553,6 +155449,11 @@ func (osVar OracleSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for OracleSink.
 func (osVar OracleSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for OracleSink.
+func (osVar OracleSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -158764,7 +157665,7 @@ type OrcSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -158954,6 +157855,11 @@ func (osVar OrcSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for OrcSink.
 func (osVar OrcSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for OrcSink.
+func (osVar OrcSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -160490,7 +159396,7 @@ type ParquetSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -160680,6 +159586,11 @@ func (ps ParquetSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for ParquetSink.
 func (ps ParquetSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for ParquetSink.
+func (ps ParquetSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -165590,10 +164501,15 @@ func (plr PipelineListResponse) IsEmpty() bool {
 	return plr.Value == nil || len(*plr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (plr PipelineListResponse) hasNextLink() bool {
+	return plr.NextLink != nil && len(*plr.NextLink) != 0
+}
+
 // pipelineListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (plr PipelineListResponse) pipelineListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if plr.NextLink == nil || len(to.String(plr.NextLink)) < 1 {
+	if !plr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -165621,11 +164537,16 @@ func (page *PipelineListResponsePage) NextWithContext(ctx context.Context) (err 
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.plr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.plr)
+		if err != nil {
+			return err
+		}
+		page.plr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.plr = next
 	return nil
 }
 
@@ -170008,8 +168929,8 @@ type QueryDataFlowDebugSessionsResponse struct {
 	NextLink *string `json:"nextLink,omitempty"`
 }
 
-// QueryDataFlowDebugSessionsResponseIterator provides access to a complete listing of
-// DataFlowDebugSessionInfo values.
+// QueryDataFlowDebugSessionsResponseIterator provides access to a complete listing of DataFlowDebugSessionInfo
+// values.
 type QueryDataFlowDebugSessionsResponseIterator struct {
 	i    int
 	page QueryDataFlowDebugSessionsResponsePage
@@ -170077,10 +168998,15 @@ func (qdfdsr QueryDataFlowDebugSessionsResponse) IsEmpty() bool {
 	return qdfdsr.Value == nil || len(*qdfdsr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (qdfdsr QueryDataFlowDebugSessionsResponse) hasNextLink() bool {
+	return qdfdsr.NextLink != nil && len(*qdfdsr.NextLink) != 0
+}
+
 // queryDataFlowDebugSessionsResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (qdfdsr QueryDataFlowDebugSessionsResponse) queryDataFlowDebugSessionsResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if qdfdsr.NextLink == nil || len(to.String(qdfdsr.NextLink)) < 1 {
+	if !qdfdsr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -170108,11 +169034,16 @@ func (page *QueryDataFlowDebugSessionsResponsePage) NextWithContext(ctx context.
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.qdfdsr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.qdfdsr)
+		if err != nil {
+			return err
+		}
+		page.qdfdsr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.qdfdsr = next
 	return nil
 }
 
@@ -170765,6 +169696,8 @@ func (qbls *QuickBooksLinkedService) UnmarshalJSON(body []byte) error {
 
 // QuickBooksLinkedServiceTypeProperties quickBooks server linked service properties.
 type QuickBooksLinkedServiceTypeProperties struct {
+	// ConnectionProperties - Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+	ConnectionProperties interface{} `json:"connectionProperties,omitempty"`
 	// Endpoint - The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
 	Endpoint interface{} `json:"endpoint,omitempty"`
 	// CompanyID - The company ID of the QuickBooks company to authorize.
@@ -170792,6 +169725,15 @@ func (qblstp *QuickBooksLinkedServiceTypeProperties) UnmarshalJSON(body []byte) 
 	}
 	for k, v := range m {
 		switch k {
+		case "connectionProperties":
+			if v != nil {
+				var connectionProperties interface{}
+				err = json.Unmarshal(*v, &connectionProperties)
+				if err != nil {
+					return err
+				}
+				qblstp.ConnectionProperties = connectionProperties
+			}
 		case "endpoint":
 			if v != nil {
 				var endpoint interface{}
@@ -172365,8 +171307,8 @@ func (rirs *RedirectIncompatibleRowSettings) UnmarshalJSON(body []byte) error {
 }
 
 // RedshiftUnloadSettings the Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon
-// Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and
-// then copied into the targeted sink from the interim S3.
+// Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then
+// copied into the targeted sink from the interim S3.
 type RedshiftUnloadSettings struct {
 	// S3LinkedServiceName - The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
 	S3LinkedServiceName *LinkedServiceReference `json:"s3LinkedServiceName,omitempty"`
@@ -173611,8 +172553,8 @@ type RelationalTableDatasetTypeProperties struct {
 	TableName interface{} `json:"tableName,omitempty"`
 }
 
-// RerunTumblingWindowTrigger trigger that schedules pipeline reruns for all fixed time interval windows
-// from a requested start time to requested end time.
+// RerunTumblingWindowTrigger trigger that schedules pipeline reruns for all fixed time interval windows from a
+// requested start time to requested end time.
 type RerunTumblingWindowTrigger struct {
 	// RerunTumblingWindowTriggerTypeProperties - Rerun Trigger properties.
 	*RerunTumblingWindowTriggerTypeProperties `json:"typeProperties,omitempty"`
@@ -177052,6 +175994,8 @@ type RestServiceLinkedServiceTypeProperties struct {
 	ServicePrincipalKey BasicSecretBase `json:"servicePrincipalKey,omitempty"`
 	// Tenant - The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
 	Tenant interface{} `json:"tenant,omitempty"`
+	// AzureCloudType - Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+	AzureCloudType interface{} `json:"azureCloudType,omitempty"`
 	// AadResourceID - The resource you are requesting authorization to use.
 	AadResourceID interface{} `json:"aadResourceId,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
@@ -177137,6 +176081,15 @@ func (rslstp *RestServiceLinkedServiceTypeProperties) UnmarshalJSON(body []byte)
 				}
 				rslstp.Tenant = tenant
 			}
+		case "azureCloudType":
+			if v != nil {
+				var azureCloudType interface{}
+				err = json.Unmarshal(*v, &azureCloudType)
+				if err != nil {
+					return err
+				}
+				rslstp.AzureCloudType = azureCloudType
+			}
 		case "aadResourceId":
 			if v != nil {
 				var aadResourceID interface{}
@@ -177154,6 +176107,407 @@ func (rslstp *RestServiceLinkedServiceTypeProperties) UnmarshalJSON(body []byte)
 					return err
 				}
 				rslstp.EncryptedCredential = encryptedCredential
+			}
+		}
+	}
+
+	return nil
+}
+
+// RestSink a copy activity Rest service Sink.
+type RestSink struct {
+	// RequestMethod - The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
+	RequestMethod interface{} `json:"requestMethod,omitempty"`
+	// AdditionalHeaders - The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+	AdditionalHeaders interface{} `json:"additionalHeaders,omitempty"`
+	// HTTPRequestTimeout - The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+	HTTPRequestTimeout interface{} `json:"httpRequestTimeout,omitempty"`
+	// RequestInterval - The time to await before sending next request, in milliseconds
+	RequestInterval interface{} `json:"requestInterval,omitempty"`
+	// CompressionType - Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
+	CompressionType interface{} `json:"compressionType,omitempty"`
+	// WrapRequestJSONInAnObject - Wraps Request Array Json into an Object before calling the rest endpoint , Default is false. ex: if true request content sample format is { rows:[]} else the format is []
+	WrapRequestJSONInAnObject interface{} `json:"wrapRequestJsonInAnObject,omitempty"`
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// WriteBatchSize - Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+	WriteBatchSize interface{} `json:"writeBatchSize,omitempty"`
+	// WriteBatchTimeout - Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+	WriteBatchTimeout interface{} `json:"writeBatchTimeout,omitempty"`
+	// SinkRetryCount - Sink retry count. Type: integer (or Expression with resultType integer).
+	SinkRetryCount interface{} `json:"sinkRetryCount,omitempty"`
+	// SinkRetryWait - Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
+	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	Type TypeBasicCopySink `json:"type,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for RestSink.
+func (rs RestSink) MarshalJSON() ([]byte, error) {
+	rs.Type = TypeRestSink
+	objectMap := make(map[string]interface{})
+	if rs.RequestMethod != nil {
+		objectMap["requestMethod"] = rs.RequestMethod
+	}
+	if rs.AdditionalHeaders != nil {
+		objectMap["additionalHeaders"] = rs.AdditionalHeaders
+	}
+	if rs.HTTPRequestTimeout != nil {
+		objectMap["httpRequestTimeout"] = rs.HTTPRequestTimeout
+	}
+	if rs.RequestInterval != nil {
+		objectMap["requestInterval"] = rs.RequestInterval
+	}
+	if rs.CompressionType != nil {
+		objectMap["compressionType"] = rs.CompressionType
+	}
+	if rs.WrapRequestJSONInAnObject != nil {
+		objectMap["wrapRequestJsonInAnObject"] = rs.WrapRequestJSONInAnObject
+	}
+	if rs.WriteBatchSize != nil {
+		objectMap["writeBatchSize"] = rs.WriteBatchSize
+	}
+	if rs.WriteBatchTimeout != nil {
+		objectMap["writeBatchTimeout"] = rs.WriteBatchTimeout
+	}
+	if rs.SinkRetryCount != nil {
+		objectMap["sinkRetryCount"] = rs.SinkRetryCount
+	}
+	if rs.SinkRetryWait != nil {
+		objectMap["sinkRetryWait"] = rs.SinkRetryWait
+	}
+	if rs.MaxConcurrentConnections != nil {
+		objectMap["maxConcurrentConnections"] = rs.MaxConcurrentConnections
+	}
+	if rs.Type != "" {
+		objectMap["type"] = rs.Type
+	}
+	for k, v := range rs.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// AsCosmosDbMongoDbAPISink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsCosmosDbMongoDbAPISink() (*CosmosDbMongoDbAPISink, bool) {
+	return nil, false
+}
+
+// AsSalesforceServiceCloudSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSalesforceServiceCloudSink() (*SalesforceServiceCloudSink, bool) {
+	return nil, false
+}
+
+// AsSalesforceSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSalesforceSink() (*SalesforceSink, bool) {
+	return nil, false
+}
+
+// AsAzureDataExplorerSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureDataExplorerSink() (*AzureDataExplorerSink, bool) {
+	return nil, false
+}
+
+// AsCommonDataServiceForAppsSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsCommonDataServiceForAppsSink() (*CommonDataServiceForAppsSink, bool) {
+	return nil, false
+}
+
+// AsDynamicsCrmSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsDynamicsCrmSink() (*DynamicsCrmSink, bool) {
+	return nil, false
+}
+
+// AsDynamicsSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsDynamicsSink() (*DynamicsSink, bool) {
+	return nil, false
+}
+
+// AsMicrosoftAccessSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsMicrosoftAccessSink() (*MicrosoftAccessSink, bool) {
+	return nil, false
+}
+
+// AsInformixSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsInformixSink() (*InformixSink, bool) {
+	return nil, false
+}
+
+// AsOdbcSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsOdbcSink() (*OdbcSink, bool) {
+	return nil, false
+}
+
+// AsAzureSearchIndexSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureSearchIndexSink() (*AzureSearchIndexSink, bool) {
+	return nil, false
+}
+
+// AsAzureBlobFSSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureBlobFSSink() (*AzureBlobFSSink, bool) {
+	return nil, false
+}
+
+// AsAzureDataLakeStoreSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureDataLakeStoreSink() (*AzureDataLakeStoreSink, bool) {
+	return nil, false
+}
+
+// AsOracleSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsOracleSink() (*OracleSink, bool) {
+	return nil, false
+}
+
+// AsSnowflakeSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSnowflakeSink() (*SnowflakeSink, bool) {
+	return nil, false
+}
+
+// AsSQLDWSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSQLDWSink() (*SQLDWSink, bool) {
+	return nil, false
+}
+
+// AsSQLMISink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSQLMISink() (*SQLMISink, bool) {
+	return nil, false
+}
+
+// AsAzureSQLSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureSQLSink() (*AzureSQLSink, bool) {
+	return nil, false
+}
+
+// AsSQLServerSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSQLServerSink() (*SQLServerSink, bool) {
+	return nil, false
+}
+
+// AsSQLSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSQLSink() (*SQLSink, bool) {
+	return nil, false
+}
+
+// AsCosmosDbSQLAPISink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsCosmosDbSQLAPISink() (*CosmosDbSQLAPISink, bool) {
+	return nil, false
+}
+
+// AsDocumentDbCollectionSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsDocumentDbCollectionSink() (*DocumentDbCollectionSink, bool) {
+	return nil, false
+}
+
+// AsFileSystemSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsFileSystemSink() (*FileSystemSink, bool) {
+	return nil, false
+}
+
+// AsBlobSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsBlobSink() (*BlobSink, bool) {
+	return nil, false
+}
+
+// AsBinarySink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsBinarySink() (*BinarySink, bool) {
+	return nil, false
+}
+
+// AsParquetSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsParquetSink() (*ParquetSink, bool) {
+	return nil, false
+}
+
+// AsAvroSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAvroSink() (*AvroSink, bool) {
+	return nil, false
+}
+
+// AsAzureTableSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureTableSink() (*AzureTableSink, bool) {
+	return nil, false
+}
+
+// AsAzureQueueSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureQueueSink() (*AzureQueueSink, bool) {
+	return nil, false
+}
+
+// AsSapCloudForCustomerSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsSapCloudForCustomerSink() (*SapCloudForCustomerSink, bool) {
+	return nil, false
+}
+
+// AsAzureMySQLSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
+	return nil, false
+}
+
+// AsAzurePostgreSQLSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsRestSink() (*RestSink, bool) {
+	return &rs, true
+}
+
+// AsOrcSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsOrcSink() (*OrcSink, bool) {
+	return nil, false
+}
+
+// AsJSONSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsJSONSink() (*JSONSink, bool) {
+	return nil, false
+}
+
+// AsDelimitedTextSink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsDelimitedTextSink() (*DelimitedTextSink, bool) {
+	return nil, false
+}
+
+// AsCopySink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsCopySink() (*CopySink, bool) {
+	return nil, false
+}
+
+// AsBasicCopySink is the BasicCopySink implementation for RestSink.
+func (rs RestSink) AsBasicCopySink() (BasicCopySink, bool) {
+	return &rs, true
+}
+
+// UnmarshalJSON is the custom unmarshaler for RestSink struct.
+func (rs *RestSink) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		case "requestMethod":
+			if v != nil {
+				var requestMethod interface{}
+				err = json.Unmarshal(*v, &requestMethod)
+				if err != nil {
+					return err
+				}
+				rs.RequestMethod = requestMethod
+			}
+		case "additionalHeaders":
+			if v != nil {
+				var additionalHeaders interface{}
+				err = json.Unmarshal(*v, &additionalHeaders)
+				if err != nil {
+					return err
+				}
+				rs.AdditionalHeaders = additionalHeaders
+			}
+		case "httpRequestTimeout":
+			if v != nil {
+				var HTTPRequestTimeout interface{}
+				err = json.Unmarshal(*v, &HTTPRequestTimeout)
+				if err != nil {
+					return err
+				}
+				rs.HTTPRequestTimeout = HTTPRequestTimeout
+			}
+		case "requestInterval":
+			if v != nil {
+				var requestInterval interface{}
+				err = json.Unmarshal(*v, &requestInterval)
+				if err != nil {
+					return err
+				}
+				rs.RequestInterval = requestInterval
+			}
+		case "compressionType":
+			if v != nil {
+				var compressionType interface{}
+				err = json.Unmarshal(*v, &compressionType)
+				if err != nil {
+					return err
+				}
+				rs.CompressionType = compressionType
+			}
+		case "wrapRequestJsonInAnObject":
+			if v != nil {
+				var wrapRequestJSONInAnObject interface{}
+				err = json.Unmarshal(*v, &wrapRequestJSONInAnObject)
+				if err != nil {
+					return err
+				}
+				rs.WrapRequestJSONInAnObject = wrapRequestJSONInAnObject
+			}
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if rs.AdditionalProperties == nil {
+					rs.AdditionalProperties = make(map[string]interface{})
+				}
+				rs.AdditionalProperties[k] = additionalProperties
+			}
+		case "writeBatchSize":
+			if v != nil {
+				var writeBatchSize interface{}
+				err = json.Unmarshal(*v, &writeBatchSize)
+				if err != nil {
+					return err
+				}
+				rs.WriteBatchSize = writeBatchSize
+			}
+		case "writeBatchTimeout":
+			if v != nil {
+				var writeBatchTimeout interface{}
+				err = json.Unmarshal(*v, &writeBatchTimeout)
+				if err != nil {
+					return err
+				}
+				rs.WriteBatchTimeout = writeBatchTimeout
+			}
+		case "sinkRetryCount":
+			if v != nil {
+				var sinkRetryCount interface{}
+				err = json.Unmarshal(*v, &sinkRetryCount)
+				if err != nil {
+					return err
+				}
+				rs.SinkRetryCount = sinkRetryCount
+			}
+		case "sinkRetryWait":
+			if v != nil {
+				var sinkRetryWait interface{}
+				err = json.Unmarshal(*v, &sinkRetryWait)
+				if err != nil {
+					return err
+				}
+				rs.SinkRetryWait = sinkRetryWait
+			}
+		case "maxConcurrentConnections":
+			if v != nil {
+				var maxConcurrentConnections interface{}
+				err = json.Unmarshal(*v, &maxConcurrentConnections)
+				if err != nil {
+					return err
+				}
+				rs.MaxConcurrentConnections = maxConcurrentConnections
+			}
+		case "type":
+			if v != nil {
+				var typeVar TypeBasicCopySink
+				err = json.Unmarshal(*v, &typeVar)
+				if err != nil {
+					return err
+				}
+				rs.Type = typeVar
 			}
 		}
 	}
@@ -179185,9 +178539,10 @@ func (smcls *SalesforceMarketingCloudLinkedService) UnmarshalJSON(body []byte) e
 	return nil
 }
 
-// SalesforceMarketingCloudLinkedServiceTypeProperties salesforce Marketing Cloud linked service
-// properties.
+// SalesforceMarketingCloudLinkedServiceTypeProperties salesforce Marketing Cloud linked service properties.
 type SalesforceMarketingCloudLinkedServiceTypeProperties struct {
+	// ConnectionProperties - Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.
+	ConnectionProperties interface{} `json:"connectionProperties,omitempty"`
 	// ClientID - The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
 	ClientID interface{} `json:"clientId,omitempty"`
 	// ClientSecret - The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
@@ -179211,6 +178566,15 @@ func (smclstp *SalesforceMarketingCloudLinkedServiceTypeProperties) UnmarshalJSO
 	}
 	for k, v := range m {
 		switch k {
+		case "connectionProperties":
+			if v != nil {
+				var connectionProperties interface{}
+				err = json.Unmarshal(*v, &connectionProperties)
+				if err != nil {
+					return err
+				}
+				smclstp.ConnectionProperties = connectionProperties
+			}
 		case "clientId":
 			if v != nil {
 				var clientID interface{}
@@ -182526,7 +181890,7 @@ type SalesforceServiceCloudSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -182724,6 +182088,11 @@ func (sscs SalesforceServiceCloudSink) AsAzureMySQLSink() (*AzureMySQLSink, bool
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SalesforceServiceCloudSink.
 func (sscs SalesforceServiceCloudSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SalesforceServiceCloudSink.
+func (sscs SalesforceServiceCloudSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -183491,7 +182860,7 @@ type SalesforceSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -183689,6 +183058,11 @@ func (ss SalesforceSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SalesforceSink.
 func (ss SalesforceSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SalesforceSink.
+func (ss SalesforceSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -187695,8 +187069,7 @@ func (scfcrd *SapCloudForCustomerResourceDataset) UnmarshalJSON(body []byte) err
 	return nil
 }
 
-// SapCloudForCustomerResourceDatasetTypeProperties sap Cloud For Customer OData resource dataset
-// properties.
+// SapCloudForCustomerResourceDatasetTypeProperties sap Cloud For Customer OData resource dataset properties.
 type SapCloudForCustomerResourceDatasetTypeProperties struct {
 	// Path - The path of the SAP Cloud for Customer OData entity. Type: string (or Expression with resultType string).
 	Path interface{} `json:"path,omitempty"`
@@ -187720,7 +187093,7 @@ type SapCloudForCustomerSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -187915,6 +187288,11 @@ func (scfcs SapCloudForCustomerSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) 
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SapCloudForCustomerSink.
 func (scfcs SapCloudForCustomerSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SapCloudForCustomerSink.
+func (scfcs SapCloudForCustomerSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -193241,10 +192619,18 @@ type SapOpenHubLinkedServiceTypeProperties struct {
 	ClientID interface{} `json:"clientId,omitempty"`
 	// Language - Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
 	Language interface{} `json:"language,omitempty"`
+	// SystemID - SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+	SystemID interface{} `json:"systemId,omitempty"`
 	// UserName - Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).
 	UserName interface{} `json:"userName,omitempty"`
 	// Password - Password to access the SAP BW server where the open hub destination is located.
 	Password BasicSecretBase `json:"password,omitempty"`
+	// MessageServer - The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+	MessageServer interface{} `json:"messageServer,omitempty"`
+	// MessageServerService - The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+	MessageServerService interface{} `json:"messageServerService,omitempty"`
+	// LogonGroup - The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+	LogonGroup interface{} `json:"logonGroup,omitempty"`
 	// EncryptedCredential - The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
 	EncryptedCredential interface{} `json:"encryptedCredential,omitempty"`
 }
@@ -193294,6 +192680,15 @@ func (sohlstp *SapOpenHubLinkedServiceTypeProperties) UnmarshalJSON(body []byte)
 				}
 				sohlstp.Language = language
 			}
+		case "systemId":
+			if v != nil {
+				var systemID interface{}
+				err = json.Unmarshal(*v, &systemID)
+				if err != nil {
+					return err
+				}
+				sohlstp.SystemID = systemID
+			}
 		case "userName":
 			if v != nil {
 				var userName interface{}
@@ -193310,6 +192705,33 @@ func (sohlstp *SapOpenHubLinkedServiceTypeProperties) UnmarshalJSON(body []byte)
 					return err
 				}
 				sohlstp.Password = password
+			}
+		case "messageServer":
+			if v != nil {
+				var messageServer interface{}
+				err = json.Unmarshal(*v, &messageServer)
+				if err != nil {
+					return err
+				}
+				sohlstp.MessageServer = messageServer
+			}
+		case "messageServerService":
+			if v != nil {
+				var messageServerService interface{}
+				err = json.Unmarshal(*v, &messageServerService)
+				if err != nil {
+					return err
+				}
+				sohlstp.MessageServerService = messageServerService
+			}
+		case "logonGroup":
+			if v != nil {
+				var logonGroup interface{}
+				err = json.Unmarshal(*v, &logonGroup)
+				if err != nil {
+					return err
+				}
+				sohlstp.LogonGroup = logonGroup
 			}
 		case "encryptedCredential":
 			if v != nil {
@@ -193332,6 +192754,10 @@ type SapOpenHubSource struct {
 	ExcludeLastRequest interface{} `json:"excludeLastRequest,omitempty"`
 	// BaseRequestID - The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
 	BaseRequestID interface{} `json:"baseRequestId,omitempty"`
+	// CustomRfcReadTableFunctionModule - Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
+	CustomRfcReadTableFunctionModule interface{} `json:"customRfcReadTableFunctionModule,omitempty"`
+	// SapDataColumnDelimiter - The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
+	SapDataColumnDelimiter interface{} `json:"sapDataColumnDelimiter,omitempty"`
 	// QueryTimeout - Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 	QueryTimeout interface{} `json:"queryTimeout,omitempty"`
 	// AdditionalColumns - Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).
@@ -193357,6 +192783,12 @@ func (sohs SapOpenHubSource) MarshalJSON() ([]byte, error) {
 	}
 	if sohs.BaseRequestID != nil {
 		objectMap["baseRequestId"] = sohs.BaseRequestID
+	}
+	if sohs.CustomRfcReadTableFunctionModule != nil {
+		objectMap["customRfcReadTableFunctionModule"] = sohs.CustomRfcReadTableFunctionModule
+	}
+	if sohs.SapDataColumnDelimiter != nil {
+		objectMap["sapDataColumnDelimiter"] = sohs.SapDataColumnDelimiter
 	}
 	if sohs.QueryTimeout != nil {
 		objectMap["queryTimeout"] = sohs.QueryTimeout
@@ -193878,6 +193310,24 @@ func (sohs *SapOpenHubSource) UnmarshalJSON(body []byte) error {
 					return err
 				}
 				sohs.BaseRequestID = baseRequestID
+			}
+		case "customRfcReadTableFunctionModule":
+			if v != nil {
+				var customRfcReadTableFunctionModule interface{}
+				err = json.Unmarshal(*v, &customRfcReadTableFunctionModule)
+				if err != nil {
+					return err
+				}
+				sohs.CustomRfcReadTableFunctionModule = customRfcReadTableFunctionModule
+			}
+		case "sapDataColumnDelimiter":
+			if v != nil {
+				var sapDataColumnDelimiter interface{}
+				err = json.Unmarshal(*v, &sapDataColumnDelimiter)
+				if err != nil {
+					return err
+				}
+				sohs.SapDataColumnDelimiter = sapDataColumnDelimiter
 			}
 		case "queryTimeout":
 			if v != nil {
@@ -196072,6 +195522,8 @@ type SapTableSource struct {
 	BatchSize interface{} `json:"batchSize,omitempty"`
 	// CustomRfcReadTableFunctionModule - Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
 	CustomRfcReadTableFunctionModule interface{} `json:"customRfcReadTableFunctionModule,omitempty"`
+	// SapDataColumnDelimiter - The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
+	SapDataColumnDelimiter interface{} `json:"sapDataColumnDelimiter,omitempty"`
 	// PartitionOption - The partition mechanism that will be used for SAP table read in parallel. Possible values include: 'SapTablePartitionOptionNone', 'SapTablePartitionOptionPartitionOnInt', 'SapTablePartitionOptionPartitionOnCalendarYear', 'SapTablePartitionOptionPartitionOnCalendarMonth', 'SapTablePartitionOptionPartitionOnCalendarDate', 'SapTablePartitionOptionPartitionOnTime'
 	PartitionOption SapTablePartitionOption `json:"partitionOption,omitempty"`
 	// PartitionSettings - The settings that will be leveraged for SAP table source partitioning.
@@ -196113,6 +195565,9 @@ func (sts SapTableSource) MarshalJSON() ([]byte, error) {
 	}
 	if sts.CustomRfcReadTableFunctionModule != nil {
 		objectMap["customRfcReadTableFunctionModule"] = sts.CustomRfcReadTableFunctionModule
+	}
+	if sts.SapDataColumnDelimiter != nil {
+		objectMap["sapDataColumnDelimiter"] = sts.SapDataColumnDelimiter
 	}
 	if sts.PartitionOption != "" {
 		objectMap["partitionOption"] = sts.PartitionOption
@@ -196677,6 +196132,15 @@ func (sts *SapTableSource) UnmarshalJSON(body []byte) error {
 				}
 				sts.CustomRfcReadTableFunctionModule = customRfcReadTableFunctionModule
 			}
+		case "sapDataColumnDelimiter":
+			if v != nil {
+				var sapDataColumnDelimiter interface{}
+				err = json.Unmarshal(*v, &sapDataColumnDelimiter)
+				if err != nil {
+					return err
+				}
+				sts.SapDataColumnDelimiter = sapDataColumnDelimiter
+			}
 		case "partitionOption":
 			if v != nil {
 				var partitionOption SapTablePartitionOption
@@ -197169,8 +196633,8 @@ func (sb SecretBase) AsBasicSecretBase() (BasicSecretBase, bool) {
 	return &sb, true
 }
 
-// SecureString azure Data Factory secure string definition. The string value will be masked with asterisks
-// '*' during Get or List API calls.
+// SecureString azure Data Factory secure string definition. The string value will be masked with asterisks '*'
+// during Get or List API calls.
 type SecureString struct {
 	// Value - Value of secure string.
 	Value *string `json:"value,omitempty"`
@@ -201110,7 +200574,7 @@ type SftpWriteSettings struct {
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
 	// CopyBehavior - The type of copy behavior for copy sink.
 	CopyBehavior interface{} `json:"copyBehavior,omitempty"`
-	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
+	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeAzureFileStorageWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
 	Type TypeBasicStoreWriteSettings `json:"type,omitempty"`
 }
 
@@ -201137,6 +200601,11 @@ func (sws SftpWriteSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzureFileStorageWriteSettings is the BasicStoreWriteSettings implementation for SftpWriteSettings.
+func (sws SftpWriteSettings) AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool) {
+	return nil, false
 }
 
 // AsFileServerWriteSettings is the BasicStoreWriteSettings implementation for SftpWriteSettings.
@@ -206614,7 +206083,7 @@ type SnowflakeSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -206809,6 +206278,11 @@ func (ss SnowflakeSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SnowflakeSink.
 func (ss SnowflakeSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SnowflakeSink.
+func (ss SnowflakeSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -209603,7 +209077,7 @@ type SQLDWSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -209810,6 +209284,11 @@ func (sds SQLDWSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SQLDWSink.
 func (sds SQLDWSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SQLDWSink.
+func (sds SQLDWSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -210666,7 +210145,7 @@ type SQLMISink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -210873,6 +210352,11 @@ func (sms SQLMISink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SQLMISink.
 func (sms SQLMISink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SQLMISink.
+func (sms SQLMISink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -212432,7 +211916,7 @@ type SQLServerSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -212639,6 +212123,11 @@ func (sss SQLServerSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SQLServerSink.
 func (sss SQLServerSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SQLServerSink.
+func (sss SQLServerSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -214528,7 +214017,7 @@ type SQLSink struct {
 	SinkRetryWait interface{} `json:"sinkRetryWait,omitempty"`
 	// MaxConcurrentConnections - The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
-	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
+	// Type - Possible values include: 'TypeCopySink', 'TypeCosmosDbMongoDbAPISink', 'TypeSalesforceServiceCloudSink', 'TypeSalesforceSink', 'TypeAzureDataExplorerSink', 'TypeCommonDataServiceForAppsSink', 'TypeDynamicsCrmSink', 'TypeDynamicsSink', 'TypeMicrosoftAccessSink', 'TypeInformixSink', 'TypeOdbcSink', 'TypeAzureSearchIndexSink', 'TypeAzureBlobFSSink', 'TypeAzureDataLakeStoreSink', 'TypeOracleSink', 'TypeSnowflakeSink', 'TypeSQLDWSink', 'TypeSQLMISink', 'TypeAzureSQLSink', 'TypeSQLServerSink', 'TypeSQLSink', 'TypeCosmosDbSQLAPISink', 'TypeDocumentDbCollectionSink', 'TypeFileSystemSink', 'TypeBlobSink', 'TypeBinarySink', 'TypeParquetSink', 'TypeAvroSink', 'TypeAzureTableSink', 'TypeAzureQueueSink', 'TypeSapCloudForCustomerSink', 'TypeAzureMySQLSink', 'TypeAzurePostgreSQLSink', 'TypeRestSink', 'TypeOrcSink', 'TypeJSONSink', 'TypeDelimitedTextSink'
 	Type TypeBasicCopySink `json:"type,omitempty"`
 }
 
@@ -214735,6 +214224,11 @@ func (ss SQLSink) AsAzureMySQLSink() (*AzureMySQLSink, bool) {
 
 // AsAzurePostgreSQLSink is the BasicCopySink implementation for SQLSink.
 func (ss SQLSink) AsAzurePostgreSQLSink() (*AzurePostgreSQLSink, bool) {
+	return nil, false
+}
+
+// AsRestSink is the BasicCopySink implementation for SQLSink.
+func (ss SQLSink) AsRestSink() (*RestSink, bool) {
 	return nil, false
 }
 
@@ -216198,6 +215692,8 @@ func (sls *SquareLinkedService) UnmarshalJSON(body []byte) error {
 
 // SquareLinkedServiceTypeProperties square Service linked service properties.
 type SquareLinkedServiceTypeProperties struct {
+	// ConnectionProperties - Properties used to connect to Square. It is mutually exclusive with any other properties in the linked service. Type: object.
+	ConnectionProperties interface{} `json:"connectionProperties,omitempty"`
 	// Host - The URL of the Square instance. (i.e. mystore.mysquare.com)
 	Host interface{} `json:"host,omitempty"`
 	// ClientID - The client ID associated with your Square application.
@@ -216225,6 +215721,15 @@ func (slstp *SquareLinkedServiceTypeProperties) UnmarshalJSON(body []byte) error
 	}
 	for k, v := range m {
 		switch k {
+		case "connectionProperties":
+			if v != nil {
+				var connectionProperties interface{}
+				err = json.Unmarshal(*v, &connectionProperties)
+				if err != nil {
+					return err
+				}
+				slstp.ConnectionProperties = connectionProperties
+			}
 		case "host":
 			if v != nil {
 				var host interface{}
@@ -218730,6 +218235,7 @@ func (srs *StoreReadSettings) UnmarshalJSON(body []byte) error {
 
 // BasicStoreWriteSettings connector write settings.
 type BasicStoreWriteSettings interface {
+	AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool)
 	AsFileServerWriteSettings() (*FileServerWriteSettings, bool)
 	AsAzureDataLakeStoreWriteSettings() (*AzureDataLakeStoreWriteSettings, bool)
 	AsAzureBlobFSWriteSettings() (*AzureBlobFSWriteSettings, bool)
@@ -218746,7 +218252,7 @@ type StoreWriteSettings struct {
 	MaxConcurrentConnections interface{} `json:"maxConcurrentConnections,omitempty"`
 	// CopyBehavior - The type of copy behavior for copy sink.
 	CopyBehavior interface{} `json:"copyBehavior,omitempty"`
-	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
+	// Type - Possible values include: 'TypeStoreWriteSettings', 'TypeAzureFileStorageWriteSettings', 'TypeFileServerWriteSettings', 'TypeAzureDataLakeStoreWriteSettings', 'TypeAzureBlobFSWriteSettings', 'TypeAzureBlobStorageWriteSettings', 'TypeSftpWriteSettings'
 	Type TypeBasicStoreWriteSettings `json:"type,omitempty"`
 }
 
@@ -218758,6 +218264,10 @@ func unmarshalBasicStoreWriteSettings(body []byte) (BasicStoreWriteSettings, err
 	}
 
 	switch m["type"] {
+	case string(TypeAzureFileStorageWriteSettings):
+		var afsws AzureFileStorageWriteSettings
+		err := json.Unmarshal(body, &afsws)
+		return afsws, err
 	case string(TypeFileServerWriteSettings):
 		var fsws FileServerWriteSettings
 		err := json.Unmarshal(body, &fsws)
@@ -218820,6 +218330,11 @@ func (sws StoreWriteSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsAzureFileStorageWriteSettings is the BasicStoreWriteSettings implementation for StoreWriteSettings.
+func (sws StoreWriteSettings) AsAzureFileStorageWriteSettings() (*AzureFileStorageWriteSettings, bool) {
+	return nil, false
 }
 
 // AsFileServerWriteSettings is the BasicStoreWriteSettings implementation for StoreWriteSettings.
@@ -218929,8 +218444,8 @@ type SubResourceDebugResource struct {
 	Name *string `json:"name,omitempty"`
 }
 
-// SwitchActivity this activity evaluates an expression and executes activities under the cases property
-// that correspond to the expression evaluation expected in the equals property.
+// SwitchActivity this activity evaluates an expression and executes activities under the cases property that
+// correspond to the expression evaluation expected in the equals property.
 type SwitchActivity struct {
 	// SwitchActivityTypeProperties - Switch activity properties.
 	*SwitchActivityTypeProperties `json:"typeProperties,omitempty"`
@@ -222231,6 +221746,198 @@ func (ts *TabularSource) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
+// TarGZipReadSettings the TarGZip compression read settings.
+type TarGZipReadSettings struct {
+	// PreserveCompressionFileNameAsFolder - Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+	PreserveCompressionFileNameAsFolder interface{} `json:"preserveCompressionFileNameAsFolder,omitempty"`
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// Type - Possible values include: 'TypeCompressionReadSettings', 'TypeTarGZipReadSettings', 'TypeTarReadSettings', 'TypeZipDeflateReadSettings'
+	Type TypeBasicCompressionReadSettings `json:"type,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for TarGZipReadSettings.
+func (tgzrs TarGZipReadSettings) MarshalJSON() ([]byte, error) {
+	tgzrs.Type = TypeTarGZipReadSettings
+	objectMap := make(map[string]interface{})
+	if tgzrs.PreserveCompressionFileNameAsFolder != nil {
+		objectMap["preserveCompressionFileNameAsFolder"] = tgzrs.PreserveCompressionFileNameAsFolder
+	}
+	if tgzrs.Type != "" {
+		objectMap["type"] = tgzrs.Type
+	}
+	for k, v := range tgzrs.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// AsTarGZipReadSettings is the BasicCompressionReadSettings implementation for TarGZipReadSettings.
+func (tgzrs TarGZipReadSettings) AsTarGZipReadSettings() (*TarGZipReadSettings, bool) {
+	return &tgzrs, true
+}
+
+// AsTarReadSettings is the BasicCompressionReadSettings implementation for TarGZipReadSettings.
+func (tgzrs TarGZipReadSettings) AsTarReadSettings() (*TarReadSettings, bool) {
+	return nil, false
+}
+
+// AsZipDeflateReadSettings is the BasicCompressionReadSettings implementation for TarGZipReadSettings.
+func (tgzrs TarGZipReadSettings) AsZipDeflateReadSettings() (*ZipDeflateReadSettings, bool) {
+	return nil, false
+}
+
+// AsCompressionReadSettings is the BasicCompressionReadSettings implementation for TarGZipReadSettings.
+func (tgzrs TarGZipReadSettings) AsCompressionReadSettings() (*CompressionReadSettings, bool) {
+	return nil, false
+}
+
+// AsBasicCompressionReadSettings is the BasicCompressionReadSettings implementation for TarGZipReadSettings.
+func (tgzrs TarGZipReadSettings) AsBasicCompressionReadSettings() (BasicCompressionReadSettings, bool) {
+	return &tgzrs, true
+}
+
+// UnmarshalJSON is the custom unmarshaler for TarGZipReadSettings struct.
+func (tgzrs *TarGZipReadSettings) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		case "preserveCompressionFileNameAsFolder":
+			if v != nil {
+				var preserveCompressionFileNameAsFolder interface{}
+				err = json.Unmarshal(*v, &preserveCompressionFileNameAsFolder)
+				if err != nil {
+					return err
+				}
+				tgzrs.PreserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder
+			}
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if tgzrs.AdditionalProperties == nil {
+					tgzrs.AdditionalProperties = make(map[string]interface{})
+				}
+				tgzrs.AdditionalProperties[k] = additionalProperties
+			}
+		case "type":
+			if v != nil {
+				var typeVar TypeBasicCompressionReadSettings
+				err = json.Unmarshal(*v, &typeVar)
+				if err != nil {
+					return err
+				}
+				tgzrs.Type = typeVar
+			}
+		}
+	}
+
+	return nil
+}
+
+// TarReadSettings the Tar compression read settings.
+type TarReadSettings struct {
+	// PreserveCompressionFileNameAsFolder - Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+	PreserveCompressionFileNameAsFolder interface{} `json:"preserveCompressionFileNameAsFolder,omitempty"`
+	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
+	AdditionalProperties map[string]interface{} `json:""`
+	// Type - Possible values include: 'TypeCompressionReadSettings', 'TypeTarGZipReadSettings', 'TypeTarReadSettings', 'TypeZipDeflateReadSettings'
+	Type TypeBasicCompressionReadSettings `json:"type,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for TarReadSettings.
+func (trs TarReadSettings) MarshalJSON() ([]byte, error) {
+	trs.Type = TypeTarReadSettings
+	objectMap := make(map[string]interface{})
+	if trs.PreserveCompressionFileNameAsFolder != nil {
+		objectMap["preserveCompressionFileNameAsFolder"] = trs.PreserveCompressionFileNameAsFolder
+	}
+	if trs.Type != "" {
+		objectMap["type"] = trs.Type
+	}
+	for k, v := range trs.AdditionalProperties {
+		objectMap[k] = v
+	}
+	return json.Marshal(objectMap)
+}
+
+// AsTarGZipReadSettings is the BasicCompressionReadSettings implementation for TarReadSettings.
+func (trs TarReadSettings) AsTarGZipReadSettings() (*TarGZipReadSettings, bool) {
+	return nil, false
+}
+
+// AsTarReadSettings is the BasicCompressionReadSettings implementation for TarReadSettings.
+func (trs TarReadSettings) AsTarReadSettings() (*TarReadSettings, bool) {
+	return &trs, true
+}
+
+// AsZipDeflateReadSettings is the BasicCompressionReadSettings implementation for TarReadSettings.
+func (trs TarReadSettings) AsZipDeflateReadSettings() (*ZipDeflateReadSettings, bool) {
+	return nil, false
+}
+
+// AsCompressionReadSettings is the BasicCompressionReadSettings implementation for TarReadSettings.
+func (trs TarReadSettings) AsCompressionReadSettings() (*CompressionReadSettings, bool) {
+	return nil, false
+}
+
+// AsBasicCompressionReadSettings is the BasicCompressionReadSettings implementation for TarReadSettings.
+func (trs TarReadSettings) AsBasicCompressionReadSettings() (BasicCompressionReadSettings, bool) {
+	return &trs, true
+}
+
+// UnmarshalJSON is the custom unmarshaler for TarReadSettings struct.
+func (trs *TarReadSettings) UnmarshalJSON(body []byte) error {
+	var m map[string]*json.RawMessage
+	err := json.Unmarshal(body, &m)
+	if err != nil {
+		return err
+	}
+	for k, v := range m {
+		switch k {
+		case "preserveCompressionFileNameAsFolder":
+			if v != nil {
+				var preserveCompressionFileNameAsFolder interface{}
+				err = json.Unmarshal(*v, &preserveCompressionFileNameAsFolder)
+				if err != nil {
+					return err
+				}
+				trs.PreserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder
+			}
+		default:
+			if v != nil {
+				var additionalProperties interface{}
+				err = json.Unmarshal(*v, &additionalProperties)
+				if err != nil {
+					return err
+				}
+				if trs.AdditionalProperties == nil {
+					trs.AdditionalProperties = make(map[string]interface{})
+				}
+				trs.AdditionalProperties[k] = additionalProperties
+			}
+		case "type":
+			if v != nil {
+				var typeVar TypeBasicCompressionReadSettings
+				err = json.Unmarshal(*v, &typeVar)
+				if err != nil {
+					return err
+				}
+				trs.Type = typeVar
+			}
+		}
+	}
+
+	return nil
+}
+
 // TeradataLinkedService linked service for Teradata data source.
 type TeradataLinkedService struct {
 	// TeradataLinkedServiceTypeProperties - Teradata linked service properties.
@@ -224876,10 +224583,15 @@ func (tlr TriggerListResponse) IsEmpty() bool {
 	return tlr.Value == nil || len(*tlr.Value) == 0
 }
 
+// hasNextLink returns true if the NextLink is not empty.
+func (tlr TriggerListResponse) hasNextLink() bool {
+	return tlr.NextLink != nil && len(*tlr.NextLink) != 0
+}
+
 // triggerListResponsePreparer prepares a request to retrieve the next set of results.
 // It returns nil if no more results exist.
 func (tlr TriggerListResponse) triggerListResponsePreparer(ctx context.Context) (*http.Request, error) {
-	if tlr.NextLink == nil || len(to.String(tlr.NextLink)) < 1 {
+	if !tlr.hasNextLink() {
 		return nil, nil
 	}
 	return autorest.Prepare((&http.Request{}).WithContext(ctx),
@@ -224907,11 +224619,16 @@ func (page *TriggerListResponsePage) NextWithContext(ctx context.Context) (err e
 			tracing.EndSpan(ctx, sc, err)
 		}()
 	}
-	next, err := page.fn(ctx, page.tlr)
-	if err != nil {
-		return err
+	for {
+		next, err := page.fn(ctx, page.tlr)
+		if err != nil {
+			return err
+		}
+		page.tlr = next
+		if !next.hasNextLink() || !next.IsEmpty() {
+			break
+		}
 	}
-	page.tlr = next
 	return nil
 }
 
@@ -224995,6 +224712,13 @@ type TriggerResource struct {
 	Type *string `json:"type,omitempty"`
 	// Etag - READ-ONLY; Etag identifies change in the resource.
 	Etag *string `json:"etag,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for TriggerResource.
+func (tr TriggerResource) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	objectMap["properties"] = tr.Properties
+	return json.Marshal(objectMap)
 }
 
 // UnmarshalJSON is the custom unmarshaler for TriggerResource struct.
@@ -225217,8 +224941,7 @@ type TriggerRunsQueryResponse struct {
 	ContinuationToken *string `json:"continuationToken,omitempty"`
 }
 
-// TriggersStartFuture an abstraction for monitoring and retrieving the results of a long-running
-// operation.
+// TriggersStartFuture an abstraction for monitoring and retrieving the results of a long-running operation.
 type TriggersStartFuture struct {
 	azure.Future
 }
@@ -225262,8 +224985,8 @@ func (future *TriggersStopFuture) Result(client TriggersClient) (ar autorest.Res
 	return
 }
 
-// TriggersSubscribeToEventsFuture an abstraction for monitoring and retrieving the results of a
-// long-running operation.
+// TriggersSubscribeToEventsFuture an abstraction for monitoring and retrieving the results of a long-running
+// operation.
 type TriggersSubscribeToEventsFuture struct {
 	azure.Future
 }
@@ -225329,8 +225052,8 @@ func (future *TriggersUnsubscribeFromEventsFuture) Result(client TriggersClient)
 	return
 }
 
-// TumblingWindowTrigger trigger that schedules pipeline runs for all fixed time interval windows from a
-// start time without gaps and also supports backfill scenarios (when start time is in the past).
+// TumblingWindowTrigger trigger that schedules pipeline runs for all fixed time interval windows from a start
+// time without gaps and also supports backfill scenarios (when start time is in the past).
 type TumblingWindowTrigger struct {
 	// Pipeline - Pipeline for which runs are created when an event is fired for trigger window that is ready.
 	Pipeline *TriggerPipelineReference `json:"pipeline,omitempty"`
@@ -225671,8 +225394,8 @@ func (twtP *TumblingWindowTriggerTypeProperties) UnmarshalJSON(body []byte) erro
 	return nil
 }
 
-// UntilActivity this activity executes inner activities until the specified boolean expression results to
-// true or timeout is reached, whichever is earlier.
+// UntilActivity this activity executes inner activities until the specified boolean expression results to true
+// or timeout is reached, whichever is earlier.
 type UntilActivity struct {
 	// UntilActivityTypeProperties - Until activity properties.
 	*UntilActivityTypeProperties `json:"typeProperties,omitempty"`
@@ -229097,8 +228820,8 @@ type WebActivityTypeProperties struct {
 	ConnectVia *IntegrationRuntimeReference `json:"connectVia,omitempty"`
 }
 
-// WebAnonymousAuthentication a WebLinkedService that uses anonymous authentication to communicate with an
-// HTTP endpoint.
+// WebAnonymousAuthentication a WebLinkedService that uses anonymous authentication to communicate with an HTTP
+// endpoint.
 type WebAnonymousAuthentication struct {
 	// URL - The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
 	URL interface{} `json:"url,omitempty"`
@@ -229249,9 +228972,9 @@ func (wba *WebBasicAuthentication) UnmarshalJSON(body []byte) error {
 	return nil
 }
 
-// WebClientCertificateAuthentication a WebLinkedService that uses client certificate based authentication
-// to communicate with an HTTP endpoint. This scheme follows mutual authentication; the server must also
-// provide valid credentials to the client.
+// WebClientCertificateAuthentication a WebLinkedService that uses client certificate based authentication to
+// communicate with an HTTP endpoint. This scheme follows mutual authentication; the server must also provide
+// valid credentials to the client.
 type WebClientCertificateAuthentication struct {
 	// Pfx - Base64-encoded contents of a PFX file.
 	Pfx BasicSecretBase `json:"pfx,omitempty"`
@@ -229693,7 +229416,7 @@ type WebHookActivityTypeProperties struct {
 	Body interface{} `json:"body,omitempty"`
 	// Authentication - Authentication method used for calling the endpoint.
 	Authentication *WebActivityAuthentication `json:"authentication,omitempty"`
-	// ReportStatusOnCallBack - When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
+	// ReportStatusOnCallBack - When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
 	ReportStatusOnCallBack interface{} `json:"reportStatusOnCallBack,omitempty"`
 }
 
@@ -232256,6 +231979,8 @@ func (xls *XeroLinkedService) UnmarshalJSON(body []byte) error {
 
 // XeroLinkedServiceTypeProperties xero Service linked service properties.
 type XeroLinkedServiceTypeProperties struct {
+	// ConnectionProperties - Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
+	ConnectionProperties interface{} `json:"connectionProperties,omitempty"`
 	// Host - The endpoint of the Xero server. (i.e. api.xero.com)
 	Host interface{} `json:"host,omitempty"`
 	// ConsumerKey - The consumer key associated with the Xero application.
@@ -232282,6 +232007,15 @@ func (xlstp *XeroLinkedServiceTypeProperties) UnmarshalJSON(body []byte) error {
 	}
 	for k, v := range m {
 		switch k {
+		case "connectionProperties":
+			if v != nil {
+				var connectionProperties interface{}
+				err = json.Unmarshal(*v, &connectionProperties)
+				if err != nil {
+					return err
+				}
+				xlstp.ConnectionProperties = connectionProperties
+			}
 		case "host":
 			if v != nil {
 				var host interface{}
@@ -234295,6 +234029,10 @@ type XMLReadSettings struct {
 	CompressionProperties BasicCompressionReadSettings `json:"compressionProperties,omitempty"`
 	// ValidationMode - Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
 	ValidationMode interface{} `json:"validationMode,omitempty"`
+	// DetectDataType - Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+	DetectDataType interface{} `json:"detectDataType,omitempty"`
+	// Namespaces - Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+	Namespaces interface{} `json:"namespaces,omitempty"`
 	// NamespacePrefixes - Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
 	NamespacePrefixes interface{} `json:"namespacePrefixes,omitempty"`
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
@@ -234310,6 +234048,12 @@ func (xrs XMLReadSettings) MarshalJSON() ([]byte, error) {
 	objectMap["compressionProperties"] = xrs.CompressionProperties
 	if xrs.ValidationMode != nil {
 		objectMap["validationMode"] = xrs.ValidationMode
+	}
+	if xrs.DetectDataType != nil {
+		objectMap["detectDataType"] = xrs.DetectDataType
+	}
+	if xrs.Namespaces != nil {
+		objectMap["namespaces"] = xrs.Namespaces
 	}
 	if xrs.NamespacePrefixes != nil {
 		objectMap["namespacePrefixes"] = xrs.NamespacePrefixes
@@ -234378,6 +234122,24 @@ func (xrs *XMLReadSettings) UnmarshalJSON(body []byte) error {
 					return err
 				}
 				xrs.ValidationMode = validationMode
+			}
+		case "detectDataType":
+			if v != nil {
+				var detectDataType interface{}
+				err = json.Unmarshal(*v, &detectDataType)
+				if err != nil {
+					return err
+				}
+				xrs.DetectDataType = detectDataType
+			}
+		case "namespaces":
+			if v != nil {
+				var namespaces interface{}
+				err = json.Unmarshal(*v, &namespaces)
+				if err != nil {
+					return err
+				}
+				xrs.Namespaces = namespaces
 			}
 		case "namespacePrefixes":
 			if v != nil {
@@ -235029,7 +234791,7 @@ type ZipDeflateReadSettings struct {
 	PreserveZipFileNameAsFolder interface{} `json:"preserveZipFileNameAsFolder,omitempty"`
 	// AdditionalProperties - Unmatched properties from the message are deserialized this collection
 	AdditionalProperties map[string]interface{} `json:""`
-	// Type - Possible values include: 'TypeCompressionReadSettings', 'TypeZipDeflateReadSettings'
+	// Type - Possible values include: 'TypeCompressionReadSettings', 'TypeTarGZipReadSettings', 'TypeTarReadSettings', 'TypeZipDeflateReadSettings'
 	Type TypeBasicCompressionReadSettings `json:"type,omitempty"`
 }
 
@@ -235047,6 +234809,16 @@ func (zdrs ZipDeflateReadSettings) MarshalJSON() ([]byte, error) {
 		objectMap[k] = v
 	}
 	return json.Marshal(objectMap)
+}
+
+// AsTarGZipReadSettings is the BasicCompressionReadSettings implementation for ZipDeflateReadSettings.
+func (zdrs ZipDeflateReadSettings) AsTarGZipReadSettings() (*TarGZipReadSettings, bool) {
+	return nil, false
+}
+
+// AsTarReadSettings is the BasicCompressionReadSettings implementation for ZipDeflateReadSettings.
+func (zdrs ZipDeflateReadSettings) AsTarReadSettings() (*TarReadSettings, bool) {
+	return nil, false
 }
 
 // AsZipDeflateReadSettings is the BasicCompressionReadSettings implementation for ZipDeflateReadSettings.
@@ -235728,6 +235500,8 @@ func (zls *ZohoLinkedService) UnmarshalJSON(body []byte) error {
 
 // ZohoLinkedServiceTypeProperties zoho server linked service properties.
 type ZohoLinkedServiceTypeProperties struct {
+	// ConnectionProperties - Properties used to connect to Zoho. It is mutually exclusive with any other properties in the linked service. Type: object.
+	ConnectionProperties interface{} `json:"connectionProperties,omitempty"`
 	// Endpoint - The endpoint of the Zoho server. (i.e. crm.zoho.com/crm/private)
 	Endpoint interface{} `json:"endpoint,omitempty"`
 	// AccessToken - The access token for Zoho authentication.
@@ -235751,6 +235525,15 @@ func (zlstp *ZohoLinkedServiceTypeProperties) UnmarshalJSON(body []byte) error {
 	}
 	for k, v := range m {
 		switch k {
+		case "connectionProperties":
+			if v != nil {
+				var connectionProperties interface{}
+				err = json.Unmarshal(*v, &connectionProperties)
+				if err != nil {
+					return err
+				}
+				zlstp.ConnectionProperties = connectionProperties
+			}
 		case "endpoint":
 			if v != nil {
 				var endpoint interface{}
