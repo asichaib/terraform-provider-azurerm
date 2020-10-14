@@ -25,6 +25,10 @@ func resourceArmSqlMiServer() *schema.Resource {
 		Update: resourceArmSqlMiServerCreateUpdate,
 		Delete: resourceArmSqlMiServerDelete,
 
+		Importer: &schema.ResourceImporter{
+			State: schema.ImportStatePassthrough,
+		},
+
 		Timeouts: &schema.ResourceTimeout{
 			Create: schema.DefaultTimeout(24 * time.Hour),
 			Read:   schema.DefaultTimeout(5 * time.Minute),
@@ -99,6 +103,12 @@ func resourceArmSqlMiServer() *schema.Resource {
 				}, true),
 			},
 
+			"instance_pool_id": {
+				Type:         schema.TypeString,
+				Required:     true,
+				ValidateFunc: azure.ValidateResourceID,
+			},
+
 			"subnet_id": {
 				Type:         schema.TypeString,
 				Required:     true,
@@ -138,6 +148,7 @@ func resourceArmSqlMiServerCreateUpdate(d *schema.ResourceData, meta interface{}
 			SubnetID:           utils.String(subnetId),
 			StorageSizeInGB:    utils.Int32(int32(d.Get("storage_size_in_gb").(int))),
 			VCores:             utils.Int32(int32(d.Get("vcores").(int))),
+			InstancePoolID:     utils.String(d.Get("instance_pool_id").(string)),
 		},
 	}
 
@@ -205,6 +216,7 @@ func resourceArmSqlMiServerRead(d *schema.ResourceData, meta interface{}) error 
 		d.Set("subnet_id", miServerProperties.SubnetID)
 		d.Set("storage_size_in_gb", miServerProperties.StorageSizeInGB)
 		d.Set("vcores", miServerProperties.VCores)
+		d.Set("instance_pool_id", miServerProperties.InstancePoolID)
 	}
 
 	return tags.FlattenAndSet(d, resp.Tags)
